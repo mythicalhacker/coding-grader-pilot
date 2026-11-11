@@ -1,0 +1,36 @@
+version	check	stdout (JSON string)	exit detail
+base	first_input	""	IndexError: list index out of range
+base	added_assertion	""	IndexError: list index out of range
+base	original_diagnostic	"first condition attrs {}\nfirst IndexError list index out of range\nsecond condition attrs {'source': 'cond'}\nsecond IndexError list index out of range\n"	OK
+base	test_where_attrs	""	IndexError: list index out of range
+base	reviewer_1	""	IndexError: list index out of range
+base	reviewer_2	""	AssertionError
+base	reviewer_3	""	IndexError: list index out of range
+base	reviewer_4	""	IndexError: list index out of range
+base	followup_diagnostic	"int IndexError list index out of range\nDataArray [1, 30] {'source': 'y'}\n"	OK
+A	first_input	"[1 1 1]\n{}\n"	OK
+A	added_assertion	""	OK
+A	original_diagnostic	"first condition attrs {}\nfirst values [1, 1, 1] result attrs {}\nsecond condition attrs {'source': 'cond'}\nsecond values [1, 1, 1] result attrs {}\n"	OK
+A	test_where_attrs	""	OK
+A	reviewer_1	""	AssertionError: ('DataArray', {'source': 'y'})
+A	reviewer_2	""	AssertionError
+A	reviewer_3	""	AssertionError: ('DataArray', {'source': 'y'})
+A	reviewer_4	""	AssertionError: {'source': 'y'}
+A	followup_diagnostic	"int [1, 0] {}\nDataArray [1, 30] {'source': 'y'}\n"	OK
+B	first_input	"[1 1 1]\n{}\n"	OK
+B	added_assertion	""	AssertionError
+B	original_diagnostic	"first condition attrs {}\nfirst values [1, 1, 1] result attrs {}\nsecond condition attrs {'source': 'cond'}\nsecond values [1, 1, 1] result attrs {'source': 'cond'}\n"	OK
+B	test_where_attrs	""	AssertionError
+B	reviewer_1	""	AssertionError: ('int', {'source': 'condition'})
+B	reviewer_2	""	AssertionError
+B	reviewer_3	""	AssertionError: ('int', {'source': 'cond'})
+B	reviewer_4	""	AssertionError: {'source': 'condition'}
+B	followup_diagnostic	"int [1, 0] {'source': 'condition'}\nDataArray [1, 30] {'source': 'y'}\n"	OK
+maintainer	first_input	"[1 1 1]\n{}\n"	OK
+maintainer	added_assertion	""	OK
+maintainer	test_where_attrs	""	OK
+maintainer	reviewer_1	""	OK
+maintainer	reviewer_2	""	OK
+maintainer	reviewer_3	""	OK
+maintainer	reviewer_4	""	OK
+maintainer	followup_diagnostic	"int [1, 0] {}\nDataArray [1, 30] {}\n"	OK

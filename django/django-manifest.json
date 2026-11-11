@@ -1,0 +1,61 @@
+{
+  "revision": "18759b2209ff556aed7f20d83cbf23e3d234e41c",
+  "target": "migrations.test_autodetector.AutodetectorTests.test_add_model_with_field_removed_from_base_model",
+  "dependencies": {
+    "asgiref": "3.4.1",
+    "pytz": "2024.2",
+    "sqlparse": "0.4.4"
+  },
+  "python": "Python 3.10.20",
+  "platform": "Darwin arm64",
+  "sources": {
+    "django.tar.gz": {
+      "url": "https://codeload.github.com/django/django/tar.gz/18759b2209ff556aed7f20d83cbf23e3d234e41c",
+      "sha256": "919801d3e71382aa01b888e338268f509900babdc74bc56eef4a643be99117e2"
+    },
+    "A.diff": {
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/django__django-12754/patch.diff",
+      "sha256": "66d6382dd876f1a7708c50fcdfb8021449c1a011a428f1c27576a3564b4616f8"
+    },
+    "B.diff": {
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/django__django-12754/patch.diff",
+      "sha256": "dfe57f788fca71379f16db8675f8f06c532f5ba9b14a1b118d94c22e36c7e26a"
+    },
+    "eval.sh": {
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/django__django-12754/eval.sh",
+      "sha256": "c139a7fc98ccc97c985d714aff68c7151d27d393264b6817181cda74c758ad5f"
+    }
+  },
+  "fixture_sha256": "9e551b2780b6f3786a257c12c138fa35ca0cce5eaf5f213a07ccbaab66367482",
+  "expected_exit_codes": {
+    "unchanged": {
+      "author": 0,
+      "regression": 1
+    },
+    "A": {
+      "author": 0,
+      "regression": 0
+    },
+    "B": {
+      "author": 0,
+      "regression": 1
+    }
+  },
+  "reference": "https://github.com/django/django/pull/12754/files",
+  "official_outputs": {
+    "A": {
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/django__django-12754/test_output.txt",
+      "sha256": "6709b3752e7b3e0384ae3ea29b855be17998d4a0a7be68de010b3ff9011e977c",
+      "bytes": 41962,
+      "status": "PASSED",
+      "line": 630
+    },
+    "B": {
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/django__django-12754/test_output.txt",
+      "sha256": "dccb166eba4aa52f495841dc0a7674bacc352dc81770b499b3f5fb935aa40600",
+      "bytes": 74428,
+      "status": "ERROR",
+      "line": 460
+    }
+  }
+}

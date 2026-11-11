@@ -1,0 +1,319 @@
+{
+  "source": "SWE-bench Verified public submissions",
+  "benchmark_results": {
+    "haiku": {
+      "url": "https://raw.githubusercontent.com/SWE-bench/experiments/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20241022_tools_claude-3-5-haiku/results/results.json",
+      "sha256": "ad182915863e5d120e6bc7b99902b43b8c8a4d54cd1ecb0d139ec6013ce5df35"
+    },
+    "sonnet": {
+      "url": "https://raw.githubusercontent.com/SWE-bench/experiments/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20241022_tools_claude-3-5-sonnet-updated/results/results.json",
+      "sha256": "eb2b4bb8052434b389c513ae1edd9a7e552dddafddf3ef8a865801190f347a0c"
+    }
+  },
+  "issues": [
+    {
+      "issue": "django__django-13346",
+      "benchmark_winner": "A",
+      "patches": {
+        "A": {
+          "submission": "sonnet",
+          "evaluated_patch": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/django__django-13346/patch.diff",
+          "patch_sha256": "b968fab15baafb59832fa9017e08a30e61efe4d695165051bf15abe84abf2ae5",
+          "trace": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/django__django-13346.log",
+          "trace_sha256": "bb1df90f8d9f77eb6392b2f8941860b0d6cc3d6acda2c8a5bcd1df7139d9fcef"
+        },
+        "B": {
+          "submission": "haiku",
+          "evaluated_patch": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/django__django-13346/patch.diff",
+          "patch_sha256": "0ed7d69058cc78136296e01e33a90c3a84da02f82b0298b76578e70eab5510c3",
+          "trace": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/django__django-13346.log",
+          "trace_sha256": "f185505a057e61db0c0f2decdea52fa2cbf6490767fc70ec3fd33e0e8f4dd5dd"
+        }
+      },
+      "choices": {
+        "base": {
+          "AB": "abstain",
+          "BA": "abstain"
+        },
+        "selected": {
+          "AB": "abstain",
+          "BA": "abstain"
+        },
+        "with_report": {
+          "AB": "abstain",
+          "BA": "abstain"
+        },
+        "tail": {
+          "AB": "abstain",
+          "BA": "abstain"
+        }
+      }
+    },
+    {
+      "issue": "sphinx-doc__sphinx-7985",
+      "benchmark_winner": "A",
+      "patches": {
+        "A": {
+          "submission": "sonnet",
+          "evaluated_patch": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/sphinx-doc__sphinx-7985/patch.diff",
+          "patch_sha256": "1b70383f5c7c5d1f46528067ab3340e439d098e5dd3d846168c6bbd6667ab8af",
+          "trace": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/sphinx-doc__sphinx-7985.log",
+          "trace_sha256": "d08a31a0c613be1f3ade9daeb334632d396fca9d02df35f70f440b2f056540ff"
+        },
+        "B": {
+          "submission": "haiku",
+          "evaluated_patch": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/sphinx-doc__sphinx-7985/patch.diff",
+          "patch_sha256": "d2e42b0af1a13f4d6d360a970960cb226f398fe948815fd1c79e58c2d5d4f1ca",
+          "trace": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/sphinx-doc__sphinx-7985.log",
+          "trace_sha256": "55aa345c41de96ccbc0a6d93c2fa847e9bb2c47611e0c9b3d3f81e9be23869e9"
+        }
+      },
+      "choices": {
+        "base": {
+          "AB": "abstain",
+          "BA": "abstain"
+        },
+        "selected": {
+          "AB": "abstain",
+          "BA": "abstain"
+        },
+        "with_report": {
+          "AB": "abstain",
+          "BA": "abstain"
+        },
+        "tail": {
+          "AB": "abstain",
+          "BA": "abstain"
+        }
+      }
+    },
+    {
+      "issue": "django__django-14053",
+      "benchmark_winner": "B",
+      "patches": {
+        "A": {
+          "submission": "sonnet",
+          "evaluated_patch": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/django__django-14053/patch.diff",
+          "patch_sha256": "b5b323f2f284ad84c5102bb153478f8660eeda96a4334e0db4e922aa9b5d24e0",
+          "trace": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/django__django-14053.log",
+          "trace_sha256": "65961a9692f3d68271e8b40a86253e3ea29723eff83445490225b85e7af299a2"
+        },
+        "B": {
+          "submission": "haiku",
+          "evaluated_patch": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/django__django-14053/patch.diff",
+          "patch_sha256": "2b6d8065009b9c478d34ce014a5fde3264d43c6c62a64d1ae4eda4d232683a93",
+          "trace": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/django__django-14053.log",
+          "trace_sha256": "d4f737d283b90e5952c95af41e9e572803e4f0a8132658e414506ced2cb01625"
+        }
+      },
+      "choices": {
+        "base": {
+          "AB": "abstain",
+          "BA": "abstain"
+        },
+        "selected": {
+          "AB": "abstain",
+          "BA": "abstain"
+        },
+        "with_report": {
+          "AB": "abstain",
+          "BA": "abstain"
+        },
+        "tail": {
+          "AB": "abstain",
+          "BA": "abstain"
+        }
+      }
+    },
+    {
+      "issue": "django__django-15103",
+      "benchmark_winner": "A",
+      "patches": {
+        "A": {
+          "submission": "haiku",
+          "evaluated_patch": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/django__django-15103/patch.diff",
+          "patch_sha256": "b0d2b2878c6cb6fc1cc2f038368a53db85313d5f487a9c01b7665feca18e530a",
+          "trace": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/django__django-15103.log",
+          "trace_sha256": "8c8fe2dcc322b00bfc134b86ad1282dd85f83eec06e46dde84972f25070f73f1"
+        },
+        "B": {
+          "submission": "sonnet",
+          "evaluated_patch": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/django__django-15103/patch.diff",
+          "patch_sha256": "3fbb23f7d559652969c422ac52cd5d3f22be358adb9288c272b2d51fba3af134",
+          "trace": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/django__django-15103.log",
+          "trace_sha256": "f52cdf8ca81e644c58d79dea5798cbfe1adc778eaae7255df48b49eb5c0ec38f"
+        }
+      },
+      "choices": {
+        "base": {
+          "AB": "first",
+          "BA": "second"
+        },
+        "selected": {
+          "AB": "first",
+          "BA": "second"
+        },
+        "with_report": {
+          "AB": "first",
+          "BA": "second"
+        },
+        "tail": {
+          "AB": "first",
+          "BA": "second"
+        }
+      }
+    },
+    {
+      "issue": "scikit-learn__scikit-learn-14983",
+      "benchmark_winner": "A",
+      "patches": {
+        "A": {
+          "submission": "sonnet",
+          "evaluated_patch": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/scikit-learn__scikit-learn-14983/patch.diff",
+          "patch_sha256": "08a4c685561d8f8ea48d932944899431a5b88cebaeae2b4a802c47a737362be4",
+          "trace": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/scikit-learn__scikit-learn-14983.log",
+          "trace_sha256": "5f97b1810a522070e09ad102e62b92f89346ba1883c324e49429178c402ec775"
+        },
+        "B": {
+          "submission": "haiku",
+          "evaluated_patch": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/scikit-learn__scikit-learn-14983/patch.diff",
+          "patch_sha256": "1d40d95e3037d570be83c384f3012492db7f833ed4cf8e580683f9e4e94d5a66",
+          "trace": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/scikit-learn__scikit-learn-14983.log",
+          "trace_sha256": "477727166af144a5640cc700bc2b63d3872bc4f1d016118aa35351c60e9d86ed"
+        }
+      },
+      "choices": {
+        "base": {
+          "AB": "first",
+          "BA": "second"
+        },
+        "selected": {
+          "AB": "first",
+          "BA": "second"
+        },
+        "with_report": {
+          "AB": "first",
+          "BA": "second"
+        },
+        "tail": {
+          "AB": "first",
+          "BA": "second"
+        }
+      }
+    },
+    {
+      "issue": "sphinx-doc__sphinx-7910",
+      "benchmark_winner": "A",
+      "patches": {
+        "A": {
+          "submission": "haiku",
+          "evaluated_patch": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/sphinx-doc__sphinx-7910/patch.diff",
+          "patch_sha256": "f6a82fed5ed80cc202db70ef938021bcc771367651578854b3a36cad2b823339",
+          "trace": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/sphinx-doc__sphinx-7910.log",
+          "trace_sha256": "f861d2d56b212e0cc8588b5627095e8e3cd6941cc46d9772c118d3223532a76c"
+        },
+        "B": {
+          "submission": "sonnet",
+          "evaluated_patch": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/sphinx-doc__sphinx-7910/patch.diff",
+          "patch_sha256": "c48d13ac050c3980ba8840db10ce10a9ba8d8288c22ece66c0db58acecd1dcea",
+          "trace": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/sphinx-doc__sphinx-7910.log",
+          "trace_sha256": "24e429327c132ca8a3e22e7c7379269d36d29aaba46148e1c9f648e1e264449d"
+        }
+      },
+      "choices": {
+        "base": {
+          "AB": "first",
+          "BA": "second"
+        },
+        "selected": {
+          "AB": "first",
+          "BA": "second"
+        },
+        "with_report": {
+          "AB": "first",
+          "BA": "second"
+        },
+        "tail": {
+          "AB": "first",
+          "BA": "second"
+        }
+      }
+    },
+    {
+      "issue": "django__django-12754",
+      "benchmark_winner": "A",
+      "patches": {
+        "A": {
+          "submission": "sonnet",
+          "evaluated_patch": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/django__django-12754/patch.diff",
+          "patch_sha256": "66d6382dd876f1a7708c50fcdfb8021449c1a011a428f1c27576a3564b4616f8",
+          "trace": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/django__django-12754.log",
+          "trace_sha256": "5c6c86d3a72799ad9b33b7632efb567b0faae024927ec3e4031431fb3a5fcbad"
+        },
+        "B": {
+          "submission": "haiku",
+          "evaluated_patch": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/django__django-12754/patch.diff",
+          "patch_sha256": "dfe57f788fca71379f16db8675f8f06c532f5ba9b14a1b118d94c22e36c7e26a",
+          "trace": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/django__django-12754.log",
+          "trace_sha256": "a9f5ef5b6ba5fea29655d06a058d74bc9e8087e2dd7e9b122dfa477995fe0d9b"
+        }
+      },
+      "choices": {
+        "base": {
+          "AB": "abstain",
+          "BA": "abstain"
+        },
+        "selected": {
+          "AB": "abstain",
+          "BA": "abstain"
+        },
+        "with_report": {
+          "AB": "abstain",
+          "BA": "abstain"
+        },
+        "tail": {
+          "AB": "abstain",
+          "BA": "abstain"
+        }
+      }
+    },
+    {
+      "issue": "django__django-13112",
+      "benchmark_winner": "A",
+      "patches": {
+        "A": {
+          "submission": "sonnet",
+          "evaluated_patch": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/django__django-13112/patch.diff",
+          "patch_sha256": "08ab19aef48cf7215c2070578a40f561484dcaeea11d4789aea44b21b182969b",
+          "trace": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/django__django-13112.log",
+          "trace_sha256": "1760bfd5ad25a3568d5cf4c901a6cb55b5ab95e9cd709b5abec831800ed97c8a"
+        },
+        "B": {
+          "submission": "haiku",
+          "evaluated_patch": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/django__django-13112/patch.diff",
+          "patch_sha256": "cc98e653a478009e5937e2389e1f375c30523ed884a15faa90741471c92126eb",
+          "trace": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/django__django-13112.log",
+          "trace_sha256": "60ff074396d70d52f652a98d68d789d05dab06fe84025f8bf8eee83db7208293"
+        }
+      },
+      "choices": {
+        "base": {
+          "AB": "first",
+          "BA": "second"
+        },
+        "selected": {
+          "AB": "first",
+          "BA": "abstain"
+        },
+        "with_report": {
+          "AB": "abstain",
+          "BA": "abstain"
+        },
+        "tail": {
+          "AB": "abstain",
+          "BA": "abstain"
+        }
+      }
+    }
+  ]
+}
