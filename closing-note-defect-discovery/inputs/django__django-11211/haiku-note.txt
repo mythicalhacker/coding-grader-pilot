@@ -1,0 +1,42 @@
+I apologize for the complexity. Let me explain the issue and the proposed solution.
+
+The problem is in the `get_prefetch_queryset` method of the `GenericForeignKey` class in Django's `contenttypes/fields.py`. When using a UUID field as a primary key, the method fails to correctly match and prefetch related objects.
+
+The specific issue is in the `gfk_key` function, which is used to match objects during prefetching. When the primary key is a UUID, the comparison and conversion can fail.
+
+Here's the fix I proposed:
+
+```python
+def gfk_key(obj):
+    ct_id = getattr(obj, ct_attname)
+    if ct_id is None:
+        return None
+    else:
+        model = self.get_content_type(id=ct_id,
+                                      using=obj._state.db).model_class()
+        pk_val = getattr(obj, self.fk_field)
+        # Handle UUID fields more robustly
+        if model._meta.pk.get_internal_type() == 'UUIDField':
+            # Convert to string if it's a UUID
+            pk_val = str(pk_val)
+        return (pk_val, model)
+```
+
+The key changes are:
+1. Check if the primary key is a UUID field
+2. Convert the primary key to a string representation
+3. Use the string representation for matching during prefetching
+
+This ensures that UUID primary keys are handled consistently during prefetching.
+
+The solution meets the requirements specified in the PR description:
+- Works with models using UUID as primary key
+- Fixes the issue with prefetch_related for Generic Foreign Keys
+- Minimal change to the existing codebase
+
+Recommended next steps:
+1. Add a test case to the Django test suite to verify this behavior
+2. Include a note in the changelog about the fix
+3. Consider adding a comment explaining the UUID handling
+
+Would you like me to proceed with creating a test case for this fix?

@@ -1,0 +1,272 @@
+{
+  "group": "django",
+  "python": "Python 3.10.20",
+  "probe_sha256": {
+    "beech": "bacd8789b89e2d6fc2847e95af24c5e6c80af3b206c10f7814bae4ac31767d0a",
+    "yew": "0859790eca66b68f1564c9894fa3e2d9ab9d4d057ae1e2e519a3bc3ebb176c39",
+    "lime": "683f180a92d84cbe013d83f886a43ca57445df0bf2f77dcd2693f29756711f40",
+    "palm": "88e04269aa76723b681bd1ecce8715199e9ff6988669ca5f73fec279af64d6e1",
+    "holly": "0a197a12a9c83be749e2edbc933ccfc298ba0a806b76deb38fd2341e8a42d4e5",
+    "hazel": "3fe3e01235526c6eb2f0863429010f7608e2a7da6eba121ee94fa0cb583a01f3",
+    "ash": "980f6536cc89d3345ae5a371b575534d171ea835faf02107d5f2338a0952a22c",
+    "rowan": "12e2b9b7f03c29e9c3774c08592c0da21bd0ed16b3bd7388a8ae6079ec0d6be0"
+  },
+  "replays": [
+    {
+      "slot": "beech",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/replay/responses/beech.py\", line 28, in <module>\n    assert prefetched.resolved == target\nAssertionError\n"
+    },
+    {
+      "slot": "beech",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "beech",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/replay/responses/beech.py\", line 28, in <module>\n    assert prefetched.resolved == target\nAssertionError\n"
+    },
+    {
+      "slot": "beech",
+      "variant": "sonnet",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/replay/responses/beech.py\", line 28, in <module>\n    assert prefetched.resolved == target\nAssertionError\n"
+    },
+    {
+      "slot": "yew",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/replay/responses/yew.py\", line 28, in <module>\n    assert ref.target == target\nAssertionError\n"
+    },
+    {
+      "slot": "yew",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "yew",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/replay/responses/yew.py\", line 28, in <module>\n    assert ref.target == target\nAssertionError\n"
+    },
+    {
+      "slot": "yew",
+      "variant": "sonnet",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/replay/responses/yew.py\", line 28, in <module>\n    assert ref.target == target\nAssertionError\n"
+    },
+    {
+      "slot": "lime",
+      "variant": "base",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "lime",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "lime",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/replay/responses/lime.py\", line 15, in <module>\n    assert charset and lookup(charset).name == lookup(mail.encoding).name\nAssertionError\n"
+    },
+    {
+      "slot": "lime",
+      "variant": "sonnet",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "palm",
+      "variant": "base",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "palm",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "palm",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/replay/responses/palm.py\", line 20, in <module>\n    assert decode_header(mail.message()[\"Subject\"]) == [(b\"Caf\\xe9\", \"iso-8859-1\")]\nAssertionError\n"
+    },
+    {
+      "slot": "palm",
+      "variant": "sonnet",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "holly",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/replay/responses/holly.py\", line 26, in <module>\n    assert (\"beta\", create_target.name) in alter_entry.dependencies\nAssertionError\n"
+    },
+    {
+      "slot": "holly",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "holly",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/replay/responses/holly.py\", line 26, in <module>\n    assert (\"beta\", create_target.name) in alter_entry.dependencies\nAssertionError\n"
+    },
+    {
+      "slot": "holly",
+      "variant": "sonnet",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "hazel",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/replay/responses/hazel.py\", line 26, in <module>\n    assert (\"testapp2\", \"0001_initial\") in alteration.dependencies, alteration.dependencies\nAssertionError: [('testapp1', '0001_initial')]\n"
+    },
+    {
+      "slot": "hazel",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "hazel",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/replay/responses/hazel.py\", line 26, in <module>\n    assert (\"testapp2\", \"0001_initial\") in alteration.dependencies, alteration.dependencies\nAssertionError: [('testapp1', '0001_initial')]\n"
+    },
+    {
+      "slot": "hazel",
+      "variant": "sonnet",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "ash",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/replay/responses/ash.py\", line 14, in <module>\n    assert [\"checked\" in box[\"attrs\"] for box in boxes] == [True, False]\nAssertionError\n"
+    },
+    {
+      "slot": "ash",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "ash",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/replay/responses/ash.py\", line 14, in <module>\n    assert [\"checked\" in box[\"attrs\"] for box in boxes] == [True, False]\nAssertionError\n"
+    },
+    {
+      "slot": "ash",
+      "variant": "sonnet",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "rowan",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/replay/responses/rowan.py\", line 10, in <module>\n    assert states == [True, False], states\nAssertionError: [True, True]\n"
+    },
+    {
+      "slot": "rowan",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "rowan",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/replay/responses/rowan.py\", line 10, in <module>\n    assert states == [True, False], states\nAssertionError: [False, False]\n"
+    },
+    {
+      "slot": "rowan",
+      "variant": "sonnet",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

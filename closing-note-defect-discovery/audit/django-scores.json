@@ -1,0 +1,34 @@
+{
+  "54b588c": {
+    "label": "hit",
+    "reason": "The CharField stores a valid 32-digit spelling of the target UUID. Prefetching the GenericForeignKey into a named attribute must return that target. Both candidates fail the equality check and the maintainer fix passes."
+  },
+  "231a5be": {
+    "label": "miss",
+    "reason": "Candidate 1 changes the charset used for a non-ASCII Subject. The test supplies an ASCII Message-ID and never supplies a non-ASCII hostname. It detects a separate header-encoding regression without exercising the issue's generated Message-ID requirement."
+  },
+  "4d06fe7": {
+    "label": "hit",
+    "reason": "The uppercase hexadecimal string represents the target UUID. Both candidates fail to return that target through the prefetched GenericForeignKey. They fail on object equality, independently of the test's zero-query assertion. The maintainer fix passes."
+  },
+  "400e150": {
+    "label": "hit",
+    "reason": "The checkbox's public check_test selects False as checked. Each BooleanField subwidget must use the predicate on its own initial value. The maintainer fix and candidate 2 produce the requested pair of states, while candidate 1 fails that assertion."
+  },
+  "4520913": {
+    "label": "hit",
+    "reason": "At the SplitArrayWidget level, the public checkbox predicate selects only 'enabled'. The original marks both children checked and candidate 1 marks neither checked. Both violate the required independent checked state per child. The maintainer fix and candidate 2 pass. This is a widget-level variant of the reported BooleanField example."
+  },
+  "b490356": {
+    "label": "hit",
+    "reason": "The target is created in a new migration in the other app. The UUID-to-foreign-key alteration needs that target to exist before it runs. Candidate 1 omits the dependency on the target-creating migration, while the maintainer fix and candidate 2 include it."
+  },
+  "5800a76": {
+    "label": "miss",
+    "reason": "The assertion checks exact Subject bytes and charset spelling with an explicit ASCII Message-ID. Candidate 1 fails, but the test never exercises a non-ASCII hostname or the required handling of its generated Message-ID."
+  },
+  "eadeec8": {
+    "label": "hit",
+    "reason": "The target already exists in the other app's initial migration. Candidate 1 lists only the altered model's own app as a dependency. With independent initial migrations, that leaves the new foreign key free to precede its target. The maintainer fix and candidate 2 include the required cross-app dependency."
+  }
+}

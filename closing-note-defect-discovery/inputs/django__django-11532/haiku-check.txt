@@ -1,0 +1,13 @@
+Command:
+cd /repo && PYTHONPATH=/repo python3 verify_punycode.py
+
+
+Observed output:
+Message-ID: <a80b5c60-3370-47d9-a6a7-b2a7388405f9@xn--jbt908a>
+Contains xn--: True
+DNS_NAME (str): xn--jbt908a
+DNS_NAME (repr): 'xn--jbt908a'
+Traceback (most recent call last):
+  File "verify_punycode.py", line 23, in <module>
+    print("Punycode of '\u6b63\u5b97':", '\u6b63\u5b97'.encode('idna').decode('ascii'))
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 13-14: ordinal not in range(128)

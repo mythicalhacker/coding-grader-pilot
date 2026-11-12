@@ -1,0 +1,1 @@
+The subject “Café” fits ISO-8859-1. Its encoded header should declare that charset and decode back to the original text. Checking only the decoded text would miss a change to UTF-8. Fixed Date and Message-ID headers keep the example independent of the clock and hostname. Patch A is expected to fail the charset assertion. Patch B and the correct implementation should pass.

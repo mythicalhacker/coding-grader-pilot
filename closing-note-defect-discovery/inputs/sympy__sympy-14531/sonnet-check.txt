@@ -1,0 +1,25 @@
+Command:
+cd /repo && python edge_cases.py
+
+
+Observed output:
+/repo/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import Mapping, defaultdict
+/repo/sympy/core/expr.py:12: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import defaultdict, Iterable
+/repo/sympy/core/containers.py:271: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  class OrderedSet(collections.MutableSet):
+/repo/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import Callable
+Test case 1: Nested expressions with sympy_integers=True
+Eq(x + S(1)/2, Limit(y + S(3)/4, y, S(5)/6))
+
+Test case 2: Function calls with sympy_integers=True
+f(x, S(1)/2) + S(3)/4
+
+Test case 3: Multiple symbols in python printer
+x = Symbol('x')
+y = Symbol('y')
+z = Symbol('z')
+f = Function('f')
+e = Eq(f(x, y), z + sin(x))

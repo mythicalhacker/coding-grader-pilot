@@ -1,0 +1,1 @@
+For the same empty input, the minimum must be positive infinity and the maximum negative infinity. Patch A’s recorded output reverses the pair. The assertion should pass silently on a correct implementation and raise AssertionError for patch A.

@@ -1,0 +1,13 @@
+All edge cases work correctly! The fix ensures that:
+1. All True values are rendered as checked
+2. All False values are rendered as unchecked
+3. Mixed values are rendered correctly with only True values checked
+4. Empty initial data renders all checkboxes unchecked
+
+The fix is minimal and only changes the CheckboxInput.get_context() method to create a copy of the attrs dictionary before modifying it. This ensures that each widget gets its own copy of the attrs dictionary and modifications don't affect other widgets.
+
+The fix is also safe because:
+1. It maintains backward compatibility - the behavior is the same for single checkboxes
+2. It doesn't change any public APIs
+3. It follows Django's coding style
+4. It fixes the issue in a clean way by addressing the root cause (shared mutable state)

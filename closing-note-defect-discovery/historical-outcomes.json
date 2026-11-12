@@ -1,0 +1,30 @@
+{
+  "haiku": {
+    "results_index": "https://raw.githubusercontent.com/SWE-bench/experiments/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20241022_tools_claude-3-5-haiku/results/results.json",
+    "sha256": "ad182915863e5d120e6bc7b99902b43b8c8a4d54cd1ecb0d139ec6013ce5df35",
+    "solved": {
+      "django__django-11211": false,
+      "django__django-11532": false,
+      "django__django-11740": false,
+      "django__django-12193": false,
+      "sympy__sympy-12419": false,
+      "sympy__sympy-14531": false,
+      "sympy__sympy-14976": false,
+      "sympy__sympy-15809": false
+    }
+  },
+  "sonnet": {
+    "results_index": "https://raw.githubusercontent.com/SWE-bench/experiments/40f164d5b8f1d249bf95a6df8b74b577fd8e519d/evaluation/verified/20241022_tools_claude-3-5-sonnet-updated/results/results.json",
+    "sha256": "eb2b4bb8052434b389c513ae1edd9a7e552dddafddf3ef8a865801190f347a0c",
+    "solved": {
+      "django__django-11211": true,
+      "django__django-11532": true,
+      "django__django-11740": true,
+      "django__django-12193": true,
+      "sympy__sympy-12419": true,
+      "sympy__sympy-14531": true,
+      "sympy__sympy-14976": true,
+      "sympy__sympy-15809": true
+    }
+  }
+}

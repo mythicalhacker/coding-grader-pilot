@@ -1,0 +1,22 @@
+Command:
+cd /repo && python test_gfk_uuid.py
+
+
+Observed output:
+Created Foo objects: foo1.id=a6ebb785-4171-4b4e-ab6a-d263ea78d14a (<class 'uuid.UUID'>), foo2.id=751dacdb-1f9d-4a81-88ab-7c911e226c25 (<class 'uuid.UUID'>)
+Created Bar objects:
+bar1: name=bar1, foo_object_id=a6ebb785-4171-4b4e-ab6a-d263ea78d14a (<class 'uuid.UUID'>)
+bar2: name=bar2, foo_object_id=751dacdb-1f9d-4a81-88ab-7c911e226c25 (<class 'uuid.UUID'>)
+
+Checking Bar object: bar1
+foo_object_id=a6ebb785-4171-4b4e-ab6a-d263ea78d14a (<class 'uuid.UUID'>)
+foo=Foo object (a6ebb785-4171-4b4e-ab6a-d263ea78d14a)
+foo.id=a6ebb785-4171-4b4e-ab6a-d263ea78d14a (<class 'uuid.UUID'>)
+foo.name=foo1
+
+Checking Bar object: bar2
+foo_object_id=751dacdb-1f9d-4a81-88ab-7c911e226c25 (<class 'uuid.UUID'>)
+foo=Foo object (751dacdb-1f9d-4a81-88ab-7c911e226c25)
+foo.id=751dacdb-1f9d-4a81-88ab-7c911e226c25 (<class 'uuid.UUID'>)
+foo.name=foo2
+All tests passed!

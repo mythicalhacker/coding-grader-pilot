@@ -1,0 +1,15 @@
+Command:
+python /repo/edge_cases.py
+
+
+Observed output:
+Min(5) = 5
+Max(5) = 5
+Min(oo) = oo
+Max(-oo) = -oo
+Min(x) = x
+Max(x) = x
+Min(x, oo) = x
+Max(x, -oo) = x
+Min(1, 2, 3) = 1
+Max(1, 2, 3) = 3

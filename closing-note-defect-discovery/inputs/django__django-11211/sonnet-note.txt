@@ -1,0 +1,32 @@
+Great! The test has passed. Let's summarize what we did to fix the issue:
+
+1. We identified that the problem was in the GenericForeignKey.get_prefetch_queryset method in django/contrib/contenttypes/fields.py.
+
+2. The issue occurred because when using UUID fields as primary keys, the values were not being properly converted to strings for comparison with the foo_object_id CharField.
+
+3. We fixed the issue by:
+   a. Modifying the gfk_key function to detect UUID fields and convert their values to strings:
+   ```python
+   if isinstance(model._meta.pk, models.UUIDField):
+       pk_value = str(pk_value)
+   ```
+
+   b. Modifying the lambda function that returns the object's key to also handle UUID fields:
+   ```python
+   lambda obj: (str(obj.pk) if isinstance(obj._meta.pk, models.UUIDField) else obj.pk, obj.__class__)
+   ```
+
+4. We created a test script that:
+   - Creates a Foo model with a UUID primary key
+   - Creates a Bar model with a GenericForeignKey to Foo
+   - Tests that prefetch_related works correctly with the UUID field
+
+The fix ensures that when comparing the object IDs during prefetch_related, both sides of the comparison are in string format when dealing with UUID fields. This is necessary because the foo_object_id field in the Bar model is a CharField, while the id field in the Foo model is a UUIDField.
+
+The test results show that:
+1. The Foo objects are created with UUID primary keys
+2. The Bar objects correctly store the UUIDs as strings in foo_object_id
+3. The prefetch_related query successfully retrieves and matches the related Foo objects
+4. The Foo objects maintain their UUID type for their id fields
+
+This fix should handle all edge cases since it specifically checks for UUIDField and only converts to string format when necessary for comparison. Other field types will continue to work as before.

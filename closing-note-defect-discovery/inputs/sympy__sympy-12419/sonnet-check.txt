@@ -1,0 +1,22 @@
+Command:
+cd /repo && python reproduce_bug.py
+
+
+Observed output:
+/repo/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import Mapping
+/repo/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import Callable
+/repo/sympy/assumptions/sathandlers.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import MutableMapping, defaultdict
+Identity matrix test:
+I 1 0 0 1
+
+Matrix properties test:
+True True
+
+Diagonal sum test:
+n
+
+Total sum test (should be n but gives 0):
+n

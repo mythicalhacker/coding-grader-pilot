@@ -1,0 +1,17 @@
+# Closing notes and defect discovery in archived SymPy and Django issues
+
+Locked on November 13, 2026 before assigning reviewers. The applicant requested this pilot. Codex prepared the protocol, assigned fresh model reviewers, and executed their proposed checks.
+
+## Cases and comparison
+
+Use the first four SymPy issues by ascending numeric pull request in the existing pinned SWE-bench Verified archive pool where both patch authors have an original closing note, both patches applied in the historical evaluation and the published tests recorded discordant results. Exclude cases already judged in the applicant's patch-review pilots. The IDs are 12419, 14531, 14976 and 15809. Single-repository selection permits local execution at each historical base. Enrichment for published disagreement makes this an exercise in finding known-to-be-imperfect pairs, not a population estimate. Do not replace cases on the basis of reviewer output or execution results.
+
+Before generating any packets or collecting any responses, add a second prespecified stratum with the first four eligible Django issues by the same numeric rule, excluding security issues and previously reviewed cases. This gives eight pairs across two libraries. Report both strata, including any unscorable cases. The initial SymPy selection and the Django extension were both fixed before outcomes. The comparison uses one independent reviewer per condition per issue.
+
+For each issue, prepare two packets with the same report of the problem, candidate diffs, order, and each author's last identifiable verification command and its recorded output. One packet additionally contains both original closing notes. Randomly assign the two packets to two opaque review slots. Balance which patch author appears first across issues. Use a separate fresh model context per packet, the same underlying configuration and instructions, and one proposed Python test per review. No reviewer gets a benchmark verdict, reference implementation, other review or second attempt. Reviewers can see whether a packet contains closing notes. They are blind to the answer key and the other condition. Match the allowed number of tests, tool access and submission-length limit; variable-length original evidence makes total input lengths unequal.
+
+## Scoring
+
+Run each proposed test unchanged in an independent Python process on the historical base, both candidate patches and the maintainer's fix. Review generated scripts before execution. A test earns a hit if it passes on the maintainer's fix and exposes an incorrect result or defect-related exception in at least one candidate, for behavior required by the issue. The base result is diagnostic and is not required to fail. Do not treat an import or setup failure, timeout, assertion about implementation details, or undocumented preference as a finding. Count each issue at most once per arm. Save outputs and report unscorable tests separately. A review that submits no test cannot find a defect. Have a separate scorer classify the issues using the test, problem and run results with the treatment assignment hidden.
+
+Report both arms' issue counts and the paired breakdown (both, command only, notes only, neither), any unusable cases, and whether they change the interpretation. Do not use eight issues to estimate a general effect, attribute an individual test to the notes, or decide which training reward to use. No training is performed.

@@ -1,0 +1,82 @@
+{
+  "django__django-11211": {
+    "repo": "django/django",
+    "base_commit": "ba726067604ce5a8ca3919edf653496722b433ab",
+    "authors": {
+      "haiku": {
+        "command": "cd /repo && python3 test_gfk_uuid_prefetch.py\n",
+        "source_line": 2040,
+        "observation_line": 2044,
+        "check_sha256": "9da867e00c8e012d20a2bb29cf64bc95293c284654601c220d6a35b72bedca0f",
+        "note_sha256": "13d5fcdb6cbabbe042d23cda669c7061bde227a822f709babfd7ce0af684a96d"
+      },
+      "sonnet": {
+        "command": "cd /repo && python test_gfk_uuid.py\n",
+        "source_line": 3998,
+        "observation_line": 4002,
+        "check_sha256": "d53322d52f9b8094395088787873e06d7a2b1e3ae74aacc1b7ff5fe8cea8dc76",
+        "note_sha256": "8ac9ae3ffbbfbe5c3dd3ab6bec8bb74c8dd38deeaefc77ba8bfc50119263eeaa"
+      }
+    }
+  },
+  "django__django-11532": {
+    "repo": "django/django",
+    "base_commit": "a5308514fb4bc5086c9a16a8a24a945eeebb073c",
+    "authors": {
+      "haiku": {
+        "command": "cd /repo && PYTHONPATH=/repo python3 verify_punycode.py\n",
+        "source_line": 2544,
+        "observation_line": 2548,
+        "check_sha256": "ed36dfb15636c2e17ed81432d94bfbb9f59f95e32c063925eafb5f133e9aaaa2",
+        "note_sha256": "0fd486b6a21712c30ce1f7e74443d0ef04a3dadbff1f49bc8396032e564e8229"
+      },
+      "sonnet": {
+        "command": "cd /repo && python reproduce_error.py\n",
+        "source_line": 1109,
+        "observation_line": 1113,
+        "check_sha256": "a29aaa6db97f9bd746d58c406d152e4cb581b457a68b234281052da7b0c9bf9f",
+        "note_sha256": "53e7a1b9bb34cca011ba443527609f4f056b589ef53b3fe305aafa287d5bef47"
+      }
+    }
+  },
+  "django__django-11740": {
+    "repo": "django/django",
+    "base_commit": "003bb34b218adb23d1a7e67932a6ba9b3c4dcc81",
+    "authors": {
+      "haiku": {
+        "command": "cd /repo && python3 reproduce_migration_issue.py\n",
+        "source_line": 721,
+        "observation_line": 725,
+        "check_sha256": "3f174636ef3f4c96abcd47aaf6454e4cc83d4060c361265560e457a22d3bb473",
+        "note_sha256": "d4002658bd876b15bb68cff01439947468f3bec853e0a837bc701a26d3201d7f"
+      },
+      "sonnet": {
+        "command": "cd /tmp/test_project && python manage.py migrate\n",
+        "source_line": 3025,
+        "observation_line": 3029,
+        "check_sha256": "7d051f9b8ae1e998378a8ca78ef9b61cdd4217f94b9275e75be481763f27f0bc",
+        "note_sha256": "9f8e7c6f72a259e2349e5b534a0f5752e2f7030016a13a375ab6b4abb6320f70"
+      }
+    }
+  },
+  "django__django-12193": {
+    "repo": "django/django",
+    "base_commit": "3fb7c12158a2402f0f80824f6778112071235803",
+    "authors": {
+      "haiku": {
+        "command": "cd /repo && python3 reproduce_issue.py\n",
+        "source_line": 4358,
+        "observation_line": 4362,
+        "check_sha256": "c60d26a2b7c81397b97fdaf74aa4aa22256df823705eec818c87202b621d191a",
+        "note_sha256": "a2e2dfa8a88f8e60793ea6839e58b66e60ed40e164eb799dca1bb758058e20dd"
+      },
+      "sonnet": {
+        "command": "cd /repo && PYTHONPATH=/repo python3 reproduce.py\n",
+        "source_line": 3717,
+        "observation_line": 3721,
+        "check_sha256": "82e97ddedb54210bb46b5f72e9b31437b9550ca52ad5d40618f538e49bc72668",
+        "note_sha256": "b666e3346a010592dc4574d964a355fa538ba8c966b58d0d91165b076a9b8643"
+      }
+    }
+  }
+}

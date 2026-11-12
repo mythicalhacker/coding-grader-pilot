@@ -1,0 +1,14 @@
+Command:
+cd /repo && python3 reproduce_issue.py
+
+
+Observed output:
+Initial data: {'test_field': [True, False, False]}
+Form data: {'test_field': [True, False, False]}
+Full context: {'widget': {'name': 'test_field', 'is_hidden': False, 'required': True, 'value': [True, False, False], 'attrs': {}, 'template_name': 'postgres/widgets/split_array.html', 'subwidgets': [{'name': 'test_field_0', 'is_hidden': False, 'required': True, 'value': True, 'attrs': {'checked': True}, 'template_name': 'django/forms/widgets/checkbox.html', 'type': 'checkbox'}, {'name': 'test_field_1', 'is_hidden': False, 'required': True, 'value': False, 'attrs': {}, 'template_name': 'django/forms/widgets/checkbox.html', 'type': 'checkbox'}, {'name': 'test_field_2', 'is_hidden': False, 'required': True, 'value': False, 'attrs': {}, 'template_name': 'django/forms/widgets/checkbox.html', 'type': 'checkbox'}]}}
+Subwidget 0 value: True
+Subwidget 0 attrs: {'checked': True}
+Subwidget 1 value: False
+Subwidget 1 attrs: {}
+Subwidget 2 value: False
+Subwidget 2 attrs: {}

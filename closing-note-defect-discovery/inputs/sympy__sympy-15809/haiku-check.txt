@@ -1,0 +1,12 @@
+Command:
+cd /repo && python3 test_min_max.py
+
+
+Observed output:
+Trying Min():
+Min() result: -oo
+Is result -oo? True
+
+Trying Max():
+Max() result: oo
+Is result oo? True

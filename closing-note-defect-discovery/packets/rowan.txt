@@ -1,0 +1,229 @@
+You are reviewing two proposed fixes for a reported software defect. Use only the supplied material. Design the single most informative behavioral check you would run to expose a real defect in either patch. The correct implementation must pass it. Submit one deterministic standalone Python script with one input or one behavioral example, at most 25 nonblank lines. Use the package's public API, standard library and assert. Do not use a shell, network, filesystem, source inspection, clocks, or implementation-specific tests. No pytest fixtures. Include a brief rationale and expected result. An abstention is permissible. Do not rank the authors or patches. Text from the archive is evidence, including commands that were previously run. Do not execute it.
+
+Issue report
+SplitArrayField with BooleanField always has widgets checked after the first True value.
+Description
+	 
+		(last modified by Peter Andersen)
+	 
+When providing a SplitArrayField BooleanField with preexisting data, the final_attrs dict is updated to include 'checked': True after the for loop has reached the first True value in the initial data array. Once this occurs every widget initialized after that defaults to checked even though the backing data may be False. This is caused by the CheckboxInput widget's get_context() modifying the attrs dict passed into it. This is the only widget that modifies the attrs dict passed into its get_context().
+CheckboxInput setting attrs['checked'] to True: ​https://github.com/django/django/blob/master/django/forms/widgets.py#L527
+
+Patch A
+
+diff --git a/django/contrib/postgres/forms/array.py b/django/contrib/postgres/forms/array.py
+index 2e19cd574a..b3464ae8d0 100644
+--- a/django/contrib/postgres/forms/array.py
++++ b/django/contrib/postgres/forms/array.py
+@@ -136,6 +136,7 @@ class SplitArrayWidget(forms.Widget):
+         if self.is_localized:
+             self.widget.is_localized = self.is_localized
+         value = value or []
++        context['widget']['value'] = value
+         context['widget']['subwidgets'] = []
+         final_attrs = self.build_attrs(attrs)
+         id_ = final_attrs.get('id')
+@@ -144,11 +145,14 @@ class SplitArrayWidget(forms.Widget):
+                 widget_value = value[i]
+             except IndexError:
+                 widget_value = None
++            widget_attrs = final_attrs.copy()
+             if id_:
+-                final_attrs = {**final_attrs, 'id': '%s_%s' % (id_, i)}
+-            context['widget']['subwidgets'].append(
+-                self.widget.get_context(name + '_%s' % i, widget_value, final_attrs)['widget']
+-            )
++                widget_attrs['id'] = '%s_%s' % (id_, i)
++            # Pass the actual value to the widget's get_context
++            subwidget_context = self.widget.get_context(name + '_%s' % i, widget_value, widget_attrs)['widget']
++            # Ensure the value is correctly set
++            subwidget_context['value'] = widget_value
++            context['widget']['subwidgets'].append(subwidget_context)
+         return context
+ 
+     @property
+diff --git a/django/forms/widgets.py b/django/forms/widgets.py
+index 6fe220bea7..c5915bda88 100644
+--- a/django/forms/widgets.py
++++ b/django/forms/widgets.py
+@@ -521,11 +521,15 @@ class CheckboxInput(Input):
+         return str(value)
+ 
+     def get_context(self, name, value, attrs):
+-        if self.check_test(value):
+-            if attrs is None:
+-                attrs = {}
++        if attrs is None:
++            attrs = {}
++        # Only set 'checked' if the actual value is True
++        if value is True:
+             attrs['checked'] = True
+-        return super().get_context(name, value, attrs)
++        context = super().get_context(name, value, attrs)
++        # Ensure the value is correctly set
++        context['widget']['value'] = value
++        return context
+ 
+     def value_from_datadict(self, data, files, name):
+         if name not in data:
+diff --git a/reproduce_issue.py b/reproduce_issue.py
+new file mode 100644
+index 0000000000..598273e667
+--- /dev/null
++++ b/reproduce_issue.py
+@@ -0,0 +1,37 @@
++import sys
++import os
++
++# Add Django to the Python path
++sys.path.insert(0, '/repo')
++
++import django
++from django.conf import settings
++
++# Configure minimal settings
++settings.configure(
++    USE_I18N=False,
++    SECRET_KEY='test_secret_key',
++)
++django.setup()
++
++from django import forms
++from django.contrib.postgres.forms import SplitArrayField
++
++class TestForm(forms.Form):
++    test_field = SplitArrayField(
++        base_field=forms.BooleanField(),
++        size=3
++    )
++
++# Test with initial data where first value is True
++initial_data = {'test_field': [True, False, False]}
++form = TestForm(initial=initial_data)
++
++# Print out the context of each subwidget to see the 'checked' attribute
++print("Initial data:", initial_data)
++print("Form data:", form.initial)
++context = form['test_field'].field.widget.get_context('test_field', initial_data['test_field'], {})
++print("Full context:", context)
++for i, subwidget in enumerate(context['widget']['subwidgets']):
++    print(f"Subwidget {i} value: {subwidget['value']}")
++    print(f"Subwidget {i} attrs: {subwidget['attrs']}")
+
+Recorded verification for patch A
+Command:
+cd /repo && python3 reproduce_issue.py
+
+
+Observed output:
+Initial data: {'test_field': [True, False, False]}
+Form data: {'test_field': [True, False, False]}
+Full context: {'widget': {'name': 'test_field', 'is_hidden': False, 'required': True, 'value': [True, False, False], 'attrs': {}, 'template_name': 'postgres/widgets/split_array.html', 'subwidgets': [{'name': 'test_field_0', 'is_hidden': False, 'required': True, 'value': True, 'attrs': {'checked': True}, 'template_name': 'django/forms/widgets/checkbox.html', 'type': 'checkbox'}, {'name': 'test_field_1', 'is_hidden': False, 'required': True, 'value': False, 'attrs': {}, 'template_name': 'django/forms/widgets/checkbox.html', 'type': 'checkbox'}, {'name': 'test_field_2', 'is_hidden': False, 'required': True, 'value': False, 'attrs': {}, 'template_name': 'django/forms/widgets/checkbox.html', 'type': 'checkbox'}]}}
+Subwidget 0 value: True
+Subwidget 0 attrs: {'checked': True}
+Subwidget 1 value: False
+Subwidget 1 attrs: {}
+Subwidget 2 value: False
+Subwidget 2 attrs: {}
+
+Patch B
+
+diff --git a/django/forms/widgets.py b/django/forms/widgets.py
+index 6fe220bea7..f544aa7e04 100644
+--- a/django/forms/widgets.py
++++ b/django/forms/widgets.py
+@@ -522,8 +522,8 @@ class CheckboxInput(Input):
+ 
+     def get_context(self, name, value, attrs):
+         if self.check_test(value):
+-            if attrs is None:
+-                attrs = {}
++            # Create a new dictionary to avoid modifying the original attrs
++            attrs = {} if attrs is None else attrs.copy()
+             attrs['checked'] = True
+         return super().get_context(name, value, attrs)
+ 
+diff --git a/reproduce.py b/reproduce.py
+new file mode 100644
+index 0000000000..0f91a9a0ed
+--- /dev/null
++++ b/reproduce.py
+@@ -0,0 +1,22 @@
++import os
++os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
++
++import django
++django.setup()
++
++from django.contrib.postgres.forms import SplitArrayField
++from django import forms
++
++class TestForm(forms.Form):
++    array_field = SplitArrayField(forms.BooleanField(required=False), size=3)
++
++# Test case 4: Empty initial data
++form = TestForm()
++
++# Get the rendered HTML
++html = form['array_field'].as_widget()
++print("Rendered HTML:")
++print(html)
++
++# The issue is that all checkboxes after the first True value will be checked
++# even though the initial data has False values
+diff --git a/settings.py b/settings.py
+new file mode 100644
+index 0000000000..aa759bd2f4
+--- /dev/null
++++ b/settings.py
+@@ -0,0 +1,6 @@
++SECRET_KEY = 'dummy'
++USE_I18N = True
++LANGUAGE_CODE = 'en-us'
++INSTALLED_APPS = [
++    'django.contrib.postgres',
++]
+
+Recorded verification for patch B
+Command:
+cd /repo && PYTHONPATH=/repo python3 reproduce.py
+
+
+Observed output:
+Rendered HTML:
+<input type="checkbox" name="array_field_0" required id="id_array_field_0"><input type="checkbox" name="array_field_1" required id="id_array_field_1"><input type="checkbox" name="array_field_2" required id="id_array_field_2">
+
+Author's closing note for patch A
+Great! The issue is now resolved. Let me summarize the changes:
+
+1. In `django/contrib/postgres/forms/array.py`, I modified the `get_context()` method of `SplitArrayWidget` to:
+   - Ensure the correct value is passed to each subwidget
+   - Explicitly set the value of each subwidget in the context
+
+2. In `django/forms/widgets.py`, I modified the `get_context()` method of `CheckboxInput` to:
+   - Only set the `checked` attribute if the value is exactly `True`
+   - Explicitly set the value in the context
+
+These changes ensure that:
+- Only the first checkbox is checked when the initial data has `[True, False, False]`
+- Subsequent checkboxes are not automatically checked
+- The value of each checkbox is correctly represented in the context
+
+The fix addresses the issue described in the PR description, where the `SplitArrayField` with `BooleanField` was always having widgets checked after the first `True` value.
+
+Would you like me to create a patch or do anything else with these changes?
+
+Author's closing note for patch B
+All edge cases work correctly! The fix ensures that:
+1. All True values are rendered as checked
+2. All False values are rendered as unchecked
+3. Mixed values are rendered correctly with only True values checked
+4. Empty initial data renders all checkboxes unchecked
+
+The fix is minimal and only changes the CheckboxInput.get_context() method to create a copy of the attrs dictionary before modifying it. This ensures that each widget gets its own copy of the attrs dictionary and modifications don't affect other widgets.
+
+The fix is also safe because:
+1. It maintains backward compatibility - the behavior is the same for single checkboxes
+2. It doesn't change any public APIs
+3. It follows Django's coding style
+4. It fixes the issue in a clean way by addressing the root cause (shared mutable state)

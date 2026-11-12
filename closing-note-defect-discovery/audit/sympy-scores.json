@@ -1,0 +1,34 @@
+{
+  "6e4b06c": {
+    "label": "miss",
+    "reason": "Both candidates fail and gold passes. A 3-by-3 identity has one 1 on its antidiagonal, so this is a real error. The issue requires the total over all entries using two independent indices. This test sums only three antidiagonal entries with one dependent index, so its failure does not establish failure of that requirement."
+  },
+  "dbb99d8": {
+    "label": "hit",
+    "reason": "The issue explicitly requires python(Eq(...)) to emit usable symbol declarations and identifies Limit as an affected subexpression. The constructor-only namespace tests whether generated code recreates the expression. Candidate 1 raises KeyError while printing the outer relation, before generating any code. Gold and candidate 2 succeed."
+  },
+  "a1c2cb2": {
+    "label": "miss",
+    "reason": "The four valid entries (i, 2*i) include exactly one diagonal entry, at i=0. Gold returns 1 and both candidates fail. This demonstrates a genuine error in summing a selected sequence of entries, but the issue requires the total over all entries with two independent indices. The selected sequence does not exercise that total."
+  },
+  "b3d4035": {
+    "label": "hit",
+    "reason": "Unpacking the empty tuple calls Min and Max with zero arguments. The assertion checks exactly the two infinities in the requested order. Candidate 1 fails the assertion, while gold and candidate 2 pass."
+  },
+  "f51ece4": {
+    "label": "hit",
+    "reason": "This checks the requested values of Min() and Max() directly. The combined assertion fails on candidate 1 and passes on gold and candidate 2. The traceback does not identify which value was wrong."
+  },
+  "e2e59d2": {
+    "label": "hit",
+    "reason": "The issue explicitly reports loss of precision in nsolve on a rational constant. This linear equation has exact root 1/3, and its residual is checked using exact rational arithmetic. Candidate 1 fails the 60-decimal-place tolerance at requested precision 64, while gold and candidate 2 pass."
+  },
+  "1f14b0b": {
+    "label": "hit",
+    "reason": "The public python printer must generate working code for Eq expressions and their nested arguments. Candidate 1 raises KeyError when printing the outer relation. Gold and candidate 2 produce code that reconstructs the expression using the supplied constructors."
+  },
+  "f48e3b1": {
+    "label": "hit",
+    "reason": "The issue requires mpmath lambdification to preserve rational values at backend precision. The value 2**(-1100) and its reciprocal scaling factor are exact binary powers, so scaling should yield 1 even at ordinary mpmath precision. Candidate 1 fails this numeric check, while gold and candidate 2 pass."
+  }
+}

@@ -1,0 +1,17 @@
+Command:
+cd /repo && python3 fix_matrix_sum.py
+
+
+Observed output:
+/repo/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import Mapping
+/repo/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import Callable
+/repo/sympy/assumptions/sathandlers.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import MutableMapping, defaultdict
+Matrix elements: I 1 0 0 1
+Is diagonal: True True
+Diagonal sum: n
+Total sum: n
+
+Concrete matrix total sum: 3

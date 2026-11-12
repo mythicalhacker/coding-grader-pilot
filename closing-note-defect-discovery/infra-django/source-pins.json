@@ -1,0 +1,121 @@
+{
+  "issues": [
+    "django__django-11211",
+    "django__django-11532",
+    "django__django-11740",
+    "django__django-12193"
+  ],
+  "cohort_selection": "Ascending numeric Django PRs with usable closing notes and a shared published behavioral test that passed in one archived patch and failed or errored in the other. Previously used issues excluded. The intervening AuthenticationForm issue 11790 was excluded on its title. Fixed before generating study responses.",
+  "dataset_url": "https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data/test-00000-of-00001.parquet",
+  "dataset_sha256": "a45b1fe4e2f0c8390b2b2938ac83e92ed5979000856808f3679c07812e9e6dcd",
+  "archive": [
+    {
+      "file": "django__django-11211.tar.gz",
+      "url": "https://codeload.github.com/django/django/tar.gz/ba726067604ce5a8ca3919edf653496722b433ab",
+      "sha256": "247ae9be3a8452785f6d4b423b5a2775ace15806b1c30df3e4762830489a916d"
+    },
+    {
+      "file": "django__django-11211-haiku.log",
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/django__django-11211.log",
+      "sha256": "bd75c24e82c922392638629c25ea68559dbbd3c294d453fa71a01eaa63009029",
+      "terminal_sha256": "13d5fcdb6cbabbe042d23cda669c7061bde227a822f709babfd7ce0af684a96d"
+    },
+    {
+      "file": "django__django-11211-haiku.diff",
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/django__django-11211/patch.diff",
+      "sha256": "9e94eb33dbda5052bd9868362a4582d24f6c6fdaee218a0ee10ab9a62012afcb"
+    },
+    {
+      "file": "django__django-11211-sonnet.log",
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/django__django-11211.log",
+      "sha256": "c4286faa81971fef600e29bf43ca6d26b70b6908dda81a689d36e89a03c31f90",
+      "terminal_sha256": "8ac9ae3ffbbfbe5c3dd3ab6bec8bb74c8dd38deeaefc77ba8bfc50119263eeaa"
+    },
+    {
+      "file": "django__django-11211-sonnet.diff",
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/django__django-11211/patch.diff",
+      "sha256": "5dd75f23c4b99e527ac5f7eab054465249b46b3eeec6429dc28648660998d091"
+    },
+    {
+      "file": "django__django-11532.tar.gz",
+      "url": "https://codeload.github.com/django/django/tar.gz/a5308514fb4bc5086c9a16a8a24a945eeebb073c",
+      "sha256": "af78af1e64f490251178a54bff3aa85c7ea73c69d112353e0dfa536404daa290"
+    },
+    {
+      "file": "django__django-11532-haiku.log",
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/django__django-11532.log",
+      "sha256": "bed7246c22243bb20605a366f144eee7d989f1bbfc13523fc6ddd5bf98e518e5",
+      "terminal_sha256": "0fd486b6a21712c30ce1f7e74443d0ef04a3dadbff1f49bc8396032e564e8229"
+    },
+    {
+      "file": "django__django-11532-haiku.diff",
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/django__django-11532/patch.diff",
+      "sha256": "f12e49219c6f07e8e94ae0523fb5159d54456cdf067101a7a1d4c2478b31fbcf"
+    },
+    {
+      "file": "django__django-11532-sonnet.log",
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/django__django-11532.log",
+      "sha256": "a5ffd9eb84673dff2d2cccddcd5d9f23cd6102fc8d6fa51d30e71f036310a276",
+      "terminal_sha256": "53e7a1b9bb34cca011ba443527609f4f056b589ef53b3fe305aafa287d5bef47"
+    },
+    {
+      "file": "django__django-11532-sonnet.diff",
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/django__django-11532/patch.diff",
+      "sha256": "a70454d150fb43a717da80ed34e692a926a0ef5f37d010cb7087a3fd9e3054a3"
+    },
+    {
+      "file": "django__django-11740.tar.gz",
+      "url": "https://codeload.github.com/django/django/tar.gz/003bb34b218adb23d1a7e67932a6ba9b3c4dcc81",
+      "sha256": "daa01fed414f2c782fdf61712dafed2dd2b0b6251c6dfe416927010a1e540968"
+    },
+    {
+      "file": "django__django-11740-haiku.log",
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/django__django-11740.log",
+      "sha256": "50cd210f7c85f22e95f8877b2a72f9e03cb5a66bd1dcf201d37d7b9481580071",
+      "terminal_sha256": "d4002658bd876b15bb68cff01439947468f3bec853e0a837bc701a26d3201d7f"
+    },
+    {
+      "file": "django__django-11740-haiku.diff",
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/django__django-11740/patch.diff",
+      "sha256": "0c1e0ff1a6d7a082f7594fcfae09eaabc81188491376a0e70304b1afd1173dcb"
+    },
+    {
+      "file": "django__django-11740-sonnet.log",
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/django__django-11740.log",
+      "sha256": "bbe5197a7494faade2163d9486bbf2146fe775a128c5a4e1ae9e2098d29ddf82",
+      "terminal_sha256": "9f8e7c6f72a259e2349e5b534a0f5752e2f7030016a13a375ab6b4abb6320f70"
+    },
+    {
+      "file": "django__django-11740-sonnet.diff",
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/django__django-11740/patch.diff",
+      "sha256": "5252424507cff644ceea9393a237721ec23078b00900809650c5c7e9f0d2843b"
+    },
+    {
+      "file": "django__django-12193.tar.gz",
+      "url": "https://codeload.github.com/django/django/tar.gz/3fb7c12158a2402f0f80824f6778112071235803",
+      "sha256": "d12f075f23f4500caba0f6bd155174ed07ce8c1966b96365fc2da0d07c0acda8"
+    },
+    {
+      "file": "django__django-12193-haiku.log",
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/django__django-12193.log",
+      "sha256": "f5d1ae60ce852337285c0d60d8cfde8f83cfb2a79aa3dc9d62cc0ce77c498960",
+      "terminal_sha256": "a2e2dfa8a88f8e60793ea6839e58b66e60ed40e164eb799dca1bb758058e20dd"
+    },
+    {
+      "file": "django__django-12193-haiku.diff",
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/django__django-12193/patch.diff",
+      "sha256": "4eb8875f0714538ba45a2b97bdb88a7a553384b27d31fd45b8c208c33d042fd2"
+    },
+    {
+      "file": "django__django-12193-sonnet.log",
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/django__django-12193.log",
+      "sha256": "acc3259866df1abd171d9729bd0d0ee0ef93b9d9ff426f8c617c60c82f93d7da",
+      "terminal_sha256": "b666e3346a010592dc4574d964a355fa538ba8c966b58d0d91165b076a9b8643"
+    },
+    {
+      "file": "django__django-12193-sonnet.diff",
+      "url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/django__django-12193/patch.diff",
+      "sha256": "46f4f05a06638c277775002ed176cce672dec51b2c153adbaf6207cd82dc2c98"
+    }
+  ]
+}

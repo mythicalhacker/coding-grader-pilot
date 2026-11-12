@@ -1,0 +1,10 @@
+Command:
+cd /tmp/test_project && python manage.py migrate
+
+
+Observed output:
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions, testapp1, testapp2
+Running migrations:
+  Applying testapp2.0001_initial... OK
+  Applying testapp1.0002_auto_20241018_0446... OK

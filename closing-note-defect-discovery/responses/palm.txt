@@ -1,0 +1,3 @@
+The subject fits the sender’s chosen ISO-8859-1 encoding. Reading its encoded-word charset and bytes checks whether the hostname fix also changes the encoding of ordinary subjects. Supplying Date and Message-ID keeps hostname and time out of this example.
+
+Expected result: the subject carries the ISO-8859-1 label and the byte E9 for é. Patch A uses UTF-8 even when ISO-8859-1 can encode the subject, so the assertion should fail there. Patch B should pass.

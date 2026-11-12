@@ -1,0 +1,3 @@
+Both apps have an initial migration. The next change creates beta.Target and converts alpha.Entry.link from a UUID to a foreign key to that target. The generated alpha migration must depend on the beta migration that actually creates Target. A dependency on beta's initial migration would still allow the alteration to run too early.
+
+Expected result: the assertion passes because the migration that creates Target appears in the alteration's dependencies.

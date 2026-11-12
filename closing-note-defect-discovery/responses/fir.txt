@@ -1,0 +1,1 @@
+The same empty input should give positive infinity for its minimum and negative infinity for its maximum. Checking the ordered pair exposes the reversed signs recorded for patch A. The expected pair is (oo, -oo), and the script should exit silently when the assertion passes.

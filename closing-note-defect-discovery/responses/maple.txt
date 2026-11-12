@@ -1,0 +1,1 @@
+mpmath can represent 2^-1100 exactly at default precision because it is a power of two. Multiplying the evaluated rational by its denominator should give exactly one. Python float division underflows to zero for this input, which makes the assertion fail if the division happens before mpmath receives the value.

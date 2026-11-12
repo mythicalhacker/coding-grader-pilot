@@ -1,0 +1,16 @@
+Command:
+cd /repo && python reproduce.py
+
+
+Observed output:
+Test case 1 - Generated function source:
+def _lambdifygenerated(x):
+    return (  # Not supported in Python:
+  # RisingFactorial
+RisingFactorial(18, x) + mpf(-232)/mpf(3))
+
+
+Test case 2 - Precision test:
+Result: 77.33333333333333333333333333333333333333333333333333333333333333
+Expected: 77.33333333333333333333333333333333333333333333333333333333333333
+Difference: 1.215432671457254239676575010503930515740283626703352955683811839E-63

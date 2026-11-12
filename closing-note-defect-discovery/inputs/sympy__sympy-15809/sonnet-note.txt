@@ -1,0 +1,11 @@
+All edge cases work correctly! Our changes only affect the no-argument case and don't interfere with any other functionality. The changes are minimal and focused on just the behavior specified in the PR description.
+
+To summarize:
+1. We explored the repository and found the relevant code in `/repo/sympy/functions/elementary/miscellaneous.py`
+2. We created a script to reproduce the error and confirmed it
+3. We modified the `MinMaxBase.__new__` method to return `cls.identity` when no arguments are provided
+4. We verified that the changes work correctly for both `Min()` and `Max()`
+5. We confirmed that our implementation matches the mathematical convention from the PR description
+6. We tested edge cases to ensure we didn't break any existing functionality
+
+The changes are minimal, focused, and achieve exactly what was requested in the PR description.

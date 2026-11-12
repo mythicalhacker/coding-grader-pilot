@@ -1,0 +1,1 @@
+The sum visits (0, 0), (1, 2), (2, 4), and (3, 6). Only (0, 0) lies on the diagonal, so the expected total is 1. Both indices depend on the same summation variable. Treating the two expressions as always unequal misses the first entry, while treating the column as a fixed index can leave the bound variable in the result.

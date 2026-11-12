@@ -1,0 +1,143 @@
+{
+  "dataset_url": "https://huggingface.co/datasets/princeton-nlp/SWE-bench_Verified/resolve/c104f840cc67f8b6eec6f759ebc8b2693d585d4a/data/test-00000-of-00001.parquet",
+  "dataset_sha256": "a45b1fe4e2f0c8390b2b2938ac83e92ed5979000856808f3679c07812e9e6dcd",
+  "verification_command_rule": "Last bash action invoking a Python behavioral reproduction or test script before submission, preserving command and full following observation (terminal colors and structural delimiters removed). No author shell command was executed.",
+  "cases": {
+    "sympy__sympy-12419": {
+      "repo": "sympy/sympy",
+      "base_commit": "479939f8c65c8c2908bbedc959549a257a7c0b0b",
+      "base_archive_url": "https://codeload.github.com/sympy/sympy/tar.gz/479939f8c65c8c2908bbedc959549a257a7c0b0b",
+      "source_archive_sha256": "4a67b34aae5ea1dea3c1ffab4aa84fe26c4bb36dd457627f417f3cb8375e66ec",
+      "problem_sha256": "48b311ac971aa2fe020b8dd89cd7d2aac3278d4b668921c6b07a29cb914ed4a5",
+      "gold_patch_sha256": "18794d75ba41397df2db6f4bad1c870a0d15be216987b0f594d5fdf11ded7f99",
+      "authors": {
+        "haiku": {
+          "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/sympy__sympy-12419.log",
+          "trajectory_sha256": "b38821c0fd3bb4db8ac254a5a0ece0485265d66859b2e45db956de31cb96eb02",
+          "patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/sympy__sympy-12419/patch.diff",
+          "patch_sha256": "2c12b6fcab79e13dedaf2b4887e11403baaa1c0f1b0d7dfbe0f62e3f275ffdb3",
+          "final_command_line": 3276,
+          "observation_line": 3280,
+          "command": "cd /repo && python3 fix_matrix_sum.py\n",
+          "empty_observation": false,
+          "check_sha256": "cc9fc57ac71a4457361c7f7cc8e533086a9a8c8b83e7ec52230b521543bf3988",
+          "note_sha256": "a17745c284015c7a01e7641e947fc8d39a20716fcf4fa0ee5a1436a3e96db9ef"
+        },
+        "sonnet": {
+          "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/sympy__sympy-12419.log",
+          "trajectory_sha256": "16c8b741a36b1bf7ef37fa17d8104476ed3a8059187db0d41512349d5232aff6",
+          "patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/sympy__sympy-12419/patch.diff",
+          "patch_sha256": "c4a3801dc477db54134f82dc67ac9e2bf788167974440dea3119e62c472d8c64",
+          "final_command_line": 7624,
+          "observation_line": 7628,
+          "command": "cd /repo && python reproduce_bug.py\n",
+          "empty_observation": false,
+          "check_sha256": "f7977494cb9e8485d5cb1078bf2a7152bd55c7bcbfcc794a11c9dcc61bfd686c",
+          "note_sha256": "86992ef7b6affcd20bda84c2f4a670e130fa589e08e0a810c59b7844d25f4b51"
+        }
+      }
+    },
+    "sympy__sympy-14531": {
+      "repo": "sympy/sympy",
+      "base_commit": "205da797006360fc629110937e39a19c9561313e",
+      "base_archive_url": "https://codeload.github.com/sympy/sympy/tar.gz/205da797006360fc629110937e39a19c9561313e",
+      "source_archive_sha256": "a745296dfdd079b0210dfdcbc2d6304fefa6ad981ce797052c68c8e63d0bcd91",
+      "problem_sha256": "8cf843dcf782552dff92511ba20491f033530e49ebbf1594db04bef5a60ada92",
+      "gold_patch_sha256": "a68cfdc90c02963442c0c0f35aa22b970921bf5766f255a53066393e07430033",
+      "authors": {
+        "haiku": {
+          "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/sympy__sympy-14531.log",
+          "trajectory_sha256": "91d4eff89ef3ec08d8c7bc058f7d946ff8c825c8b1554255356b81677fee6b32",
+          "patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/sympy__sympy-14531/patch.diff",
+          "patch_sha256": "ebc531077da3264dbf4686401e6ec0ae4039661c56c73b31c8bc0869946e1fcd",
+          "final_command_line": 1567,
+          "observation_line": 1571,
+          "command": "cd /repo && python3 reproduce_error.py\n",
+          "empty_observation": false,
+          "check_sha256": "3d08a95dd32cf4f78877f63bd1ad55a5b660a65af4f8b6f99fb22b2348496ef7",
+          "note_sha256": "e373b08f41805b344717afa039678f8a0d727805f82255c5488930e553fb1572"
+        },
+        "sonnet": {
+          "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/sympy__sympy-14531.log",
+          "trajectory_sha256": "f90332042508c9bc73b7300cc2c3f83ac76b643826f15c7d452515bd8afab145",
+          "patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/sympy__sympy-14531/patch.diff",
+          "patch_sha256": "841353ccf115b60c8e3eb72eafd85cb5d178d712eaefa9cf24260a48ea2dc3d6",
+          "final_command_line": 1665,
+          "observation_line": 1669,
+          "command": "cd /repo && python edge_cases.py\n",
+          "empty_observation": false,
+          "check_sha256": "74cadb0b269ee2a1d08f398bbe6f4e97e37b932b88096967e48660fb40f6d6b2",
+          "note_sha256": "b79025f37a6c2bb3eb4240231dc941c7b6a1c007aa335ed16040df9d996616e2"
+        }
+      }
+    },
+    "sympy__sympy-14976": {
+      "repo": "sympy/sympy",
+      "base_commit": "9cbea134220b0b951587e11b63e2c832c7246cbc",
+      "base_archive_url": "https://codeload.github.com/sympy/sympy/tar.gz/9cbea134220b0b951587e11b63e2c832c7246cbc",
+      "source_archive_sha256": "933429412e3fb8697c383ec1d772e0c1313ff87ab5e4ac90d583cb44eb4b90f7",
+      "problem_sha256": "3c0d98bb2098e4b8be846f95279696c6ab55e3ab5f22f05c946c0af281f81bda",
+      "gold_patch_sha256": "88a494b898a5dabfc5a1952212570a7002eaf119fbcb8019a3ef6f7a52ab26f6",
+      "authors": {
+        "haiku": {
+          "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/sympy__sympy-14976.log",
+          "trajectory_sha256": "96cb159c955b6c72ea92782bd6b56cfb58288db3bddc80e8fd103e5c3bd30610",
+          "patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/sympy__sympy-14976/patch.diff",
+          "patch_sha256": "f956e8349a4cedd0633aef0ed6f02dd7d8d1b75d06186fc1835070241b28d94e",
+          "final_command_line": 3096,
+          "observation_line": 3100,
+          "command": "cd /repo && python3 reproduce_error.py\n",
+          "empty_observation": false,
+          "check_sha256": "eeebc4b2292546a174f4dfa5f6a45c210079e0d797da430eacc11857209df91b",
+          "note_sha256": "3232d03bbca6502cb3208f038586cd16341552910e2ff78776c837c045058e57"
+        },
+        "sonnet": {
+          "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/sympy__sympy-14976.log",
+          "trajectory_sha256": "5269ecd86f3bf707352d51361e1bb68a13fce9c9a1f202d7b99dff0c325726c9",
+          "patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/sympy__sympy-14976/patch.diff",
+          "patch_sha256": "f2f79b5ec3d2674f6a29970dddb59cc21e72b7433c069ce63abcf237a0c45626",
+          "final_command_line": 1873,
+          "observation_line": 1877,
+          "command": "cd /repo && python reproduce.py\n",
+          "empty_observation": false,
+          "check_sha256": "a234c53a3e83bf5ce71ccea33cd3ea164ebf79e5d98fd37ea517a4b8e8819372",
+          "note_sha256": "cadb3fa988482a78b0d326b963e6157cab5a2bd068b0d5ef5234b6035cdeef76"
+        }
+      }
+    },
+    "sympy__sympy-15809": {
+      "repo": "sympy/sympy",
+      "base_commit": "28d913d3cead6c5646307ffa6540b21d65059dfd",
+      "base_archive_url": "https://codeload.github.com/sympy/sympy/tar.gz/28d913d3cead6c5646307ffa6540b21d65059dfd",
+      "source_archive_sha256": "e394d57a809505cfbb030f744ee161c49e373ddd8961701310c45d768e5408ed",
+      "problem_sha256": "4d0982bb7d0bc25fd0f0c24f136fddb1e2e9e1571502aadcae1c84644c40bd5a",
+      "gold_patch_sha256": "721408a9d86c5c95e2a1f6d495ba550be573a072e016f5ad14e2d36dce8ccda1",
+      "authors": {
+        "haiku": {
+          "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/sympy__sympy-15809.log",
+          "trajectory_sha256": "9e8566a6810aab228ba87c3c3b4a93c4e06f85b369fb6174e1c46cb19f3cd947",
+          "patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/sympy__sympy-15809/patch.diff",
+          "patch_sha256": "06d02b21ceba2f4364e0a51200d7bde767845268522abac314296f373e205233",
+          "final_command_line": 8774,
+          "observation_line": 8778,
+          "command": "cd /repo && python3 test_min_max.py\n",
+          "empty_observation": false,
+          "check_sha256": "9bc891858bc30de0ddef812f7a12a411700b8c6ac8beb0d7c7de6441069be459",
+          "note_sha256": "3d0cac80068e0addce4bf4217275afbb3dfce159fd139b002dbc9b10313db8e9"
+        },
+        "sonnet": {
+          "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/sympy__sympy-15809.log",
+          "trajectory_sha256": "95593c2b7f148fd5560917c0e43501429ddd7c6182c3332a8c1035e20d3b3c6f",
+          "patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/sympy__sympy-15809/patch.diff",
+          "patch_sha256": "2a442dfd6a8ac8b75f2317d57e09730a349f6e142bfb7618fb0e0f22c758058e",
+          "final_command_line": 1172,
+          "observation_line": 1176,
+          "command": "python /repo/edge_cases.py\n",
+          "empty_observation": false,
+          "check_sha256": "5ab0e25a9933968950066095372b742b1bc79be4ca425793e9fc4e62b1ec2a07",
+          "note_sha256": "308f23f028e4c33c2b740946987aaa6f32587e8f0e16bff9acd0074f25c16c08"
+        }
+      }
+    }
+  }
+}

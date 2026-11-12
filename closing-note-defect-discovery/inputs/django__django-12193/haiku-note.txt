@@ -1,0 +1,18 @@
+Great! The issue is now resolved. Let me summarize the changes:
+
+1. In `django/contrib/postgres/forms/array.py`, I modified the `get_context()` method of `SplitArrayWidget` to:
+   - Ensure the correct value is passed to each subwidget
+   - Explicitly set the value of each subwidget in the context
+
+2. In `django/forms/widgets.py`, I modified the `get_context()` method of `CheckboxInput` to:
+   - Only set the `checked` attribute if the value is exactly `True`
+   - Explicitly set the value in the context
+
+These changes ensure that:
+- Only the first checkbox is checked when the initial data has `[True, False, False]`
+- Subsequent checkboxes are not automatically checked
+- The value of each checkbox is correctly represented in the context
+
+The fix addresses the issue described in the PR description, where the `SplitArrayField` with `BooleanField` was always having widgets checked after the first `True` value.
+
+Would you like me to create a patch or do anything else with these changes?

@@ -1,0 +1,247 @@
+{
+  "cases": {
+    "sympy__sympy-12419": {
+      "commands_only": {
+        "slot": "elm",
+        "audit_id": "6e4b06c",
+        "primary": "miss",
+        "secondary": "miss",
+        "run_signal": true,
+        "statuses": {
+          "base": "fail",
+          "gold": "pass",
+          "haiku": "fail",
+          "sonnet": "fail"
+        }
+      },
+      "with_notes": {
+        "slot": "birch",
+        "audit_id": "a1c2cb2",
+        "primary": "miss",
+        "secondary": "miss",
+        "run_signal": true,
+        "statuses": {
+          "base": "fail",
+          "gold": "pass",
+          "haiku": "fail",
+          "sonnet": "fail"
+        }
+      }
+    },
+    "sympy__sympy-14531": {
+      "commands_only": {
+        "slot": "cedar",
+        "audit_id": "dbb99d8",
+        "primary": "hit",
+        "secondary": "hit",
+        "run_signal": true,
+        "statuses": {
+          "base": "fail",
+          "gold": "pass",
+          "haiku": "fail",
+          "sonnet": "pass"
+        }
+      },
+      "with_notes": {
+        "slot": "pine",
+        "audit_id": "1f14b0b",
+        "primary": "hit",
+        "secondary": "hit",
+        "run_signal": true,
+        "statuses": {
+          "base": "fail",
+          "gold": "pass",
+          "haiku": "fail",
+          "sonnet": "pass"
+        }
+      }
+    },
+    "sympy__sympy-14976": {
+      "commands_only": {
+        "slot": "oak",
+        "audit_id": "e2e59d2",
+        "primary": "hit",
+        "secondary": "hit",
+        "run_signal": true,
+        "statuses": {
+          "base": "fail",
+          "gold": "pass",
+          "haiku": "fail",
+          "sonnet": "pass"
+        }
+      },
+      "with_notes": {
+        "slot": "maple",
+        "audit_id": "f48e3b1",
+        "primary": "hit",
+        "secondary": "hit",
+        "run_signal": true,
+        "statuses": {
+          "base": "fail",
+          "gold": "pass",
+          "haiku": "fail",
+          "sonnet": "pass"
+        }
+      }
+    },
+    "sympy__sympy-15809": {
+      "commands_only": {
+        "slot": "fir",
+        "audit_id": "b3d4035",
+        "primary": "hit",
+        "secondary": "hit",
+        "run_signal": true,
+        "statuses": {
+          "base": "fail",
+          "gold": "pass",
+          "haiku": "fail",
+          "sonnet": "pass"
+        }
+      },
+      "with_notes": {
+        "slot": "larch",
+        "audit_id": "f51ece4",
+        "primary": "hit",
+        "secondary": "hit",
+        "run_signal": true,
+        "statuses": {
+          "base": "fail",
+          "gold": "pass",
+          "haiku": "fail",
+          "sonnet": "pass"
+        }
+      }
+    },
+    "django__django-11211": {
+      "commands_only": {
+        "slot": "beech",
+        "audit_id": "54b588c",
+        "primary": "hit",
+        "secondary": "hit",
+        "run_signal": true,
+        "statuses": {
+          "base": "fail",
+          "gold": "pass",
+          "haiku": "fail",
+          "sonnet": "fail"
+        }
+      },
+      "with_notes": {
+        "slot": "yew",
+        "audit_id": "4d06fe7",
+        "primary": "hit",
+        "secondary": "hit",
+        "run_signal": true,
+        "statuses": {
+          "base": "fail",
+          "gold": "pass",
+          "haiku": "fail",
+          "sonnet": "fail"
+        }
+      }
+    },
+    "django__django-11532": {
+      "commands_only": {
+        "slot": "lime",
+        "audit_id": "231a5be",
+        "primary": "miss",
+        "secondary": "miss",
+        "run_signal": true,
+        "statuses": {
+          "base": "pass",
+          "gold": "pass",
+          "haiku": "fail",
+          "sonnet": "pass"
+        }
+      },
+      "with_notes": {
+        "slot": "palm",
+        "audit_id": "5800a76",
+        "primary": "miss",
+        "secondary": "miss",
+        "run_signal": true,
+        "statuses": {
+          "base": "pass",
+          "gold": "pass",
+          "haiku": "fail",
+          "sonnet": "pass"
+        }
+      }
+    },
+    "django__django-11740": {
+      "commands_only": {
+        "slot": "holly",
+        "audit_id": "b490356",
+        "primary": "hit",
+        "secondary": "hit",
+        "run_signal": true,
+        "statuses": {
+          "base": "fail",
+          "gold": "pass",
+          "haiku": "fail",
+          "sonnet": "pass"
+        }
+      },
+      "with_notes": {
+        "slot": "hazel",
+        "audit_id": "eadeec8",
+        "primary": "hit",
+        "secondary": "hit",
+        "run_signal": true,
+        "statuses": {
+          "base": "fail",
+          "gold": "pass",
+          "haiku": "fail",
+          "sonnet": "pass"
+        }
+      }
+    },
+    "django__django-12193": {
+      "commands_only": {
+        "slot": "ash",
+        "audit_id": "400e150",
+        "primary": "hit",
+        "secondary": "hit",
+        "run_signal": true,
+        "statuses": {
+          "base": "fail",
+          "gold": "pass",
+          "haiku": "fail",
+          "sonnet": "pass"
+        }
+      },
+      "with_notes": {
+        "slot": "rowan",
+        "audit_id": "4520913",
+        "primary": "hit",
+        "secondary": "hit",
+        "run_signal": true,
+        "statuses": {
+          "base": "fail",
+          "gold": "pass",
+          "haiku": "fail",
+          "sonnet": "pass"
+        }
+      }
+    }
+  },
+  "primary": {
+    "both": 6,
+    "commands_only": 0,
+    "notes_only": 0,
+    "neither": 2
+  },
+  "secondary": {
+    "both": 6,
+    "commands_only": 0,
+    "notes_only": 0,
+    "neither": 2
+  },
+  "gold_passes_and_candidate_fails": {
+    "both": 8,
+    "commands_only": 0,
+    "notes_only": 0,
+    "neither": 0
+  },
+  "unscorable": 0
+}

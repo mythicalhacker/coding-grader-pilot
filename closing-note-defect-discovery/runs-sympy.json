@@ -1,0 +1,272 @@
+{
+  "group": "sympy",
+  "python": "Python 3.8.20",
+  "probe_sha256": {
+    "elm": "5036a043c9026902b62945b23032df7354dca7d85ff2eb95a1e4f8dc20ea3890",
+    "birch": "3fb1d5d67b8db2a130a264ad456a9f240c1bc5115ddc758ef88d6494cc510f03",
+    "cedar": "0e45d4a16488ecd30ff50a047df4d9e771bbbc60eac2165debe98d044b5c4183",
+    "pine": "d0426f938c571da8ebbd3b2de36ce40b2dc3a820babea5830b26b12e6080f2f1",
+    "oak": "2ee920b6b219d0994faa8beb1e5b4ad0607caca9b20d42db07e7a9fda245d8dc",
+    "maple": "ad9b17b344ccf06a93c02d554e59be904cbd6e970b68d8588e8c2688f00101f8",
+    "fir": "e42fd6082beeef3ee01fbd5cefa61a0ffd1e152306101103d4a6934d982baf6d",
+    "larch": "c5fda608d3c2668ba53685dc2d1412d70be4e136f0e9ec1313d380fd0c9f4e44"
+  },
+  "replays": [
+    {
+      "slot": "elm",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-12419/base/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Mapping\n/replay/trees/sympy__sympy-12419/base/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-12419/base/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Callable\nTraceback (most recent call last):\n  File \"/replay/responses/elm.py\", line 5, in <module>\n    assert Sum(matrix[i, 2 - i], (i, 0, 2)).doit() == 1\nAssertionError\n"
+    },
+    {
+      "slot": "elm",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-12419/gold/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Mapping\n/replay/trees/sympy__sympy-12419/gold/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-12419/gold/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Callable\n"
+    },
+    {
+      "slot": "elm",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-12419/haiku/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Mapping\n/replay/trees/sympy__sympy-12419/haiku/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-12419/haiku/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Callable\nTraceback (most recent call last):\n  File \"/replay/responses/elm.py\", line 5, in <module>\n    assert Sum(matrix[i, 2 - i], (i, 0, 2)).doit() == 1\nAssertionError\n"
+    },
+    {
+      "slot": "elm",
+      "variant": "sonnet",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-12419/sonnet/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Mapping\n/replay/trees/sympy__sympy-12419/sonnet/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-12419/sonnet/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Callable\nTraceback (most recent call last):\n  File \"/replay/responses/elm.py\", line 5, in <module>\n    assert Sum(matrix[i, 2 - i], (i, 0, 2)).doit() == 1\nAssertionError\n"
+    },
+    {
+      "slot": "birch",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-12419/base/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Mapping\n/replay/trees/sympy__sympy-12419/base/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-12419/base/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Callable\nTraceback (most recent call last):\n  File \"/replay/responses/birch.py\", line 5, in <module>\n    assert total == 1, total\nAssertionError: 0\n"
+    },
+    {
+      "slot": "birch",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-12419/gold/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Mapping\n/replay/trees/sympy__sympy-12419/gold/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-12419/gold/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Callable\n"
+    },
+    {
+      "slot": "birch",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-12419/haiku/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Mapping\n/replay/trees/sympy__sympy-12419/haiku/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-12419/haiku/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Callable\nTraceback (most recent call last):\n  File \"/replay/responses/birch.py\", line 5, in <module>\n    assert total == 1, total\nAssertionError: 0\n"
+    },
+    {
+      "slot": "birch",
+      "variant": "sonnet",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-12419/sonnet/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Mapping\n/replay/trees/sympy__sympy-12419/sonnet/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-12419/sonnet/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Callable\nTraceback (most recent call last):\n  File \"/replay/responses/birch.py\", line 5, in <module>\n    assert total == 1, total\nAssertionError: Piecewise((1, (2*i >= 0) & (2*i <= 3)), (0, True))\n"
+    },
+    {
+      "slot": "cedar",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-14531/base/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Mapping, defaultdict\n/replay/trees/sympy__sympy-14531/base/sympy/core/expr.py:12: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import defaultdict, Iterable\n/replay/trees/sympy__sympy-14531/base/sympy/core/containers.py:271: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  class OrderedSet(collections.MutableSet):\n/replay/trees/sympy__sympy-14531/base/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-14531/base/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Callable\nTraceback (most recent call last):\n  File \"/replay/responses/cedar.py\", line 8, in <module>\n    exec(python(expr), namespace)\n  File \"<string>\", line 1, in <module>\nNameError: name 'f' is not defined\n"
+    },
+    {
+      "slot": "cedar",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-14531/gold/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Mapping, defaultdict\n/replay/trees/sympy__sympy-14531/gold/sympy/core/expr.py:12: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import defaultdict, Iterable\n/replay/trees/sympy__sympy-14531/gold/sympy/core/containers.py:271: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  class OrderedSet(collections.MutableSet):\n/replay/trees/sympy__sympy-14531/gold/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-14531/gold/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Callable\n"
+    },
+    {
+      "slot": "cedar",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-14531/haiku/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Mapping, defaultdict\n/replay/trees/sympy__sympy-14531/haiku/sympy/core/expr.py:12: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import defaultdict, Iterable\n/replay/trees/sympy__sympy-14531/haiku/sympy/core/containers.py:271: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  class OrderedSet(collections.MutableSet):\n/replay/trees/sympy__sympy-14531/haiku/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-14531/haiku/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Callable\nTraceback (most recent call last):\n  File \"/replay/responses/cedar.py\", line 8, in <module>\n    exec(python(expr), namespace)\n  File \"/replay/trees/sympy__sympy-14531/haiku/sympy/printing/python.py\", line 53, in python\n    exprp = printer.doprint(expr)\n  File \"/replay/trees/sympy__sympy-14531/haiku/sympy/printing/printer.py\", line 236, in doprint\n    return self._str(self._print(expr))\n  File \"/replay/trees/sympy__sympy-14531/haiku/sympy/printing/printer.py\", line 274, in _print\n    return getattr(self, printmethod)(expr, *args, **kwargs)\n  File \"/replay/trees/sympy__sympy-14531/haiku/sympy/printing/str.py\", line 655, in _print_Relational\n    del settings['sympy_integers']\nKeyError: 'sympy_integers'\n"
+    },
+    {
+      "slot": "cedar",
+      "variant": "sonnet",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-14531/sonnet/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Mapping, defaultdict\n/replay/trees/sympy__sympy-14531/sonnet/sympy/core/expr.py:12: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import defaultdict, Iterable\n/replay/trees/sympy__sympy-14531/sonnet/sympy/core/containers.py:271: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  class OrderedSet(collections.MutableSet):\n/replay/trees/sympy__sympy-14531/sonnet/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-14531/sonnet/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Callable\n"
+    },
+    {
+      "slot": "pine",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-14531/base/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Mapping, defaultdict\n/replay/trees/sympy__sympy-14531/base/sympy/core/expr.py:12: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import defaultdict, Iterable\n/replay/trees/sympy__sympy-14531/base/sympy/core/containers.py:271: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  class OrderedSet(collections.MutableSet):\n/replay/trees/sympy__sympy-14531/base/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-14531/base/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Callable\nTraceback (most recent call last):\n  File \"/replay/responses/pine.py\", line 8, in <module>\n    exec(python(expression), namespace)\n  File \"<string>\", line 1, in <module>\nNameError: name 'f' is not defined\n"
+    },
+    {
+      "slot": "pine",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-14531/gold/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Mapping, defaultdict\n/replay/trees/sympy__sympy-14531/gold/sympy/core/expr.py:12: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import defaultdict, Iterable\n/replay/trees/sympy__sympy-14531/gold/sympy/core/containers.py:271: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  class OrderedSet(collections.MutableSet):\n/replay/trees/sympy__sympy-14531/gold/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-14531/gold/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Callable\n"
+    },
+    {
+      "slot": "pine",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-14531/haiku/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Mapping, defaultdict\n/replay/trees/sympy__sympy-14531/haiku/sympy/core/expr.py:12: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import defaultdict, Iterable\n/replay/trees/sympy__sympy-14531/haiku/sympy/core/containers.py:271: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  class OrderedSet(collections.MutableSet):\n/replay/trees/sympy__sympy-14531/haiku/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-14531/haiku/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Callable\nTraceback (most recent call last):\n  File \"/replay/responses/pine.py\", line 8, in <module>\n    exec(python(expression), namespace)\n  File \"/replay/trees/sympy__sympy-14531/haiku/sympy/printing/python.py\", line 53, in python\n    exprp = printer.doprint(expr)\n  File \"/replay/trees/sympy__sympy-14531/haiku/sympy/printing/printer.py\", line 236, in doprint\n    return self._str(self._print(expr))\n  File \"/replay/trees/sympy__sympy-14531/haiku/sympy/printing/printer.py\", line 274, in _print\n    return getattr(self, printmethod)(expr, *args, **kwargs)\n  File \"/replay/trees/sympy__sympy-14531/haiku/sympy/printing/str.py\", line 655, in _print_Relational\n    del settings['sympy_integers']\nKeyError: 'sympy_integers'\n"
+    },
+    {
+      "slot": "pine",
+      "variant": "sonnet",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-14531/sonnet/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Mapping, defaultdict\n/replay/trees/sympy__sympy-14531/sonnet/sympy/core/expr.py:12: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import defaultdict, Iterable\n/replay/trees/sympy__sympy-14531/sonnet/sympy/core/containers.py:271: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  class OrderedSet(collections.MutableSet):\n/replay/trees/sympy__sympy-14531/sonnet/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-14531/sonnet/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working\n  from collections import Callable\n"
+    },
+    {
+      "slot": "oak",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-14976/base/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\nTraceback (most recent call last):\n  File \"/replay/responses/oak.py\", line 5, in <module>\n    assert abs(3 * Rational(root) - 1) < Rational(1, 10**60)\nAssertionError\n"
+    },
+    {
+      "slot": "oak",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-14976/gold/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n"
+    },
+    {
+      "slot": "oak",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-14976/haiku/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\nTraceback (most recent call last):\n  File \"/replay/responses/oak.py\", line 5, in <module>\n    assert abs(3 * Rational(root) - 1) < Rational(1, 10**60)\nAssertionError\n"
+    },
+    {
+      "slot": "oak",
+      "variant": "sonnet",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-14976/sonnet/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n"
+    },
+    {
+      "slot": "maple",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-14976/base/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\nTraceback (most recent call last):\n  File \"/replay/responses/maple.py\", line 5, in <module>\n    assert evaluate() * denominator == 1\nOverflowError: int too large to convert to float\n"
+    },
+    {
+      "slot": "maple",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-14976/gold/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n"
+    },
+    {
+      "slot": "maple",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-14976/haiku/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\nTraceback (most recent call last):\n  File \"/replay/responses/maple.py\", line 5, in <module>\n    assert evaluate() * denominator == 1\nAssertionError\n"
+    },
+    {
+      "slot": "maple",
+      "variant": "sonnet",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-14976/sonnet/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n"
+    },
+    {
+      "slot": "fir",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-15809/base/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-15809/base/sympy/plotting/plot.py:520: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/base/sympy/plotting/plot.py:540: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/base/sympy/plotting/plot.py:553: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/base/sympy/plotting/plot.py:560: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\nTraceback (most recent call last):\n  File \"/replay/responses/fir.py\", line 4, in <module>\n    assert (Min(*values), Max(*values)) == (oo, -oo)\n  File \"/replay/trees/sympy__sympy-15809/base/sympy/functions/elementary/miscellaneous.py\", line 343, in __new__\n    raise ValueError(\"The Max/Min functions must have arguments.\")\nValueError: The Max/Min functions must have arguments.\n"
+    },
+    {
+      "slot": "fir",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-15809/gold/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-15809/gold/sympy/plotting/plot.py:520: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/gold/sympy/plotting/plot.py:540: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/gold/sympy/plotting/plot.py:553: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/gold/sympy/plotting/plot.py:560: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n"
+    },
+    {
+      "slot": "fir",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-15809/haiku/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-15809/haiku/sympy/plotting/plot.py:520: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/haiku/sympy/plotting/plot.py:540: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/haiku/sympy/plotting/plot.py:553: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/haiku/sympy/plotting/plot.py:560: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\nTraceback (most recent call last):\n  File \"/replay/responses/fir.py\", line 4, in <module>\n    assert (Min(*values), Max(*values)) == (oo, -oo)\nAssertionError\n"
+    },
+    {
+      "slot": "fir",
+      "variant": "sonnet",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-15809/sonnet/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-15809/sonnet/sympy/plotting/plot.py:520: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/sonnet/sympy/plotting/plot.py:540: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/sonnet/sympy/plotting/plot.py:553: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/sonnet/sympy/plotting/plot.py:560: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n"
+    },
+    {
+      "slot": "larch",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-15809/base/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-15809/base/sympy/plotting/plot.py:520: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/base/sympy/plotting/plot.py:540: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/base/sympy/plotting/plot.py:553: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/base/sympy/plotting/plot.py:560: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\nTraceback (most recent call last):\n  File \"/replay/responses/larch.py\", line 3, in <module>\n    assert (Min(), Max()) == (oo, -oo)\n  File \"/replay/trees/sympy__sympy-15809/base/sympy/functions/elementary/miscellaneous.py\", line 343, in __new__\n    raise ValueError(\"The Max/Min functions must have arguments.\")\nValueError: The Max/Min functions must have arguments.\n"
+    },
+    {
+      "slot": "larch",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-15809/gold/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-15809/gold/sympy/plotting/plot.py:520: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/gold/sympy/plotting/plot.py:540: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/gold/sympy/plotting/plot.py:553: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/gold/sympy/plotting/plot.py:560: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n"
+    },
+    {
+      "slot": "larch",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-15809/haiku/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-15809/haiku/sympy/plotting/plot.py:520: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/haiku/sympy/plotting/plot.py:540: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/haiku/sympy/plotting/plot.py:553: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/haiku/sympy/plotting/plot.py:560: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\nTraceback (most recent call last):\n  File \"/replay/responses/larch.py\", line 3, in <module>\n    assert (Min(), Max()) == (oo, -oo)\nAssertionError\n"
+    },
+    {
+      "slot": "larch",
+      "variant": "sonnet",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:892: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/env38/lib/python3.8/site-packages/mpmath/ctx_mp_python.py:986: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if other is 0:\n/replay/trees/sympy__sympy-15809/sonnet/sympy/solvers/diophantine.py:3188: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if feasible is 1:  # it's prime and k == 2\n/replay/trees/sympy__sympy-15809/sonnet/sympy/plotting/plot.py:520: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/sonnet/sympy/plotting/plot.py:540: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/sonnet/sympy/plotting/plot.py:553: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n/replay/trees/sympy__sympy-15809/sonnet/sympy/plotting/plot.py:560: SyntaxWarning: \"is\" with a literal. Did you mean \"==\"?\n  if self.xscale is 'log':\n"
+    }
+  ]
+}

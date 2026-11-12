@@ -1,0 +1,1 @@
+The checkbox displays unavailability, so its public check_test callback selects False. With no widget ID, the first box must be checked and the second clear. Shared checked state would select both boxes. Replacing the callback with a literal True check would select only the second.

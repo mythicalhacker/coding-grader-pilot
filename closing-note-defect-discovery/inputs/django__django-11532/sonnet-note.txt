@@ -1,0 +1,24 @@
+Perfect! The fix works as expected. Let's analyze what we did:
+
+1. We identified the issue: When the computer hostname contains non-ASCII characters and the email encoding is set to a non-Unicode encoding like iso-8859-1, the Message-ID header generation fails because it can't encode the non-ASCII characters.
+
+2. We implemented the fix by modifying the `CachedDnsName` class in `django/core/mail/utils.py` to:
+   - Keep the lazy loading behavior of the hostname
+   - When the hostname is first loaded, check if it contains non-ASCII characters
+   - If it does contain non-ASCII characters, convert it to punycode using IDNA encoding
+   - Cache the converted hostname for future use
+
+3. The fix works because:
+   - IDNA (Internationalizing Domain Names in Applications) is the standard for handling non-ASCII domain names
+   - The punycode version of a domain name is guaranteed to contain only ASCII characters
+   - The conversion is done only once when the hostname is first accessed
+   - The fix is transparent to the rest of the code since it's handled at the DNS_NAME level
+
+4. Edge cases handled:
+   - ASCII-only hostnames: No conversion needed, works as before
+   - Non-ASCII hostnames: Converted to punycode automatically
+   - Mixed ASCII/non-ASCII hostnames: Converted to punycode automatically
+   - Different email encodings: Works with any encoding since the hostname is always ASCII
+   - Caching: The conversion is done only once and cached, maintaining performance
+
+The fix is minimal and focused on the root cause of the issue. It follows the principle of least surprise by handling the conversion at the DNS level, which is where domain name encoding is typically handled.

@@ -1,0 +1,7 @@
+Command:
+cd /repo && PYTHONPATH=/repo python3 reproduce.py
+
+
+Observed output:
+Rendered HTML:
+<input type="checkbox" name="array_field_0" required id="id_array_field_0"><input type="checkbox" name="array_field_1" required id="id_array_field_1"><input type="checkbox" name="array_field_2" required id="id_array_field_2">

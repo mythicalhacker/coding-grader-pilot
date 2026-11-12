@@ -1,0 +1,23 @@
+Perfect! The edge cases also work correctly:
+
+1. Nested expressions with `sympy_integers=True` properly propagate the setting to all subexpressions
+2. Function calls with `sympy_integers=True` work correctly
+3. The python printer correctly identifies and declares all symbols and functions used in the expression
+
+To summarize the changes we made:
+
+1. In `str.py`:
+   - Modified `_print_Relational` to use `self._print()` for printing `lhs` and `rhs` to ensure settings are propagated
+   - Modified `_print_Limit` to use `self._print()` for printing all arguments to ensure settings are propagated
+
+2. In `python.py`:
+   - Modified `python()` to do a first pass with `doprint()` to collect all symbols before doing the actual printing
+   - This ensures all symbols are collected before any output is generated
+
+These changes fix all the issues mentioned in the PR description:
+1. `sstr(x + S(1)/2, sympy_integers=True)` correctly outputs `'x + S(1)/2'`
+2. `sstr(Eq(x, S(1)/2), sympy_integers=True)` now correctly outputs `'Eq(x, S(1)/2)'` instead of `'Eq(x, 1/2)'`
+3. `sstr(Limit(x, x, S(1)/2), sympy_integers=True)` now correctly outputs `'Limit(x, x, S(1)/2)'` instead of `'Limit(x, x, 1/2)'`
+4. `python(Eq(x, y))` now correctly outputs all symbol declarations before the expression.
+
+The changes are minimal and focused on the specific issues, and we've verified they work correctly with both the original test cases and additional edge cases.

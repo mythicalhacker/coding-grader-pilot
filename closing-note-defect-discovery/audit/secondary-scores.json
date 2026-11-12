@@ -1,0 +1,66 @@
+{
+  "4520913": {
+    "label": "hit",
+    "reason": "The public checkbox predicate marks the first array item checked and the second unchecked. Candidate 1 renders both unchecked. This checks the same per-item state contract with a custom predicate."
+  },
+  "6e4b06c": {
+    "label": "miss",
+    "reason": "The anti-diagonal sum is mathematically correct, but it selects three entries. The report requires the sum over all rows and columns. A broader identity-matrix summation criterion would count it."
+  },
+  "dbb99d8": {
+    "label": "hit",
+    "reason": "The issue explicitly requires usable Python output for Eq. Candidate 1 raises KeyError while printing Eq, before it can emit the nested expression. The maintainer output reconstructs it."
+  },
+  "a1c2cb2": {
+    "label": "miss",
+    "reason": "The stride selects four entries with linked row and column indices. Its sum is valid but tests a broader class of identity-matrix sums than the reported whole-matrix total."
+  },
+  "b3d4035": {
+    "label": "hit",
+    "reason": "Expanding an empty tuple calls both functions with zero arguments. Candidate 1 fails the pair of return values expressly requested."
+  },
+  "f51ece4": {
+    "label": "hit",
+    "reason": "The exact zero-argument Min and Max calls return the requested signed infinities on the maintainer patch. Candidate 1 fails the assertion."
+  },
+  "e2e59d2": {
+    "label": "hit",
+    "reason": "The report explicitly describes nsolve losing precision on rational constants. Candidate 1 misses the tolerance for the root of a linear equation with one such constant."
+  },
+  "1f14b0b": {
+    "label": "hit",
+    "reason": "The reported code-generation bug includes Eq output that cannot reconstruct the original expression. Candidate 1 raises KeyError on the Eq printer, while the maintainer patch emits executable output."
+  },
+  "f48e3b1": {
+    "label": "hit",
+    "reason": "mpmath can represent this power-of-two rational exactly. Candidate 1 fails its exact rescaling after lambdify, directly testing preservation of an mpmath rational over a wider exponent range."
+  },
+  "54b588c": {
+    "label": "hit",
+    "reason": "Both candidates fail to resolve the UUID target through a prefetched generic foreign key backed by a hex string. Using to_attr changes where Django exposes the result."
+  },
+  "231a5be": {
+    "label": "miss",
+    "reason": "The test supplies an ASCII Message-ID and examines the Subject charset. It exposes a candidate regression but bypasses generation of the Message-ID from a non-ASCII hostname, the behavior requested."
+  },
+  "4d06fe7": {
+    "label": "hit",
+    "reason": "Both candidates fail the target-equality check when prefetching a generic foreign key stored as a valid uppercase UUID hex string. The failure is on object resolution itself."
+  },
+  "400e150": {
+    "label": "hit",
+    "reason": "The SplitArrayField checkbox predicate defines which boolean is checked. The probe checks the reported per-item state transition from checked to unchecked. Candidate 1 fails it."
+  },
+  "b490356": {
+    "label": "hit",
+    "reason": "A UUID-to-foreign-key alteration must depend on the other app's migration that creates the referenced model. Candidate 1 omits that dependency when both changes are generated together."
+  },
+  "5800a76": {
+    "label": "miss",
+    "reason": "The fixed ASCII Message-ID bypasses the reported hostname path. The failing Subject encoding assertion identifies a separate regression and also fixes the charset spelling."
+  },
+  "eadeec8": {
+    "label": "hit",
+    "reason": "Candidate 1 omits the existing target app's initial migration from the UUID-to-foreign-key alteration dependencies. The report requests that cross-app dependency."
+  }
+}

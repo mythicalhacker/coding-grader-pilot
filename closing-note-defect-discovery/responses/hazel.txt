@@ -1,0 +1,3 @@
+The two apps start with independent initial migrations. Changing the existing nullable UUID field to a foreign key is the only model change. Asking the autodetector for migrations tests whether it discovers the target prerequisite without anyone adding it by hand.
+
+Expected result: the generated testapp1 migration depends on testapp2.0001_initial and the assertion passes. Printing a model field or applying both apps in a favorable order can succeed even when this dependency is missing.

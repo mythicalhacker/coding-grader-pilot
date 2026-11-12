@@ -1,0 +1,18 @@
+Command:
+cd /repo && python3 reproduce_error.py
+
+
+Observed output:
+Generated function source:
+def _lambdifygenerated(x):
+    return (  # Not supported in Python:
+  # RisingFactorial
+RisingFactorial(18, x) + mpf(-232/3))
+
+
+Testing the generated function:
+f(1.5) = 0.612415648412875477747555075271555699098403317860232932780414646
+
+Testing nsolve:
+x0 = 1.497321100673776845507367094456054017271143195221442931450474008
+rf(18, x0) = 77.33333333333332859638176159933209419250488281250000000000000000

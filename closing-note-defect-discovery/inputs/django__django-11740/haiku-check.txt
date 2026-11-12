@@ -1,0 +1,7 @@
+Command:
+cd /repo && python3 reproduce_migration_issue.py
+
+
+Observed output:
+Reproducing migration issue...
+testapp1.App1Updated.another_app

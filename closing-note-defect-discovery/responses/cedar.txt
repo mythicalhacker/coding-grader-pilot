@@ -1,0 +1,1 @@
+Every user-defined name occurs inside the equality, and the function occurs inside a limit. The generated Python must declare those names before using them. In a fresh namespace containing the four constructors, the code should run and assign the original symbolic equality to e. This check allows any valid declaration order.

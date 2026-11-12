@@ -1,0 +1,22 @@
+{
+  "rule": "Ascending numeric SymPy pull request from pinned archive with passed vs failed or errored target, excluding previously reviewed issues. Selection was fixed before reading problem text or collecting reviewer output.",
+  "issues": [
+    "sympy__sympy-12419",
+    "sympy__sympy-14531",
+    "sympy__sympy-14976",
+    "sympy__sympy-15809"
+  ],
+  "dataset_revision": "c104f840cc67f8b6eec6f759ebc8b2693d585d4a",
+  "disposition": "Archival discrepant candidate pairs. Do not interpret as a representative sample.",
+  "observed_sympy_pool_in_numeric_order": [
+    "sympy__sympy-12419",
+    "sympy__sympy-14531",
+    "sympy__sympy-14976",
+    "sympy__sympy-15809",
+    "sympy__sympy-17139",
+    "sympy__sympy-19783",
+    "sympy__sympy-20154",
+    "sympy__sympy-20801",
+    "sympy__sympy-24661"
+  ]
+}

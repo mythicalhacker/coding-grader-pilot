@@ -1,0 +1,10 @@
+{
+  "sympy": {
+    "repeat_replays": 32,
+    "same_exit_status": 32
+  },
+  "django": {
+    "repeat_replays": 32,
+    "same_exit_status": 32
+  }
+}

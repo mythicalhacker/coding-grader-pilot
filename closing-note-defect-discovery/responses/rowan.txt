@@ -1,0 +1,1 @@
+The custom checkbox predicate accepts “enabled” and rejects “disabled.” A single array in that order checks both whether the widget honors its predicate and whether the second checkbox inherits the first one's checked attribute. The expected states are [True, False]. Requiring literal True would leave both unchecked. Sharing the mutated attributes would leave both checked.

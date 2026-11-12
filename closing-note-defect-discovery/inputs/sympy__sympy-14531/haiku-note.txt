@@ -1,0 +1,21 @@
+Great! The changes now correctly handle the `sympy_integers` setting for `Eq` and `Limit` expressions.
+
+Let me explain the changes:
+
+1. In the `_print_Relational` method, I added a new approach to handle the `sympy_integers` setting:
+   - Extract the `sympy_integers` value from the settings
+   - If `sympy_integers` is `True`, use a new `_print_with_sympy_integers` method to print the left and right sides
+   - This method creates a new `StrPrinter` with `sympy_integers=True` to ensure the correct representation
+
+2. Similarly, in the `_print_Limit` method, I added the same logic to handle the `sympy_integers` setting for each argument.
+
+3. The `_print_with_sympy_integers` method is a helper method that creates a new `StrPrinter` with `sympy_integers=True` and uses its `_print` method.
+
+These changes ensure that:
+- `sstr(x + S(1)/2, sympy_integers=True)` returns `x + S(1)/2`
+- `sstr(Eq(x, S(1)/2), sympy_integers=True)` returns `Eq(x, S(1)/2)`
+- `sstr(Limit(x, x, S(1)/2), sympy_integers=True)` returns `Limit(x, x, S(1)/2)`
+
+The solution is minimal and focused on the specific issue described in the PR description. It handles the edge cases by creating a new printer with the desired settings for each argument.
+
+Would you like me to make any further modifications or clarify anything about the implementation?

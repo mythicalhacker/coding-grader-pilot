@@ -1,0 +1,18 @@
+Great! The Message-ID now contains the punycode domain. 
+
+Let me summarize the changes I made:
+
+1. In `django/core/mail/utils.py`, I modified the `CachedDnsName` class to convert non-ASCII domain names to punycode when `get_fqdn()` is called.
+2. In `django/core/mail/message.py`, I modified the `forbid_multi_line_headers()` function to use UTF-8 encoding when the default encoding fails.
+
+These changes ensure that:
+- When a non-ASCII domain name is used, it gets converted to punycode
+- The Message-ID header can handle non-ASCII domain names
+- The encoding of the message is handled gracefully
+
+The solution meets the requirements specified in the PR description:
+- It converts the domain name to punycode before using it
+- It handles the case where the hostname is set to a non-ASCII value
+- It ensures the Message-ID can be created without encoding errors
+
+Would you like me to make any further modifications or explain the changes in more detail?
