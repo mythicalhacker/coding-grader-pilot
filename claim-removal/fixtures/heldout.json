@@ -1,0 +1,185 @@
+{
+  "astropy__astropy-12907": {
+    "haiku": {
+      "fail_to_pass_failed": 2,
+      "fail_to_pass_passed": 0,
+      "failure_ids": [
+        "astropy/modeling/tests/test_separable.py::test_separable[compound_model6-result6]",
+        "astropy/modeling/tests/test_separable.py::test_separable[compound_model9-result9]"
+      ],
+      "pass_to_pass_failed": 0,
+      "pass_to_pass_passed": 13,
+      "resolved": false
+    },
+    "sonnet": {
+      "fail_to_pass_failed": 0,
+      "fail_to_pass_passed": 2,
+      "failure_ids": [],
+      "pass_to_pass_failed": 0,
+      "pass_to_pass_passed": 13,
+      "resolved": true
+    }
+  },
+  "astropy__astropy-14508": {
+    "haiku": {
+      "fail_to_pass_failed": 0,
+      "fail_to_pass_passed": 1,
+      "failure_ids": [
+        "astropy/io/fits/tests/test_header.py::TestHeaderFunctions::test_invalid_float_cards2"
+      ],
+      "pass_to_pass_failed": 1,
+      "pass_to_pass_passed": 173,
+      "resolved": false
+    },
+    "sonnet": {
+      "fail_to_pass_failed": 0,
+      "fail_to_pass_passed": 1,
+      "failure_ids": [],
+      "pass_to_pass_failed": 0,
+      "pass_to_pass_passed": 174,
+      "resolved": true
+    }
+  },
+  "matplotlib__matplotlib-22719": {
+    "haiku": {
+      "fail_to_pass_failed": 0,
+      "fail_to_pass_passed": 1,
+      "failure_ids": [
+        "lib/matplotlib/tests/test_category.py::TestStrCategoryConverter::test_convert_one_number"
+      ],
+      "pass_to_pass_failed": 1,
+      "pass_to_pass_passed": 67,
+      "resolved": false
+    },
+    "sonnet": {
+      "fail_to_pass_failed": 0,
+      "fail_to_pass_passed": 1,
+      "failure_ids": [],
+      "pass_to_pass_failed": 0,
+      "pass_to_pass_passed": 68,
+      "resolved": true
+    }
+  },
+  "matplotlib__matplotlib-24570": {
+    "haiku": {
+      "fail_to_pass_failed": 0,
+      "fail_to_pass_passed": 2,
+      "failure_ids": [],
+      "pass_to_pass_failed": 0,
+      "pass_to_pass_passed": 267,
+      "resolved": true
+    },
+    "sonnet": {
+      "fail_to_pass_failed": 2,
+      "fail_to_pass_passed": 0,
+      "failure_ids": [
+        "lib/matplotlib/tests/test_offsetbox.py::test_packers[bottom]",
+        "lib/matplotlib/tests/test_offsetbox.py::test_packers[top]",
+        "lib/matplotlib/tests/test_offsetbox.py::test_packers[baseline]",
+        "lib/matplotlib/tests/test_offsetbox.py::test_packers[left]",
+        "lib/matplotlib/tests/test_offsetbox.py::test_packers[right]",
+        "lib/matplotlib/tests/test_offsetbox.py::test_packers[center]"
+      ],
+      "pass_to_pass_failed": 4,
+      "pass_to_pass_passed": 263,
+      "resolved": false
+    }
+  },
+  "pytest-dev__pytest-10081": {
+    "haiku": {
+      "fail_to_pass_failed": 1,
+      "fail_to_pass_passed": 0,
+      "failure_ids": [
+        "testing/test_unittest.py::test_pdb_teardown_skipped_for_classes[@unittest.skip]"
+      ],
+      "pass_to_pass_failed": 0,
+      "pass_to_pass_passed": 63,
+      "resolved": false
+    },
+    "sonnet": {
+      "fail_to_pass_failed": 0,
+      "fail_to_pass_passed": 1,
+      "failure_ids": [],
+      "pass_to_pass_failed": 0,
+      "pass_to_pass_passed": 63,
+      "resolved": true
+    }
+  },
+  "pytest-dev__pytest-7490": {
+    "haiku": {
+      "fail_to_pass_failed": 2,
+      "fail_to_pass_passed": 0,
+      "failure_ids": [
+        "testing/test_skipping.py::TestXFail::test_dynamic_xfail_set_during_runtest_failed",
+        "testing/test_skipping.py::TestXFail::test_dynamic_xfail_set_during_runtest_passed_strict",
+        "testing/test_skipping.py::TestXFail::test_xfail_simple[True]",
+        "testing/test_skipping.py::TestXFail::test_xfail_simple[False]",
+        "testing/test_skipping.py::TestXFail::test_xfail_run_anyway",
+        "testing/test_skipping.py::TestXFail::test_xfail_evalfalse_but_fails",
+        "testing/test_skipping.py::TestXFail::test_dynamic_xfail_no_run",
+        "testing/test_skipping.py::TestXFail::test_dynamic_xfail_set_during_funcarg_setup",
+        "testing/test_skipping.py::TestXFail::test_xfail_raises[TypeError-TypeError-*1",
+        "testing/test_skipping.py::TestXFail::test_xfail_raises[(AttributeError,",
+        "testing/test_skipping.py::TestXFail::test_xfail_raises[TypeError-IndexError-*1",
+        "testing/test_skipping.py::TestXFail::test_strict_sanity",
+        "testing/test_skipping.py::test_reportchars",
+        "testing/test_skipping.py::test_reportchars_all",
+        "testing/test_skipping.py::test_xfail_skipif_with_globals",
+        "testing/test_skipping.py::TestBooleanCondition::test_xfail",
+        "testing/test_skipping.py::test_mark_xfail_item"
+      ],
+      "pass_to_pass_failed": 15,
+      "pass_to_pass_passed": 63,
+      "resolved": false
+    },
+    "sonnet": {
+      "fail_to_pass_failed": 0,
+      "fail_to_pass_passed": 2,
+      "failure_ids": [],
+      "pass_to_pass_failed": 0,
+      "pass_to_pass_passed": 78,
+      "resolved": true
+    }
+  },
+  "scikit-learn__scikit-learn-10908": {
+    "haiku": {
+      "fail_to_pass_failed": 0,
+      "fail_to_pass_passed": 1,
+      "failure_ids": [],
+      "pass_to_pass_failed": 0,
+      "pass_to_pass_passed": 47,
+      "resolved": true
+    },
+    "sonnet": {
+      "fail_to_pass_failed": 0,
+      "fail_to_pass_passed": 1,
+      "failure_ids": [
+        "sklearn/feature_extraction/tests/test_text.py::test_countvectorizer_custom_vocabulary",
+        "sklearn/feature_extraction/tests/test_text.py::test_non_unique_vocab"
+      ],
+      "pass_to_pass_failed": 2,
+      "pass_to_pass_passed": 45,
+      "resolved": false
+    }
+  },
+  "scikit-learn__scikit-learn-12973": {
+    "haiku": {
+      "fail_to_pass_failed": 0,
+      "fail_to_pass_passed": 1,
+      "failure_ids": [],
+      "pass_to_pass_failed": 0,
+      "pass_to_pass_passed": 32,
+      "resolved": true
+    },
+    "sonnet": {
+      "fail_to_pass_failed": 0,
+      "fail_to_pass_passed": 1,
+      "failure_ids": [
+        "sklearn/linear_model/tests/test_least_angle.py::test_lars_precompute[LassoLarsIC]"
+      ],
+      "pass_to_pass_failed": 1,
+      "pass_to_pass_passed": 31,
+      "resolved": false
+    }
+  }
+}

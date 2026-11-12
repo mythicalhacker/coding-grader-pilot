@@ -1,0 +1,6 @@
+Recorded test results (five existing regression tests):
+PASSED testing/test_unittest.py::test_BdbQuit
+PASSED testing/test_unittest.py::test_async_support
+PASSED testing/test_unittest.py::test_class_method_containing_test_issue1558
+PASSED testing/test_unittest.py::test_cleanup_functions
+PASSED testing/test_unittest.py::test_djangolike_testcase

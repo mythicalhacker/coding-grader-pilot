@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P122666",
+    "probability": 32,
+    "reason": "The fit override reaches preprocessing, but forcing copy_X=False in lars_path can let the solver reorder the working matrix used to score the coefficient path, a risk the input-mutation examples and recorded tests do not check."
+  },
+  {
+    "id": "P630053",
+    "probability": 1,
+    "reason": "The debugger branch still checks only the test method, so a class-level skip on an undecorated method still schedules the original tearDown, and none of the five recorded tests exercises that case."
+  },
+  {
+    "id": "P635817",
+    "probability": 83,
+    "reason": "The offset formulas correctly align the lower and upper edges, but the new test opens plots during import and asks pytest for an unexplained align fixture, while the five recorded tests do not check these alignments."
+  },
+  {
+    "id": "P257219",
+    "probability": 83,
+    "reason": "Copying the right-hand matrix preserves its independent inputs as requested, but the unrelated exact setuptools pin restricts builds and the recorded modeling tests do not cover build compatibility."
+  }
+]

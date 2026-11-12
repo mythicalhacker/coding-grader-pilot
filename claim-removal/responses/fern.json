@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P307514",
+    "probability": 31,
+    "reason": "Rechecking marks after the call catches the reported failure, but it also reevaluates previously active conditions after the test can change them, a case the five recorded tests miss."
+  },
+  {
+    "id": "P858045",
+    "probability": 78,
+    "reason": "The early return prevents the false warning for empty lists, but it also converts a multidimensional empty input such as shape (0, 2) to shape (0,), which the recorded tests do not check."
+  },
+  {
+    "id": "P276265",
+    "probability": 68,
+    "reason": "Feature-name lookup now validates the supplied vocabulary before sorting it, but the shared checker can also report success when only the constructor parameter exists and vocabulary_ is missing, a state the five tests do not exercise."
+  },
+  {
+    "id": "P997246",
+    "probability": 8,
+    "reason": "Using str preserves the example's comment, but a short scientific value such as 1e-07 now bypasses exponent normalization and emits a lowercase e in the FITS card, which the recorded tests do not cover."
+  }
+]

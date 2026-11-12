@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P114757",
+    "probability": 1,
+    "reason": "Replacing every descent with its complementary ascent changes baseline and center placement as well as edge alignment, and none of the recorded tests checks the top edges of unequal-height children."
+  },
+  {
+    "id": "P164378",
+    "probability": 99,
+    "reason": "Both preprocessing and the LARS solver now use the explicit fit argument when supplied and the constructor setting otherwise, although the added integer-array examples only print results and the recorded tests do not verify copy precedence."
+  },
+  {
+    "id": "P115114",
+    "probability": 90,
+    "reason": "The skip check now recognizes the class marker on an ordinary bound test method, covering the reported teardown failure, though it misses static methods and the recorded tests do not exercise the class-skip example under --pdb."
+  },
+  {
+    "id": "P642129",
+    "probability": 1,
+    "reason": "Both sides of the reported nested model recursively produce arrays, so the patch still calls the same operator with the same inputs and the recorded tests do not assert the nested result."
+  }
+]

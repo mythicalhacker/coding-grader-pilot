@@ -1,0 +1,6 @@
+# Keep archival input hashes and exact reviewer packet bytes portable.
+fixtures/** -text
+packets/** -text
+responses/** -text
+notices/** -text
+*.json -text

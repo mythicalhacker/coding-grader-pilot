@@ -1,0 +1,16 @@
+Great! The script now works as expected. Let me explain the changes:
+
+1. In `_check_vocabulary()`, I added a check to return early if a vocabulary was provided during initialization.
+2. In `_validate_vocabulary()`, I ensured that `vocabulary_` is always set when a vocabulary is provided, and removed it if no vocabulary is provided.
+3. In `transform()` and `get_feature_names()`, I added a check to call `_validate_vocabulary()` if `vocabulary_` is not set.
+
+These changes ensure that:
+- When a vocabulary is provided during initialization, `get_feature_names()` and `transform()` work without raising a `NotFittedError`
+- The `vocabulary_` attribute is correctly set and managed
+- The existing behavior for other cases remains unchanged
+
+The solution meets the requirements specified in the PR description:
+- If a vocabulary is provided during initialization, `get_feature_names()` and `transform()` work without requiring a prior `fit()`
+- The code handles edge cases like providing a vocabulary during initialization
+
+Would you like me to make any further modifications or clarify anything about the implementation?

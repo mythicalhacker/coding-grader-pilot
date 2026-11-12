@@ -1,0 +1,14 @@
+The fix works correctly for both `top` and `bottom` alignment. Let's explain why this fix works:
+
+1. In matplotlib's coordinate system, the y-descent (`yd`) is measured from the bottom of the box to the baseline. This means that `h - yd` represents the distance from the top of the box to the baseline.
+
+2. In the original code, `HPacker` was passing `(h, yd)` to `_get_aligned_offsets`, which meant it was treating the descent as being measured from the top of the box. This caused the alignment to be reversed.
+
+3. The fix changes this to pass `(h, h - yd)`, which correctly represents the descent as being measured from the bottom of the box. This matches how matplotlib's coordinate system works and how the `VPacker` class handles vertical alignment.
+
+4. The `_get_aligned_offsets` function then correctly aligns the boxes based on these values:
+   - For `align="bottom"`, it aligns the boxes at their bottom edges (descent = 0)
+   - For `align="top"`, it aligns the boxes at their top edges (descent = h)
+   - For `align="baseline"`, it aligns the boxes at their baselines (descent = h - yd)
+
+This fix ensures that the `align` parameter in `HPacker` works consistently with the rest of matplotlib's coordinate system and matches the expected behavior shown in the PR description.

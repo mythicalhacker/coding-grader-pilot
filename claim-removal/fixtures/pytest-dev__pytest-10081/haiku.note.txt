@@ -1,0 +1,26 @@
+Let me explain the changes and reasoning:
+
+1. The original issue was that when running pytest with `--pdb`, the `tearDown()` method of a skipped test class was being called.
+
+2. In the `runtest()` method of `TestCaseFunction` in `_pytest/unittest.py`, there was a condition `if self.config.getoption("usepdb") and not _is_skipped(self.obj)` that prevented replacing the `tearDown` method with a no-op function for skipped tests.
+
+3. I modified the code to explicitly handle skipped tests when running with `--pdb`:
+```python
+if self.config.getoption("usepdb"):
+    # Always replace tearDown with a no-op function for skipped tests
+    if _is_skipped(self.obj):
+        setattr(self._testcase, "tearDown", lambda *args: None)
+    else:
+        self._explicit_tearDown = self._testcase.tearDown
+        setattr(self._testcase, "tearDown", lambda *args: None)
+```
+
+4. This change ensures that for skipped tests, the `tearDown` method is always replaced with a no-op function when running with `--pdb`.
+
+5. I created test cases to verify the behavior:
+   - `test_repro_skip_class.py` checks the basic skipping behavior
+   - `test_skip_pdb_teardown.py` checks that `tearDown` is not called for skipped tests
+
+The changes are minimal and targeted, addressing the specific issue described in the PR description. The fix ensures that `tearDown()` is not called for skipped tests when running with `--pdb`, regardless of whether the skip is applied at the class or function level.
+
+Would you like me to make any further modifications or clarify anything about the implementation?

@@ -1,0 +1,776 @@
+{
+  "credit_threshold": 70,
+  "primary_failing_full_vs_stripped": {
+    "conditions": [
+      "full",
+      "stripped"
+    ],
+    "decisions": 16,
+    "issues": 8,
+    "accepted": {
+      "full": 0,
+      "stripped": 0,
+      "none": 0
+    },
+    "left_only": [],
+    "right_only": [],
+    "flip_issue_counts": {
+      "left_only": 0,
+      "right_only": 0
+    },
+    "signed_left_minus_right_pp": 0.0,
+    "absolute_gap_pp": 0.0
+  },
+  "cluster_interval": {
+    "method": "Exact percentile distribution, resampling whole issues with replacement and keeping both draws",
+    "metric": "full minus stripped percentage points for benchmark-failing patches",
+    "clusters": 8,
+    "percentile_2_5": 0.0,
+    "percentile_97_5": 0.0
+  },
+  "passing": {
+    "decisions": 16,
+    "issues": 8,
+    "accepted": {
+      "full": 10,
+      "stripped": 7,
+      "none": 11
+    }
+  },
+  "overall": {
+    "decisions": 32,
+    "issues": 8,
+    "accepted": {
+      "full": 10,
+      "stripped": 7,
+      "none": 11
+    }
+  },
+  "companion_failing_full_vs_none": {
+    "conditions": [
+      "full",
+      "none"
+    ],
+    "decisions": 16,
+    "issues": 8,
+    "accepted": {
+      "full": 0,
+      "stripped": 0,
+      "none": 0
+    },
+    "left_only": [],
+    "right_only": [],
+    "flip_issue_counts": {
+      "left_only": 0,
+      "right_only": 0
+    },
+    "signed_left_minus_right_pp": 0.0,
+    "absolute_gap_pp": 0.0
+  },
+  "companion_failing_stripped_vs_none": {
+    "conditions": [
+      "stripped",
+      "none"
+    ],
+    "decisions": 16,
+    "issues": 8,
+    "accepted": {
+      "full": 0,
+      "stripped": 0,
+      "none": 0
+    },
+    "left_only": [],
+    "right_only": [],
+    "flip_issue_counts": {
+      "left_only": 0,
+      "right_only": 0
+    },
+    "signed_left_minus_right_pp": 0.0,
+    "absolute_gap_pp": 0.0
+  },
+  "by_draw": {
+    "1": {
+      "failing": {
+        "conditions": [
+          "full",
+          "stripped"
+        ],
+        "decisions": 8,
+        "issues": 8,
+        "accepted": {
+          "full": 0,
+          "stripped": 0,
+          "none": 0
+        },
+        "left_only": [],
+        "right_only": [],
+        "flip_issue_counts": {
+          "left_only": 0,
+          "right_only": 0
+        },
+        "signed_left_minus_right_pp": 0.0,
+        "absolute_gap_pp": 0.0
+      },
+      "passing": {
+        "decisions": 8,
+        "issues": 8,
+        "accepted": {
+          "full": 5,
+          "stripped": 4,
+          "none": 6
+        }
+      },
+      "overall": {
+        "decisions": 16,
+        "issues": 8,
+        "accepted": {
+          "full": 5,
+          "stripped": 4,
+          "none": 6
+        }
+      },
+      "matched_top_eight": {
+        "full": {
+          "selected": 8,
+          "boundary_score": 24,
+          "number_tied_at_boundary": 1,
+          "weight_per_boundary_patch": 1.0,
+          "benchmark_failing_selected": 1.0
+        },
+        "stripped": {
+          "selected": 8,
+          "boundary_score": 12,
+          "number_tied_at_boundary": 1,
+          "weight_per_boundary_patch": 1.0,
+          "benchmark_failing_selected": 1
+        },
+        "none": {
+          "selected": 8,
+          "boundary_score": 22,
+          "number_tied_at_boundary": 1,
+          "weight_per_boundary_patch": 1.0,
+          "benchmark_failing_selected": 1
+        }
+      }
+    },
+    "2": {
+      "failing": {
+        "conditions": [
+          "full",
+          "stripped"
+        ],
+        "decisions": 8,
+        "issues": 8,
+        "accepted": {
+          "full": 0,
+          "stripped": 0,
+          "none": 0
+        },
+        "left_only": [],
+        "right_only": [],
+        "flip_issue_counts": {
+          "left_only": 0,
+          "right_only": 0
+        },
+        "signed_left_minus_right_pp": 0.0,
+        "absolute_gap_pp": 0.0
+      },
+      "passing": {
+        "decisions": 8,
+        "issues": 8,
+        "accepted": {
+          "full": 5,
+          "stripped": 3,
+          "none": 5
+        }
+      },
+      "overall": {
+        "decisions": 16,
+        "issues": 8,
+        "accepted": {
+          "full": 5,
+          "stripped": 3,
+          "none": 5
+        }
+      },
+      "matched_top_eight": {
+        "full": {
+          "selected": 8,
+          "boundary_score": 15,
+          "number_tied_at_boundary": 1,
+          "weight_per_boundary_patch": 1.0,
+          "benchmark_failing_selected": 1
+        },
+        "stripped": {
+          "selected": 8,
+          "boundary_score": 18,
+          "number_tied_at_boundary": 1,
+          "weight_per_boundary_patch": 1.0,
+          "benchmark_failing_selected": 1
+        },
+        "none": {
+          "selected": 8,
+          "boundary_score": 20,
+          "number_tied_at_boundary": 1,
+          "weight_per_boundary_patch": 1.0,
+          "benchmark_failing_selected": 1
+        }
+      }
+    }
+  },
+  "regrade_disagreement": {
+    "failing": {
+      "full": {
+        "patches": 8,
+        "disagreements": 0,
+        "changed_patches": []
+      },
+      "stripped": {
+        "patches": 8,
+        "disagreements": 0,
+        "changed_patches": []
+      },
+      "none": {
+        "patches": 8,
+        "disagreements": 0,
+        "changed_patches": []
+      }
+    },
+    "passing": {
+      "full": {
+        "patches": 8,
+        "disagreements": 0,
+        "changed_patches": []
+      },
+      "stripped": {
+        "patches": 8,
+        "disagreements": 1,
+        "changed_patches": [
+          [
+            "pytest-dev__pytest-10081",
+            "sonnet"
+          ]
+        ]
+      },
+      "none": {
+        "patches": 8,
+        "disagreements": 1,
+        "changed_patches": [
+          [
+            "matplotlib__matplotlib-22719",
+            "sonnet"
+          ]
+        ]
+      }
+    },
+    "overall": {
+      "full": {
+        "patches": 16,
+        "disagreements": 0,
+        "changed_patches": []
+      },
+      "stripped": {
+        "patches": 16,
+        "disagreements": 1,
+        "changed_patches": [
+          [
+            "pytest-dev__pytest-10081",
+            "sonnet"
+          ]
+        ]
+      },
+      "none": {
+        "patches": 16,
+        "disagreements": 1,
+        "changed_patches": [
+          [
+            "matplotlib__matplotlib-22719",
+            "sonnet"
+          ]
+        ]
+      }
+    }
+  },
+  "changed_note_failing": {
+    "conditions": [
+      "full",
+      "stripped"
+    ],
+    "decisions": 16,
+    "issues": 8,
+    "accepted": {
+      "full": 0,
+      "stripped": 0,
+      "none": 0
+    },
+    "left_only": [],
+    "right_only": [],
+    "flip_issue_counts": {
+      "left_only": 0,
+      "right_only": 0
+    },
+    "signed_left_minus_right_pp": 0.0,
+    "absolute_gap_pp": 0.0
+  },
+  "changed_note_clean_scope_failing": {
+    "conditions": [
+      "full",
+      "stripped"
+    ],
+    "decisions": 6,
+    "issues": 3,
+    "accepted": {
+      "full": 0,
+      "stripped": 0,
+      "none": 0
+    },
+    "left_only": [],
+    "right_only": [],
+    "flip_issue_counts": {
+      "left_only": 0,
+      "right_only": 0
+    },
+    "signed_left_minus_right_pp": 0.0,
+    "absolute_gap_pp": 0.0
+  },
+  "inseparable_scope_failing": {
+    "conditions": [
+      "full",
+      "stripped"
+    ],
+    "decisions": 10,
+    "issues": 5,
+    "accepted": {
+      "full": 0,
+      "stripped": 0,
+      "none": 0
+    },
+    "left_only": [],
+    "right_only": [],
+    "flip_issue_counts": {
+      "left_only": 0,
+      "right_only": 0
+    },
+    "signed_left_minus_right_pp": 0.0,
+    "absolute_gap_pp": 0.0
+  },
+  "per_patch_per_draw": [
+    {
+      "issue": "astropy__astropy-12907",
+      "model": "haiku",
+      "draw": 1,
+      "benchmark_passed": false,
+      "note_changed": true,
+      "inseparable_scope": false,
+      "scores": {
+        "full": 1,
+        "stripped": 0,
+        "none": 1
+      }
+    },
+    {
+      "issue": "astropy__astropy-12907",
+      "model": "haiku",
+      "draw": 2,
+      "benchmark_passed": false,
+      "note_changed": true,
+      "inseparable_scope": false,
+      "scores": {
+        "full": 1,
+        "stripped": 1,
+        "none": 1
+      }
+    },
+    {
+      "issue": "astropy__astropy-12907",
+      "model": "sonnet",
+      "draw": 1,
+      "benchmark_passed": true,
+      "note_changed": true,
+      "inseparable_scope": true,
+      "scores": {
+        "full": 88,
+        "stripped": 83,
+        "none": 89
+      }
+    },
+    {
+      "issue": "astropy__astropy-12907",
+      "model": "sonnet",
+      "draw": 2,
+      "benchmark_passed": true,
+      "note_changed": true,
+      "inseparable_scope": true,
+      "scores": {
+        "full": 88,
+        "stripped": 94,
+        "none": 91
+      }
+    },
+    {
+      "issue": "astropy__astropy-14508",
+      "model": "haiku",
+      "draw": 1,
+      "benchmark_passed": false,
+      "note_changed": true,
+      "inseparable_scope": true,
+      "scores": {
+        "full": 8,
+        "stripped": 3,
+        "none": 8
+      }
+    },
+    {
+      "issue": "astropy__astropy-14508",
+      "model": "haiku",
+      "draw": 2,
+      "benchmark_passed": false,
+      "note_changed": true,
+      "inseparable_scope": true,
+      "scores": {
+        "full": 7,
+        "stripped": 9,
+        "none": 7
+      }
+    },
+    {
+      "issue": "astropy__astropy-14508",
+      "model": "sonnet",
+      "draw": 1,
+      "benchmark_passed": true,
+      "note_changed": true,
+      "inseparable_scope": true,
+      "scores": {
+        "full": 17,
+        "stripped": 12,
+        "none": 12
+      }
+    },
+    {
+      "issue": "astropy__astropy-14508",
+      "model": "sonnet",
+      "draw": 2,
+      "benchmark_passed": true,
+      "note_changed": true,
+      "inseparable_scope": true,
+      "scores": {
+        "full": 8,
+        "stripped": 18,
+        "none": 20
+      }
+    },
+    {
+      "issue": "matplotlib__matplotlib-22719",
+      "model": "haiku",
+      "draw": 1,
+      "benchmark_passed": false,
+      "note_changed": true,
+      "inseparable_scope": false,
+      "scores": {
+        "full": 1,
+        "stripped": 0,
+        "none": 1
+      }
+    },
+    {
+      "issue": "matplotlib__matplotlib-22719",
+      "model": "haiku",
+      "draw": 2,
+      "benchmark_passed": false,
+      "note_changed": true,
+      "inseparable_scope": false,
+      "scores": {
+        "full": 0,
+        "stripped": 0,
+        "none": 1
+      }
+    },
+    {
+      "issue": "matplotlib__matplotlib-22719",
+      "model": "sonnet",
+      "draw": 1,
+      "benchmark_passed": true,
+      "note_changed": true,
+      "inseparable_scope": false,
+      "scores": {
+        "full": 78,
+        "stripped": 50,
+        "none": 78
+      }
+    },
+    {
+      "issue": "matplotlib__matplotlib-22719",
+      "model": "sonnet",
+      "draw": 2,
+      "benchmark_passed": true,
+      "note_changed": true,
+      "inseparable_scope": false,
+      "scores": {
+        "full": 70,
+        "stripped": 65,
+        "none": 55
+      }
+    },
+    {
+      "issue": "matplotlib__matplotlib-24570",
+      "model": "haiku",
+      "draw": 1,
+      "benchmark_passed": true,
+      "note_changed": true,
+      "inseparable_scope": false,
+      "scores": {
+        "full": 77,
+        "stripped": 83,
+        "none": 84
+      }
+    },
+    {
+      "issue": "matplotlib__matplotlib-24570",
+      "model": "haiku",
+      "draw": 2,
+      "benchmark_passed": true,
+      "note_changed": true,
+      "inseparable_scope": false,
+      "scores": {
+        "full": 86,
+        "stripped": 84,
+        "none": 84
+      }
+    },
+    {
+      "issue": "matplotlib__matplotlib-24570",
+      "model": "sonnet",
+      "draw": 1,
+      "benchmark_passed": false,
+      "note_changed": true,
+      "inseparable_scope": true,
+      "scores": {
+        "full": 1,
+        "stripped": 1,
+        "none": 1
+      }
+    },
+    {
+      "issue": "matplotlib__matplotlib-24570",
+      "model": "sonnet",
+      "draw": 2,
+      "benchmark_passed": false,
+      "note_changed": true,
+      "inseparable_scope": true,
+      "scores": {
+        "full": 1,
+        "stripped": 1,
+        "none": 2
+      }
+    },
+    {
+      "issue": "pytest-dev__pytest-10081",
+      "model": "haiku",
+      "draw": 1,
+      "benchmark_passed": false,
+      "note_changed": true,
+      "inseparable_scope": true,
+      "scores": {
+        "full": 1,
+        "stripped": 1,
+        "none": 1
+      }
+    },
+    {
+      "issue": "pytest-dev__pytest-10081",
+      "model": "haiku",
+      "draw": 2,
+      "benchmark_passed": false,
+      "note_changed": true,
+      "inseparable_scope": true,
+      "scores": {
+        "full": 1,
+        "stripped": 1,
+        "none": 1
+      }
+    },
+    {
+      "issue": "pytest-dev__pytest-10081",
+      "model": "sonnet",
+      "draw": 1,
+      "benchmark_passed": true,
+      "note_changed": true,
+      "inseparable_scope": false,
+      "scores": {
+        "full": 83,
+        "stripped": 91,
+        "none": 88
+      }
+    },
+    {
+      "issue": "pytest-dev__pytest-10081",
+      "model": "sonnet",
+      "draw": 2,
+      "benchmark_passed": true,
+      "note_changed": true,
+      "inseparable_scope": false,
+      "scores": {
+        "full": 90,
+        "stripped": 68,
+        "none": 87
+      }
+    },
+    {
+      "issue": "pytest-dev__pytest-7490",
+      "model": "haiku",
+      "draw": 1,
+      "benchmark_passed": false,
+      "note_changed": true,
+      "inseparable_scope": true,
+      "scores": {
+        "full": 0,
+        "stripped": 0,
+        "none": 1
+      }
+    },
+    {
+      "issue": "pytest-dev__pytest-7490",
+      "model": "haiku",
+      "draw": 2,
+      "benchmark_passed": false,
+      "note_changed": true,
+      "inseparable_scope": true,
+      "scores": {
+        "full": 0,
+        "stripped": 0,
+        "none": 0
+      }
+    },
+    {
+      "issue": "pytest-dev__pytest-7490",
+      "model": "sonnet",
+      "draw": 1,
+      "benchmark_passed": true,
+      "note_changed": true,
+      "inseparable_scope": false,
+      "scores": {
+        "full": 31,
+        "stripped": 9,
+        "none": 22
+      }
+    },
+    {
+      "issue": "pytest-dev__pytest-7490",
+      "model": "sonnet",
+      "draw": 2,
+      "benchmark_passed": true,
+      "note_changed": true,
+      "inseparable_scope": false,
+      "scores": {
+        "full": 15,
+        "stripped": 8,
+        "none": 7
+      }
+    },
+    {
+      "issue": "scikit-learn__scikit-learn-10908",
+      "model": "haiku",
+      "draw": 1,
+      "benchmark_passed": true,
+      "note_changed": true,
+      "inseparable_scope": false,
+      "scores": {
+        "full": 68,
+        "stripped": 46,
+        "none": 73
+      }
+    },
+    {
+      "issue": "scikit-learn__scikit-learn-10908",
+      "model": "haiku",
+      "draw": 2,
+      "benchmark_passed": true,
+      "note_changed": true,
+      "inseparable_scope": false,
+      "scores": {
+        "full": 30,
+        "stripped": 22,
+        "none": 74
+      }
+    },
+    {
+      "issue": "scikit-learn__scikit-learn-10908",
+      "model": "sonnet",
+      "draw": 1,
+      "benchmark_passed": false,
+      "note_changed": true,
+      "inseparable_scope": true,
+      "scores": {
+        "full": 12,
+        "stripped": 8,
+        "none": 8
+      }
+    },
+    {
+      "issue": "scikit-learn__scikit-learn-10908",
+      "model": "sonnet",
+      "draw": 2,
+      "benchmark_passed": false,
+      "note_changed": true,
+      "inseparable_scope": true,
+      "scores": {
+        "full": 9,
+        "stripped": 12,
+        "none": 12
+      }
+    },
+    {
+      "issue": "scikit-learn__scikit-learn-12973",
+      "model": "haiku",
+      "draw": 1,
+      "benchmark_passed": true,
+      "note_changed": true,
+      "inseparable_scope": false,
+      "scores": {
+        "full": 98,
+        "stripped": 98,
+        "none": 98
+      }
+    },
+    {
+      "issue": "scikit-learn__scikit-learn-12973",
+      "model": "haiku",
+      "draw": 2,
+      "benchmark_passed": true,
+      "note_changed": true,
+      "inseparable_scope": false,
+      "scores": {
+        "full": 99,
+        "stripped": 99,
+        "none": 97
+      }
+    },
+    {
+      "issue": "scikit-learn__scikit-learn-12973",
+      "model": "sonnet",
+      "draw": 1,
+      "benchmark_passed": false,
+      "note_changed": true,
+      "inseparable_scope": false,
+      "scores": {
+        "full": 24,
+        "stripped": 32,
+        "none": 32
+      }
+    },
+    {
+      "issue": "scikit-learn__scikit-learn-12973",
+      "model": "sonnet",
+      "draw": 2,
+      "benchmark_passed": false,
+      "note_changed": true,
+      "inseparable_scope": false,
+      "scores": {
+        "full": 66,
+        "stripped": 43,
+        "none": 38
+      }
+    }
+  ],
+  "limits": "Eight selected issues with opposite historical benchmark outcomes per pair. Two ratings per patch and condition share a model family and block context. The descriptive cluster interval captures within-sample issue variability; it does not account for shared reviewer or selection effects. Benchmark passage does not establish complete correctness. No training or deployment inference."
+}

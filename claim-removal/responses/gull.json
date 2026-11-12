@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P104831",
+    "probability": 1,
+    "reason": "Replacing every child's descent with its ascent also changes baseline and center alignment, and none of the recorded tests checks the top or bottom edges of unequal-height children."
+  },
+  {
+    "id": "P721717",
+    "probability": 98,
+    "reason": "Both preprocessing and the LARS path receive the constructor setting when the fit argument is omitted and the explicit value otherwise, although the added script only prints results and the recorded tests do not establish precedence."
+  },
+  {
+    "id": "P167422",
+    "probability": 1,
+    "reason": "The reported nested model produces arrays on both sides, so it takes the unchanged operator path that produced the incorrect matrix, and none of the recorded tests checks that nesting example."
+  },
+  {
+    "id": "P769734",
+    "probability": 88,
+    "reason": "The bound instance method in the report now inherits its class's skip decision, but a static test method bypasses that check and the recorded tests do not demonstrate the class-skip case under --pdb."
+  }
+]

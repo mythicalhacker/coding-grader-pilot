@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P122666",
+    "probability": 32,
+    "reason": "Preprocessing honors the effective copy flag, but forcing lars_path to work in place can reorder the matrix used for information-criterion scoring when no Gram matrix is available, a case the recorded tests do not establish as correct."
+  },
+  {
+    "id": "P630053",
+    "probability": 1,
+    "reason": "The debugger branch still checks only the test method, so a class-level skip on an undecorated method still schedules tearDown, and none of the recorded tests exercises that combination."
+  },
+  {
+    "id": "P635817",
+    "probability": 84,
+    "reason": "The revised offsets align the requested edges even for children with different descents, but the added test opens plots at import and asks pytest for an unspecified align fixture, and none of the recorded tests checks those edges."
+  },
+  {
+    "id": "P257219",
+    "probability": 89,
+    "reason": "Copying the right operand preserves the zeros that encode independent inputs, though the supplied example only prints the matrix and the recorded modeling tests do not check the unrelated setuptools pin."
+  }
+]

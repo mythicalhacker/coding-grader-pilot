@@ -1,0 +1,6 @@
+Recorded test results (five existing regression tests):
+PASSED testing/test_skipping.py::TestBooleanCondition::test_skipif
+PASSED testing/test_skipping.py::TestBooleanCondition::test_skipif_noreason
+FAILED testing/test_skipping.py::TestBooleanCondition::test_xfail
+PASSED testing/test_skipping.py::TestEvaluation::test_marked_one_arg
+PASSED testing/test_skipping.py::TestEvaluation::test_marked_one_arg_twice

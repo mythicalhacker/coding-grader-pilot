@@ -1,0 +1,21 @@
+Perfect! The fix works as expected. Let's analyze what we did:
+
+1. We identified that the issue was in the `_cstack` function which handles the `&` operator for compound models.
+2. The original code was treating nested compound models as simple models, not preserving their internal separability structure.
+3. We modified the code to:
+   - Check if a model is a CompoundModel
+   - If it is, recursively compute its separability matrix using `_separable`
+   - Properly place this matrix in the correct position in the output matrix
+   - Handle both left and right sides consistently
+
+The fix now correctly handles:
+1. Simple compound models (Test 1)
+2. Complex non-nested models (Test 2)
+3. Nested compound models (Test 3)
+
+Edge cases that are also handled:
+1. Multiple levels of nesting (e.g., `(a & b) & (c & d)`)
+2. Mixed nesting with non-nested models (e.g., `a & (b & c)`)
+3. Different input/output dimensions for nested models
+
+The fix is minimal and focused on the core issue - preserving the separability information when combining models with the `&` operator. It maintains backward compatibility for all existing use cases while fixing the nested compound model case.

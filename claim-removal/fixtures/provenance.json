@@ -1,0 +1,426 @@
+{
+  "astropy__astropy-12907": {
+    "base_commit": "d16bfe05a744909de4b27f5875fe0d4ed41ce607",
+    "displayed_tests": [
+      "astropy/modeling/tests/test_separable.py::test_arith_oper",
+      "astropy/modeling/tests/test_separable.py::test_cdot",
+      "astropy/modeling/tests/test_separable.py::test_coord_matrix",
+      "astropy/modeling/tests/test_separable.py::test_cstack",
+      "astropy/modeling/tests/test_separable.py::test_custom_model_separable"
+    ],
+    "patches": {
+      "haiku": {
+        "displayed_tests_sha256": "1511aa68e446e780beac134d5ff69d69064bdc6dfb509219fc300b8b5aea5805",
+        "note_sha256": "0cd652ac1a99af2661cacd1bb8bc8572f146e4a4d578961ef48b27d6289d0143",
+        "patch_sha256": "4c7e0981f95838580cac8e98393f5664a794a43e79288746eed4a8845f48f30e",
+        "report_sha256": "694d47ab10f881fae49f54c1d0d1776143e5d268ca6f0c3bc5dee7ebbb705361",
+        "report_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/astropy__astropy-12907/report.json",
+        "source_patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/astropy__astropy-12907/patch.diff",
+        "stdout_line_numbers": [
+          539,
+          537,
+          536,
+          538,
+          548
+        ],
+        "stdout_sha256": "26a7e92b808e1e43ff4eeb0619b679e3cd6fd20ed9e5f34f933638a2ba460e2c",
+        "stdout_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/astropy__astropy-12907/test_output.txt",
+        "trajectory_range_sha256": "a885470e7123eff391665c05fb34585c66a9051976553f1d3b3e3ec773a81def",
+        "trajectory_range_start": 1952,
+        "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/astropy__astropy-12907.log"
+      },
+      "sonnet": {
+        "displayed_tests_sha256": "1511aa68e446e780beac134d5ff69d69064bdc6dfb509219fc300b8b5aea5805",
+        "note_sha256": "f9eef41f8c7385f2e97a0f536ad992f312199fc474d4bbe4916447aa829c3ba0",
+        "patch_sha256": "2652afcce01c0e3136164254a978da69c24b5363ca3655b4bfb2f51048885954",
+        "report_sha256": "fe3f3bddc9631279d3babf7270913070d91e9207c3468bd947823aee3e7b1b86",
+        "report_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/astropy__astropy-12907/report.json",
+        "source_patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/astropy__astropy-12907/patch.diff",
+        "stdout_line_numbers": [
+          484,
+          482,
+          481,
+          483,
+          495
+        ],
+        "stdout_sha256": "af2f0e578c3c74daabff6447e88e43d0197e7fff36b5f933794fe895c8098fb1",
+        "stdout_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/astropy__astropy-12907/test_output.txt",
+        "trajectory_range_sha256": "b0e6a0f2f0984ff0d03f174c801ae46dcbb890396ebd7034e6a0336bf2e9d346",
+        "trajectory_range_start": 1392,
+        "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/astropy__astropy-12907.log"
+      }
+    },
+    "problem_sha256": "c01334ec1b21a089c650cf2e7b96ab974469076bf1260d23885799e1f0a7551f"
+  },
+  "astropy__astropy-14508": {
+    "base_commit": "a3f4ae6cd24d5ecdf49f213d77b3513dd509a06c",
+    "displayed_tests": [
+      "astropy/io/fits/tests/test_header.py::TestHeaderFunctions::test_add_blank",
+      "astropy/io/fits/tests/test_header.py::TestHeaderFunctions::test_add_history",
+      "astropy/io/fits/tests/test_header.py::TestHeaderFunctions::test_append_end_card",
+      "astropy/io/fits/tests/test_header.py::TestHeaderFunctions::test_assign_boolean",
+      "astropy/io/fits/tests/test_header.py::TestHeaderFunctions::test_assign_inf_nan"
+    ],
+    "patches": {
+      "haiku": {
+        "displayed_tests_sha256": "cdd64292e549a2c7a158da9dfc3bd1c51a34fc933a4490c32d0abe5502269944",
+        "note_sha256": "eb8eedff14ead974c7981b077ffda3d600fd97280f75dd0fef0e8e00f573d046",
+        "patch_sha256": "2536c19400f459314d7b828d54e11808b14930e01cecbe18b1a8088619daaf79",
+        "report_sha256": "9d82005ee6833992190893629d39a68be5407b43e98f870c3e08490e618d7562",
+        "report_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/astropy__astropy-14508/report.json",
+        "source_patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/astropy__astropy-14508/patch.diff",
+        "stdout_line_numbers": [
+          629,
+          628,
+          728,
+          734,
+          743
+        ],
+        "stdout_sha256": "5d08e5acbdfb1190e2a4c204998846ee035d93cba5100383f0f107d771e5b2e5",
+        "stdout_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/astropy__astropy-14508/test_output.txt",
+        "trajectory_range_sha256": "3ae29c7480a8cae93e8a69807092c25cdd0222623bca3e74f7a68b3684db0f85",
+        "trajectory_range_start": 47390,
+        "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/astropy__astropy-14508.log"
+      },
+      "sonnet": {
+        "displayed_tests_sha256": "cdd64292e549a2c7a158da9dfc3bd1c51a34fc933a4490c32d0abe5502269944",
+        "note_sha256": "cd10dce3131cdab061d0a3debc9dfaed242b8f88e549695fd40cf9eb8400a19c",
+        "patch_sha256": "27cbf8fc83d955fd2d0e1b168b1d0d702f3cf6e49fcdf053e4f1e8565e141f4a",
+        "report_sha256": "e30dde81030594e3084f3d120a85927a763da5d69613dc3a10b77f3d9c36155d",
+        "report_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/astropy__astropy-14508/report.json",
+        "source_patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/astropy__astropy-14508/patch.diff",
+        "stdout_line_numbers": [
+          537,
+          536,
+          636,
+          643,
+          652
+        ],
+        "stdout_sha256": "450bb85f3460780e2c4dbdcd3d357aad7380a2dc2ed79f7cd3167a62985d1a38",
+        "stdout_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/astropy__astropy-14508/test_output.txt",
+        "trajectory_range_sha256": "54beff253ac8bc8e1fe08976ad71db74427ffd3d9fbea8ba5bd2baa322b04d7d",
+        "trajectory_range_start": 60697,
+        "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/astropy__astropy-14508.log"
+      }
+    },
+    "problem_sha256": "d08eb8c70acd4f003f7f477092385046092d36ff4e4155594b286795e7f9cd9f"
+  },
+  "matplotlib__matplotlib-22719": {
+    "base_commit": "a2a1b0a11b993fe5f8fab64b6161e99243a6393c",
+    "displayed_tests": [
+      "lib/matplotlib/tests/test_category.py::TestStrCategoryConverter::test_axisinfo",
+      "lib/matplotlib/tests/test_category.py::TestStrCategoryConverter::test_convert_float_array",
+      "lib/matplotlib/tests/test_category.py::TestStrCategoryConverter::test_convert_one_number",
+      "lib/matplotlib/tests/test_category.py::TestStrCategoryConverter::test_default_units",
+      "lib/matplotlib/tests/test_category.py::TestStrCategoryLocator::test_StrCategoryLocator"
+    ],
+    "patches": {
+      "haiku": {
+        "displayed_tests_sha256": "3f92e809b48ced9ec6730489a5bcd2ed84c57523485e37823ea7be30a8c201b3",
+        "note_sha256": "8ed22b67ac230eea3bf13d2a38025271bda40a2249846c397251aa6e95bbdb36",
+        "patch_sha256": "74e020461ca2a76c548791f52d15e34ad7f16452fcf9ee1975b97464af31924a",
+        "report_sha256": "bc2ab4cf2bb32acffbfdc2a2af83805b3683731e977063e74535bad158c360b3",
+        "report_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/matplotlib__matplotlib-22719/report.json",
+        "source_patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/matplotlib__matplotlib-22719/patch.diff",
+        "stdout_line_numbers": [
+          493,
+          490,
+          570,
+          494,
+          495
+        ],
+        "stdout_sha256": "e0513e25633d08e0eadcf421bb14369303d982e12a8ed9ed28c59d8189d7816f",
+        "stdout_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/matplotlib__matplotlib-22719/test_output.txt",
+        "trajectory_range_sha256": "e7d252506d4020f97543e4b37dee132c2a09535735763afc334e1bff253f3645",
+        "trajectory_range_start": 5253,
+        "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/matplotlib__matplotlib-22719.log"
+      },
+      "sonnet": {
+        "displayed_tests_sha256": "e5ff8eceee8ba4013f75b0617b6776e06b8036a2c25efc06332a50305f1fc013",
+        "note_sha256": "d209282e61da301593b1f7b3f75a07d25f024e7466ed2964860bb88706a733b5",
+        "patch_sha256": "02cc2b2bae64f0a6e9832d1ba86764ded6247aa3f106a3f018611d6b3fcf36d6",
+        "report_sha256": "ff885a3d790354de42dc1d01e45e9b8fd3414945e2a305d6eb8327379661da2f",
+        "report_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/matplotlib__matplotlib-22719/report.json",
+        "source_patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/matplotlib__matplotlib-22719/patch.diff",
+        "stdout_line_numbers": [
+          435,
+          432,
+          431,
+          436,
+          437
+        ],
+        "stdout_sha256": "95a368aa84c9c0e09c262ce503597e56d660dd52183aae44d5e3e0fcda5879db",
+        "stdout_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/matplotlib__matplotlib-22719/test_output.txt",
+        "trajectory_range_sha256": "8fcc5fd16bde27241cb9a408756eaf149b74fb273979762b50fc562673665acb",
+        "trajectory_range_start": 130100,
+        "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/matplotlib__matplotlib-22719.log"
+      }
+    },
+    "problem_sha256": "2ffeda0f37f0b31f33acc4091c401b2ecdf32fe61756e07d1248ab2095cb77e0"
+  },
+  "matplotlib__matplotlib-24570": {
+    "base_commit": "8f0003ae902952372824c9917975fb372c026a42",
+    "displayed_tests": [
+      "lib/matplotlib/tests/test_offsetbox.py::test_annotationbbox_extents",
+      "lib/matplotlib/tests/test_offsetbox.py::test_arrowprops_copied",
+      "lib/matplotlib/tests/test_offsetbox.py::test_expand_with_tight_layout",
+      "lib/matplotlib/tests/test_offsetbox.py::test_get_packed_offsets_equal_total_none_sep_none",
+      "lib/matplotlib/tests/test_offsetbox.py::test_offsetbox_clip_children"
+    ],
+    "patches": {
+      "haiku": {
+        "displayed_tests_sha256": "6a265f9c41f641b85ab6019133f9f7c4636ac95b92ff667ee728a2d6e39f48ca",
+        "note_sha256": "b738194c59b7e5e17053e59658f1a42f06495e05be82c73fb922e0e695cad3f3",
+        "patch_sha256": "3c0e199b6df440eb1cde0cff2c5ed9fe419e60f9e2a4d5bc8e889b56896c3a39",
+        "report_sha256": "2006897b9505ed28ac9ddea2652380f5666c5acc7e2d0b99ecce7cfbe65341a0",
+        "report_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/matplotlib__matplotlib-24570/report.json",
+        "source_patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/matplotlib__matplotlib-24570/patch.diff",
+        "stdout_line_numbers": [
+          693,
+          695,
+          429,
+          679,
+          427
+        ],
+        "stdout_sha256": "e3548b18dffb76ff5d34fea616d20c234a8693fb716736093248918b6400c32a",
+        "stdout_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/matplotlib__matplotlib-24570/test_output.txt",
+        "trajectory_range_sha256": "f9da8de6c65ed8bb494281a98a89fa15f41441563766dff3e2d767e49803cde5",
+        "trajectory_range_start": 63565,
+        "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/matplotlib__matplotlib-24570.log"
+      },
+      "sonnet": {
+        "displayed_tests_sha256": "6a265f9c41f641b85ab6019133f9f7c4636ac95b92ff667ee728a2d6e39f48ca",
+        "note_sha256": "f53ca042e819f9040bfd81c7e7a01d91f3cddf3e241bc6746398c85865b137c4",
+        "patch_sha256": "b1b1e111da5a38ec2c23fabc0472ce640e07f3e47a5858a3f4007324df2b5e4e",
+        "report_sha256": "45ac1b1d4d05bd62c05734efee24d3145c412946178ab4999538ca43c588550f",
+        "report_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/matplotlib__matplotlib-24570/report.json",
+        "source_patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/matplotlib__matplotlib-24570/patch.diff",
+        "stdout_line_numbers": [
+          1013,
+          1015,
+          749,
+          999,
+          747
+        ],
+        "stdout_sha256": "ae0ff78d80798c71cae6d1035137c147d8c3c65a956df68e5dc23e43faf8f521",
+        "stdout_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/matplotlib__matplotlib-24570/test_output.txt",
+        "trajectory_range_sha256": "2ecce4d9a08d79aeee5f725d17ce2bf32989814d0778d6b161abfe669a4dc214",
+        "trajectory_range_start": 60308,
+        "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/matplotlib__matplotlib-24570.log"
+      }
+    },
+    "problem_sha256": "e92b7455ee344da93d431a6f48428a89f1ee055b46c062bc804d4456e74c15a5"
+  },
+  "pytest-dev__pytest-10081": {
+    "base_commit": "da9a2b584eb7a6c7e924b2621ed0ddaeca0a7bea",
+    "displayed_tests": [
+      "testing/test_unittest.py::test_BdbQuit",
+      "testing/test_unittest.py::test_async_support",
+      "testing/test_unittest.py::test_class_method_containing_test_issue1558",
+      "testing/test_unittest.py::test_cleanup_functions",
+      "testing/test_unittest.py::test_djangolike_testcase"
+    ],
+    "patches": {
+      "haiku": {
+        "displayed_tests_sha256": "03723537238aa2e322170e0e69f975ccc044190446f6e64e497c04eb8c997af0",
+        "note_sha256": "9336f76fd22dfac25cd810e08188bebc09eaa39a3596a5289445fa939a34dd42",
+        "patch_sha256": "d1fd17f07b5f86ef79b8903bd558c8acd6b715a04b3bc155c94642b1a35751a6",
+        "report_sha256": "9d81628a446f78e8618177cd4e933b45aa82a54f96a0c84644c53a3fc3e7a8a2",
+        "report_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/pytest-dev__pytest-10081/report.json",
+        "source_patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/pytest-dev__pytest-10081/patch.diff",
+        "stdout_line_numbers": [
+          1754,
+          1761,
+          1746,
+          1742,
+          1730
+        ],
+        "stdout_sha256": "22dfb6c9b2024e6e2e88c471bf942e747dda8842b359997c38f21db8cdf81448",
+        "stdout_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/pytest-dev__pytest-10081/test_output.txt",
+        "trajectory_range_sha256": "f6071e3337d18cbdd1ac166774334be8a98ae2638d5d8309ec7146bce1165466",
+        "trajectory_range_start": 34193,
+        "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/pytest-dev__pytest-10081.log"
+      },
+      "sonnet": {
+        "displayed_tests_sha256": "03723537238aa2e322170e0e69f975ccc044190446f6e64e497c04eb8c997af0",
+        "note_sha256": "bbcf65f89e149ef90b20fcc608bfdc3ff835706b15608cc0907df2f03ffdf8fb",
+        "patch_sha256": "b825feb3119e4ead1d3fdb34aa680f81b2b435549c8b5823774c88b2640af43d",
+        "report_sha256": "429c0866a3b308506076d36e5d8d29d5bb53a78849a28cf6f49b206c6b774b23",
+        "report_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/pytest-dev__pytest-10081/report.json",
+        "source_patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/pytest-dev__pytest-10081/patch.diff",
+        "stdout_line_numbers": [
+          1704,
+          1712,
+          1696,
+          1692,
+          1680
+        ],
+        "stdout_sha256": "abb5d70b96150b3d8d16ed602ac43ea15eaa8c56da9fd1eac3a5391056163904",
+        "stdout_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/pytest-dev__pytest-10081/test_output.txt",
+        "trajectory_range_sha256": "e0e040fe953d90e4cf69070ef2f180047a74535508ba947623f1b66ddade8ee0",
+        "trajectory_range_start": 24862,
+        "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/pytest-dev__pytest-10081.log"
+      }
+    },
+    "problem_sha256": "591d6bb69d71666bdd35a3144c95f3d689544055966393676fd23f260f707571"
+  },
+  "pytest-dev__pytest-7490": {
+    "base_commit": "7f7a36478abe7dd1fa993b115d22606aa0e35e88",
+    "displayed_tests": [
+      "testing/test_skipping.py::TestBooleanCondition::test_skipif",
+      "testing/test_skipping.py::TestBooleanCondition::test_skipif_noreason",
+      "testing/test_skipping.py::TestBooleanCondition::test_xfail",
+      "testing/test_skipping.py::TestEvaluation::test_marked_one_arg",
+      "testing/test_skipping.py::TestEvaluation::test_marked_one_arg_twice"
+    ],
+    "patches": {
+      "haiku": {
+        "displayed_tests_sha256": "36de61d11bcf01504b1a6b24c49263c5628aa582ca3002fe9c2b280959460887",
+        "note_sha256": "5c7a549b4bf06454339bf410199c77f57c29523fc86cce35e1fffdc0d18a5b2e",
+        "patch_sha256": "834a09e562926f5f0179b854def605e118cff397a9be571b02c2fe1fd1bb09f6",
+        "report_sha256": "26e2330b19213717bf6da189f71d3f462c899a25202ca1b2ca1669957265b682",
+        "report_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/pytest-dev__pytest-7490/report.json",
+        "source_patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/pytest-dev__pytest-7490/patch.diff",
+        "stdout_line_numbers": [
+          2074,
+          2075,
+          2098,
+          2023,
+          2025
+        ],
+        "stdout_sha256": "b126f95dcc9d356d613a833f803a2450995f225a668d903538e1c07ecaf18bf4",
+        "stdout_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/pytest-dev__pytest-7490/test_output.txt",
+        "trajectory_range_sha256": "23d32682847038a49404e5b4ef0faac4e3e8106f3c0fac39c08890f6735212ef",
+        "trajectory_range_start": 106993,
+        "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/pytest-dev__pytest-7490.log"
+      },
+      "sonnet": {
+        "displayed_tests_sha256": "8c7a67c8f2341517e7cb7facd74e97f78709b2aada46856cfcb2bc40323c08e6",
+        "note_sha256": "eb5f6d6862cf23a8aa6226132f6ac200a2250730ca854123ff023db64eecdda5",
+        "patch_sha256": "8e9c95069bfc5f62bfcf657dc02edc6cfbb68c26325499734cf4f74511c3b503",
+        "report_sha256": "2cff2e11a7622f12c06f0a2890e2c23d7a01c32a96aa47262a8ef3a7d7ee4961",
+        "report_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/pytest-dev__pytest-7490/report.json",
+        "source_patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/pytest-dev__pytest-7490/patch.diff",
+        "stdout_line_numbers": [
+          1474,
+          1475,
+          1476,
+          1407,
+          1409
+        ],
+        "stdout_sha256": "981457dba3be8132005d5c83792b27d39247273d702a99a9a8891705d06feee9",
+        "stdout_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/pytest-dev__pytest-7490/test_output.txt",
+        "trajectory_range_sha256": "f86e95f7eb24bac46718a6b03ceee1978b4ce56e47d62ce9e5f1fc3b122dcad4",
+        "trajectory_range_start": 42035,
+        "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/pytest-dev__pytest-7490.log"
+      }
+    },
+    "problem_sha256": "9a5e8c33368dc3bbe9c5f03d3136a574cebede61fea6c575d39ddf108b92d947"
+  },
+  "scikit-learn__scikit-learn-10908": {
+    "base_commit": "67d06b18c68ee4452768f8a1e868565dd4354abf",
+    "displayed_tests": [
+      "sklearn/feature_extraction/tests/test_text.py::test_char_ngram_analyzer",
+      "sklearn/feature_extraction/tests/test_text.py::test_char_wb_ngram_analyzer",
+      "sklearn/feature_extraction/tests/test_text.py::test_count_binary_occurrences",
+      "sklearn/feature_extraction/tests/test_text.py::test_count_vectorizer_max_features",
+      "sklearn/feature_extraction/tests/test_text.py::test_count_vectorizer_pipeline_grid_selection"
+    ],
+    "patches": {
+      "haiku": {
+        "displayed_tests_sha256": "cb6746451bf0cafcce8672b6c87f2fe86a3b353017898f7e6cbe2c1e97384b58",
+        "note_sha256": "87b499198582a249d15f200922ffe5a748421ffb86602076b39614de69b146b2",
+        "patch_sha256": "2089363b44dbd69efa0372bf21a7977b5e34ca2c1187003588b99f980453a2b3",
+        "report_sha256": "f4ea4874d8b0a5fbb454b9c96333b9ef5f6ed83af31c665ddaed669205ff2d8a",
+        "report_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/scikit-learn__scikit-learn-10908/report.json",
+        "source_patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/scikit-learn__scikit-learn-10908/patch.diff",
+        "stdout_line_numbers": [
+          568,
+          569,
+          589,
+          586,
+          592
+        ],
+        "stdout_sha256": "f489e7f0af036c89409850a88ad3ebc5902e6b421caa74e724e7380785f4e52a",
+        "stdout_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/scikit-learn__scikit-learn-10908/test_output.txt",
+        "trajectory_range_sha256": "a02bf9da74475329b904e5997c384d14ed19b9fc2728a6c7f7f76b4ebb493b90",
+        "trajectory_range_start": 77306,
+        "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/scikit-learn__scikit-learn-10908.log"
+      },
+      "sonnet": {
+        "displayed_tests_sha256": "cb6746451bf0cafcce8672b6c87f2fe86a3b353017898f7e6cbe2c1e97384b58",
+        "note_sha256": "bfba23fa97d6e5a96488c2bc4654cbd1f8e93c2d98bac5b0a5417f6921bd8cbe",
+        "patch_sha256": "7b2c10888057a5f7be3c27e54d680de8801682be02bedb3c57bb4f1529b6798c",
+        "report_sha256": "8cf2eb58c13df7bac4491f542bde053af70c710182d59ff9e84fed6ff84deb15",
+        "report_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/scikit-learn__scikit-learn-10908/report.json",
+        "source_patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/scikit-learn__scikit-learn-10908/patch.diff",
+        "stdout_line_numbers": [
+          635,
+          636,
+          655,
+          652,
+          658
+        ],
+        "stdout_sha256": "11aa33891f19ba2b41ec6c80b23ef0dcf151db5a78d512f8d0939d206c1f04af",
+        "stdout_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/scikit-learn__scikit-learn-10908/test_output.txt",
+        "trajectory_range_sha256": "246155c47fa72c46b9518218f1468b83d7c75097345d1988791a668610a30c48",
+        "trajectory_range_start": 66025,
+        "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/scikit-learn__scikit-learn-10908.log"
+      }
+    },
+    "problem_sha256": "706f3719994e3076d30e5aeafcaa86f8ce95666d705c8eb5127779336e4d88ae"
+  },
+  "scikit-learn__scikit-learn-12973": {
+    "base_commit": "a7b8b9e9e16d4e15fabda5ae615086c2e1c47d8a",
+    "displayed_tests": [
+      "sklearn/linear_model/tests/test_least_angle.py::test_all_precomputed",
+      "sklearn/linear_model/tests/test_least_angle.py::test_collinearity",
+      "sklearn/linear_model/tests/test_least_angle.py::test_estimatorclasses_positive_constraint",
+      "sklearn/linear_model/tests/test_least_angle.py::test_lars_add_features",
+      "sklearn/linear_model/tests/test_least_angle.py::test_lars_cv"
+    ],
+    "patches": {
+      "haiku": {
+        "displayed_tests_sha256": "a25267ef21613795d42735ef403cdebfaa090a9f803196129661caffd2589a21",
+        "note_sha256": "e3997eab44b3138d6a4d89510ec8ebf6149685c13c53b528f6add0f3d2d49087",
+        "patch_sha256": "146124c29f52c797746fde52347d0a5e110103c290e86d3b882485d0e376c956",
+        "report_sha256": "e394e0b8596ada0e174fbbc3c2421e1cc2e95d971c42fe5602f10866797a4410",
+        "report_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/scikit-learn__scikit-learn-12973/report.json",
+        "source_patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/scikit-learn__scikit-learn-12973/patch.diff",
+        "stdout_line_numbers": [
+          618,
+          621,
+          643,
+          635,
+          638
+        ],
+        "stdout_sha256": "89336acb3868a820cc4de57503e36de108f30ac1584d08c458e3f5b3b3ea2343",
+        "stdout_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/logs/scikit-learn__scikit-learn-12973/test_output.txt",
+        "trajectory_range_sha256": "18d0118fddb4870e4894169ceca54087fc0cc157b4e60e62a26cab383db4e7a6",
+        "trajectory_range_start": 73284,
+        "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-haiku/trajs/scikit-learn__scikit-learn-12973.log"
+      },
+      "sonnet": {
+        "displayed_tests_sha256": "a25267ef21613795d42735ef403cdebfaa090a9f803196129661caffd2589a21",
+        "note_sha256": "8504553324e40e4f843af20c57bb4a6353fed3140f94aede6a68cfe5d4508e86",
+        "patch_sha256": "1e8414b1a69f91edb55ee72ecfcff23eefb6f00785bf9352dbf2af16e2b2d380",
+        "report_sha256": "67f2b3863a355821efd9533657b1d8caf9b17209d72f4c8eaed7716be22328ec",
+        "report_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/scikit-learn__scikit-learn-12973/report.json",
+        "source_patch_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/scikit-learn__scikit-learn-12973/patch.diff",
+        "stdout_line_numbers": [
+          654,
+          657,
+          678,
+          670,
+          673
+        ],
+        "stdout_sha256": "a3c445a0388f55fb376a35d616f9643eafe3862baf118bcec09c9a07829174ae",
+        "stdout_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/logs/scikit-learn__scikit-learn-12973/test_output.txt",
+        "trajectory_range_sha256": "5cce3df6bf43dbdf317707ef0094165f21ded43466968204722a878d3f0e65e0",
+        "trajectory_range_start": 110903,
+        "trajectory_url": "https://swe-bench-submissions.s3.amazonaws.com/verified/20241022_tools_claude-3-5-sonnet-updated/trajs/scikit-learn__scikit-learn-12973.log"
+      }
+    },
+    "problem_sha256": "9f4c3ac86062600df1bbf16897c088a862213cb9418d09da8d0d6e32163ba223"
+  }
+}

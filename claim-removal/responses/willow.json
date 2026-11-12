@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P307514",
+    "probability": 22,
+    "reason": "Report-time evaluation catches the new marker, but it also reevaluates previously active conditions after the test can change their result, and two added tests fail outright when collected."
+  },
+  {
+    "id": "P858045",
+    "probability": 78,
+    "reason": "The early return bypasses the warning for empty categorical data, but it collapses every empty input to one dimension and the added test catches plotting errors instead of asserting success."
+  },
+  {
+    "id": "P276265",
+    "probability": 73,
+    "reason": "Validating before feature-name lookup initializes the supplied vocabulary correctly, but the shared checker now accepts a fixed vocabulary even when the vocabulary_ attribute its callers need is absent."
+  },
+  {
+    "id": "P997246",
+    "probability": 8,
+    "reason": "The shorter decimal preserves the example comment, but short scientific-notation values now bypass FITS exponent normalization and retain Python’s lowercase e, a case the five recorded tests miss."
+  }
+]

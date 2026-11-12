@@ -1,0 +1,1 @@
+The changes are minimal and targeted to restore the previous behavior while maintaining the overall improvements in pytest 6.x. The solution handles the specific case of dynamically adding xfail markers without affecting other marker behaviors.

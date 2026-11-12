@@ -1,0 +1,6 @@
+Recorded test results (five existing regression tests):
+PASSED lib/matplotlib/tests/test_offsetbox.py::test_annotationbbox_extents
+PASSED lib/matplotlib/tests/test_offsetbox.py::test_arrowprops_copied
+PASSED lib/matplotlib/tests/test_offsetbox.py::test_expand_with_tight_layout
+PASSED lib/matplotlib/tests/test_offsetbox.py::test_get_packed_offsets_equal_total_none_sep_none
+PASSED lib/matplotlib/tests/test_offsetbox.py::test_offsetbox_clip_children

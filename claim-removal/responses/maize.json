@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P253050",
+    "probability": 9,
+    "reason": "The example keeps its full comment, but short scientific values such as 1e-07 now retain a lowercase exponent instead of the uppercase FITS form, a case the recorded tests miss."
+  },
+  {
+    "id": "P360795",
+    "probability": 0,
+    "reason": "Clearing the exception for every xfail-marked call loses the failure needed to report XFAIL and ignores marker conditions, and the recorded conditional-xfail test fails."
+  },
+  {
+    "id": "P611478",
+    "probability": 12,
+    "reason": "The constructor fixes the supplied list example, but moving validation there changes when invalid inputs raise and can leave feature names stale after set_params changes the vocabulary."
+  },
+  {
+    "id": "P245689",
+    "probability": 65,
+    "reason": "The early return avoids the warning for the reported empty list, but it converts every empty input to shape (0,), losing dimensions for inputs such as shape (0, 2), which the recorded tests do not cover."
+  }
+]

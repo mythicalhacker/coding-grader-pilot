@@ -1,0 +1,60 @@
+{
+  "archive_indexes_revision": "40f164d5b8f1d249bf95a6df8b74b577fd8e519d",
+  "dataset_revision": "c104f840cc67f8b6eec6f759ebc8b2693d585d4a",
+  "dataset_sha256": "a45b1fe4e2f0c8390b2b2938ac83e92ed5979000856808f3679c07812e9e6dcd",
+  "eligible_order_by_repo": {
+    "astropy/astropy": [
+      "astropy__astropy-12907",
+      "astropy__astropy-14508",
+      "astropy__astropy-14539"
+    ],
+    "matplotlib/matplotlib": [
+      "matplotlib__matplotlib-22719",
+      "matplotlib__matplotlib-24570",
+      "matplotlib__matplotlib-24637",
+      "matplotlib__matplotlib-25332",
+      "matplotlib__matplotlib-26291"
+    ],
+    "pytest-dev/pytest": [
+      "pytest-dev__pytest-7490",
+      "pytest-dev__pytest-10081"
+    ],
+    "scikit-learn/scikit-learn": [
+      "scikit-learn__scikit-learn-10908",
+      "scikit-learn__scikit-learn-12973",
+      "scikit-learn__scikit-learn-25102",
+      "scikit-learn__scikit-learn-25232"
+    ]
+  },
+  "excluded_previously_graded": [
+    "django__django-11211",
+    "django__django-11532",
+    "django__django-11740",
+    "django__django-12193",
+    "django__django-12754",
+    "django__django-13112",
+    "django__django-13346",
+    "django__django-14053",
+    "django__django-15103",
+    "matplotlib__matplotlib-20859",
+    "pydata__xarray-6461",
+    "scikit-learn__scikit-learn-14983",
+    "sphinx-doc__sphinx-7910",
+    "sphinx-doc__sphinx-7985",
+    "sympy__sympy-12419",
+    "sympy__sympy-14531",
+    "sympy__sympy-14976",
+    "sympy__sympy-15809"
+  ],
+  "selected": [
+    "astropy__astropy-12907",
+    "astropy__astropy-14508",
+    "matplotlib__matplotlib-22719",
+    "matplotlib__matplotlib-24570",
+    "pytest-dev__pytest-7490",
+    "pytest-dev__pytest-10081",
+    "scikit-learn__scikit-learn-10908",
+    "scikit-learn__scikit-learn-12973"
+  ],
+  "selection_rule": "Available discordant graded Sonnet/Haiku submission pairs in four projects, both applied, resolved flags agree with pinned result indexes, both have natural terminal messages. Exclude previously graded IDs. Take lowest two numeric IDs per project; all selected reports describe ordinary non-security library behavior."
+}

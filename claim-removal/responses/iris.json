@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P832873",
+    "probability": 8,
+    "reason": "Constructor validation makes the supplied list available immediately, but it also raises on invalid vocabularies during construction and consumes one-shot vocabularies before fit, neither of which the five passing tests exercise."
+  },
+  {
+    "id": "P451041",
+    "probability": 1,
+    "reason": "The empty-list shortcut avoids the warning, but calling len on a scalar number raises TypeError, consistent with the recorded failure of test_convert_one_number."
+  },
+  {
+    "id": "P536234",
+    "probability": 1,
+    "reason": "Clearing the exception for every test carrying an xfail marker discards genuine failures even when the marker condition is false, and the recorded boolean xfail test fails."
+  },
+  {
+    "id": "P788362",
+    "probability": 12,
+    "reason": "The example keeps its short 0.009125 spelling, but formatting 1E-10 as 1.0E-10 can truncate a previously fitting comment, a case the recorded tests do not cover."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P832873",
+    "probability": 8,
+    "reason": "Constructor validation makes the supplied list available immediately, but it also consumes a one-shot vocabulary before fit can validate it again and moves invalid-vocabulary errors to construction, neither of which the recorded tests cover."
+  },
+  {
+    "id": "P451041",
+    "probability": 0,
+    "reason": "The empty-list check suppresses the warning, but calling len on a scalar number raises TypeError, consistent with the recorded failure of test_convert_one_number."
+  },
+  {
+    "id": "P536234",
+    "probability": 0,
+    "reason": "Clearing the exception for every xfail marker can turn a real failure into a pass even when the marker condition is false, and the existing Boolean xfail test fails."
+  },
+  {
+    "id": "P788362",
+    "probability": 12,
+    "reason": "The change preserves the example comment, but it expands scientific values such as 1E-10 to 1.0E-10, which can truncate a previously fitting comment on a long keyword, a case the recorded tests miss."
+  }
+]

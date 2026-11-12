@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P114757",
+    "probability": 2,
+    "reason": "Replacing every child's descent with its ascent changes baseline and center geometry while leaving the reversed top and bottom alignment rules in place, and the recorded tests do not check unequal-height child positions."
+  },
+  {
+    "id": "P164378",
+    "probability": 97,
+    "reason": "Both preprocessing and the LARS solver now honor the constructor setting unless fit receives an explicit override, though the added script only prints integer inputs and the recorded tests do not directly verify copying."
+  },
+  {
+    "id": "P115114",
+    "probability": 87,
+    "reason": "For an ordinary bound test method the helper now detects the class-level skip and can prevent deferred teardown, though static methods lack that binding and the recorded tests do not establish the reported behavior under --pdb."
+  },
+  {
+    "id": "P642129",
+    "probability": 1,
+    "reason": "The reported nested models produce NumPy matrices on both sides, so they still follow the identical operator call, and the reproduction script prints the result without asserting the expected diagonal block."
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P104831",
+    "probability": 1,
+    "reason": "Replacing every child's descent with its ascent changes center and baseline geometry as well as edge offsets, and the recorded tests do not check that unequal-height children share the requested edge."
+  },
+  {
+    "id": "P721717",
+    "probability": 98,
+    "reason": "Both preprocessing and the LARS path now use the constructor setting when the fit argument is omitted and honor either explicit boolean, although the added script only prints results."
+  },
+  {
+    "id": "P167422",
+    "probability": 1,
+    "reason": "The nested linear models already produce a NumPy matrix, so the reported example still follows the unchanged operator call that loses the diagonal structure."
+  },
+  {
+    "id": "P769734",
+    "probability": 83,
+    "reason": "Checking the bound method's instance class handles the reported example, but a static test method has no such binding and the recorded tests do not exercise a class skip under --pdb."
+  }
+]

@@ -1,0 +1,9 @@
+Perfect! All edge cases are handled correctly:
+
+1. Empty vocabulary raises an error
+2. Duplicate terms in vocabulary raise an error
+3. Set vocabulary is converted to a sorted list and works correctly
+4. Dictionary vocabulary with gaps raises an error
+5. No vocabulary behaves as before - requires fit() before get_feature_names() works
+
+The fix is complete and handles all edge cases correctly while maintaining backward compatibility for the case where no vocabulary is provided.

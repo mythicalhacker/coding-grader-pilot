@@ -1,0 +1,17 @@
+Great! The error is now fixed. 
+
+5. Let's consider edge cases:
+- The function now first tries `str(value)`, which should work for most common float values
+- If the string representation is longer than 20 characters, it falls back to the `.16G` formatting
+- The existing code for handling exponents and ensuring a decimal point is preserved
+- The code still limits the string to 20 characters, maintaining the original constraint
+
+Let me explain the changes:
+1. The original code always used `f"{value:.16G}"`, which can lead to unnecessary precision
+2. The new implementation first tries `str(value)`, which often provides a more compact representation
+3. If the string representation is too long (> 20 characters), it falls back to the `.16G` formatting
+4. The rest of the function remains the same, ensuring compatibility with the existing code
+
+This change should resolve the issue described in the PR, allowing `io.fits.Card` to use a more compact string representation of floats when possible, while still maintaining the existing behavior for more complex cases.
+
+Would you like me to make any further modifications or run additional tests?

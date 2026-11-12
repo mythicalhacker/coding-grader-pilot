@@ -1,0 +1,7 @@
+To summarize:
+1. We identified the issue was in the xfail marker evaluation timing
+2. We modified `pytest_runtest_makereport` to re-evaluate xfail marks during report generation
+3. We verified the fix works for both the basic case and various edge cases
+4. We added a changelog entry to document the fix
+
+The changes are minimal and focused on fixing the specific issue while maintaining backward compatibility and proper handling of all xfail features.

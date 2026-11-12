@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P928458",
+    "probability": 1,
+    "reason": "The early return silences the warning for empty lists, but calling len() before normalizing the input breaks scalar conversion, as the failing test_convert_one_number confirms."
+  },
+  {
+    "id": "P636842",
+    "probability": 7,
+    "reason": "Evaluating marks after the test catches the reported dynamic xfail, but it can also reverse a previously evaluated condition, and two newly added tests would report ordinary failures when collected."
+  },
+  {
+    "id": "P194652",
+    "probability": 20,
+    "reason": "Using str() preserves 0.009125, but the formatter expands 1E-07 to 1.0E-07, which can newly truncate a long HIERARCH comment, a case the five recorded tests do not cover."
+  },
+  {
+    "id": "P598607",
+    "probability": 74,
+    "reason": "get_feature_names() now validates the supplied vocabulary on first use, but the shared vocabulary check also accepts a configured vectorizer with no vocabulary_ attribute, a state the recorded tests do not exercise."
+  }
+]

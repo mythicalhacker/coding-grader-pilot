@@ -1,0 +1,294 @@
+[
+  {
+    "stem": "astropy__astropy-12907-haiku",
+    "removed": [
+      [
+        991,
+        1122
+      ],
+      [
+        1124,
+        1160
+      ],
+      [
+        726,
+        757
+      ]
+    ],
+    "original_sha256": "0cd652ac1a99af2661cacd1bb8bc8572f146e4a4d578961ef48b27d6289d0143",
+    "stripped": "5. Let me explain the changes and reasoning:\n\nThe core issue was in how nested compound models were being processed in the `_separable` function. The original implementation would recursively call `_separable` on the left and right components and then use the operator to combine their results. However, this approach didn't work correctly for nested models.\n\nThe key changes are:\n1. Check if both `sepleft` and `sepright` are numpy arrays (coordinate matrices)\n2. If they are, use the original operator-based combination\n3. If not (which happens with nested models), create full coordinate matrices for the left and right components\n4. Use `np.hstack` to combine these matrices, which preserves the separability information\n\n\n- Simple compound models are processed as before\n- Nested compound models get their separability matrix correctly computed\n- The total number of outputs is preserved\n- The separability of inputs and outputs is correctly represented\n\n\n\n\n1. Simple models (Linear1D, etc.)\n2. Compound models with '&' and '|' operators\n3. Nested compound models with multiple levels of nesting\n\nWould you like me to run any additional tests or explain any part of the solution in more detail?",
+    "inseparable_scope": false,
+    "note_fully_removed": false
+  },
+  {
+    "stem": "astropy__astropy-12907-sonnet",
+    "removed": [
+      [
+        0,
+        36
+      ],
+      [
+        583,
+        613
+      ],
+      [
+        723,
+        756
+      ],
+      [
+        1069,
+        1176
+      ]
+    ],
+    "original_sha256": "f9eef41f8c7385f2e97a0f536ad992f312199fc474d4bbe4916447aa829c3ba0",
+    "stripped": "Let's analyze what we did:\n\n1. We identified that the issue was in the `_cstack` function which handles the `&` operator for compound models.\n2. The original code was treating nested compound models as simple models, not preserving their internal separability structure.\n3. We modified the code to:\n   - Check if a model is a CompoundModel\n   - If it is, recursively compute its separability matrix using `_separable`\n   - Properly place this matrix in the correct position in the output matrix\n   - Handle both left and right sides consistently\n\n\n1. Simple compound models (Test 1)\n2. Complex non-nested models (Test 2)\n3. Nested compound models (Test 3)\n\n\n1. Multiple levels of nesting (e.g., `(a & b) & (c & d)`)\n2. Mixed nesting with non-nested models (e.g., `a & (b & c)`)\n3. Different input/output dimensions for nested models\n\nThe fix is minimal and focused on the core issue - preserving the separability information when combining models with the `&` operator.",
+    "inseparable_scope": true,
+    "note_fully_removed": false
+  },
+  {
+    "stem": "astropy__astropy-14508-haiku",
+    "removed": [
+      [
+        0,
+        30
+      ],
+      [
+        848,
+        906
+      ]
+    ],
+    "original_sha256": "eb8eedff14ead974c7981b077ffda3d600fd97280f75dd0fef0e8e00f573d046",
+    "stripped": "5. Let's consider edge cases:\n- The function now first tries `str(value)`, which should work for most common float values\n- If the string representation is longer than 20 characters, it falls back to the `.16G` formatting\n- The existing code for handling exponents and ensuring a decimal point is preserved\n- The code still limits the string to 20 characters, maintaining the original constraint\n\nLet me explain the changes:\n1. The original code always used `f\"{value:.16G}\"`, which can lead to unnecessary precision\n2. The new implementation first tries `str(value)`, which often provides a more compact representation\n3. If the string representation is too long (> 20 characters), it falls back to the `.16G` formatting\n4. The rest of the function remains the same, ensuring compatibility with the existing code\n\nallowing `io.fits.Card` to use a more compact string representation of floats when possible, while still maintaining the existing behavior for more complex cases.\n\nWould you like me to make any further modifications or run additional tests?",
+    "inseparable_scope": true,
+    "note_fully_removed": false
+  },
+  {
+    "stem": "astropy__astropy-14508-sonnet",
+    "removed": [
+      [
+        1128,
+        1177
+      ]
+    ],
+    "original_sha256": "cd10dce3131cdab061d0a3debc9dfaed242b8f88e549695fd40cf9eb8400a19c",
+    "stripped": "Perfect! All our test cases pass now. Let's summarize what our fix does:\n\n1. For most floating point numbers, it uses Python's default string representation (via `str(value)`) which is usually more compact while still being precise enough.\n\n2. If the default representation would lose precision (checked by converting back to float and comparing), it falls back to the full precision format using `{value:.16G}`.\n\n3. In both cases, it ensures:\n   - Numbers always have a decimal point (by adding .0 if needed)\n   - Scientific notation is normalized to use uppercase 'E' and 2-digit exponents\n   - The significand in scientific notation always has a decimal point\n   - The output is limited to 20 characters as required by the FITS standard\n\nThe fix successfully handles all edge cases we tested:\n- Regular decimal numbers (0.009125)\n- Very small numbers requiring scientific notation (1.23e-10)\n- Very large numbers (1.23e10)\n- Numbers requiring full precision (1/3)\n- Integer-like floats (42.0)\n- Numbers that could be represented more compactly (0.1 + 0.2)\n- Numbers with trailing zeros in scientific notation (1.000000e-10)\n\nusing a more compact representation when possible, which prevents comments from being unnecessarily truncated.",
+    "inseparable_scope": true,
+    "note_fully_removed": false
+  },
+  {
+    "stem": "matplotlib__matplotlib-22719-haiku",
+    "removed": [
+      [
+        623,
+        690
+      ],
+      [
+        937,
+        1082
+      ]
+    ],
+    "original_sha256": "8ed22b67ac230eea3bf13d2a38025271bda40a2249846c397251aa6e95bbdb36",
+    "stripped": "I see the test case with mixed empty and non-empty data fails, but this is expected behavior. The error is not related to our category unit conversion fix.\n\nLet me explain the changes I made:\n\n1. In the `convert` method of `StrCategoryConverter`, I added a special case to handle empty input by returning an empty numpy float array.\n2. This prevents the `is_numlike` check from being triggered for empty lists.\n3. It also ensures that empty lists are handled gracefully without raising deprecation warnings.\n\nThe key changes are:\n```python\n# Handle empty input\nif len(value) == 0:\n    return np.array([], dtype=float)\n```\n\n\n1. It prevents the confusing deprecation warning when empty data is passed.\n2. It allows plotting with empty data structures for axes using string unit converters.\n3. It handles the edge case of empty input without raising unnecessary warnings.\n\n\n\nWould you like me to make any further modifications or clarify anything about the implementation?",
+    "inseparable_scope": false,
+    "note_fully_removed": false
+  },
+  {
+    "stem": "matplotlib__matplotlib-22719-sonnet",
+    "removed": [
+      [
+        0,
+        54
+      ],
+      [
+        570,
+        672
+      ],
+      [
+        1098,
+        1134
+      ],
+      [
+        844,
+        865
+      ]
+    ],
+    "original_sha256": "d209282e61da301593b1f7b3f75a07d25f024e7466ed2964860bb88706a733b5",
+    "stripped": "1. Empty lists\n2. Empty numpy arrays\n3. Empty float arrays\n4. Normal categorical data\n5. Single categorical value\n6. Numeric data with categorical axis\n\nThe fix we implemented:\n\n1. Adds a special case for empty arrays before the numeric check\n2. Returns an empty float array when an empty input is received\n3. Preserves the existing behavior for non-empty arrays\n4. Avoids the deprecation warning for empty arrays since they don't need conversion\n5. Maintains compatibility with both numeric and categorical data\n\n The change is also consistent with the API change note mentioned in the PR description, as empty arrays are now handled as a special case before any conversion attempts.\n\n\n1. Empty data structures can be plotted without warnings or errors\n2. The behavior is consistent with what users would expect\n3. The fix doesn't interfere with the planned deprecation of numeric data passing through unit converters\n\n\nWould you like me to make any additional changes or test any other scenarios?",
+    "inseparable_scope": false,
+    "note_fully_removed": false
+  },
+  {
+    "stem": "matplotlib__matplotlib-24570-haiku",
+    "removed": [
+      [
+        370,
+        457
+      ]
+    ],
+    "original_sha256": "b738194c59b7e5e17053e59658f1a42f06495e05be82c73fb922e0e695cad3f3",
+    "stripped": "This test script will help visualize the alignment behavior for different `align` options.\n\nTo summarize the changes:\n1. I modified the `_get_aligned_offsets` function in `offsetbox.py`\n2. Swapped the conditions for `\"top\"` and `\"bottom\"` alignment\n3. This ensures that `align=\"top\"` aligns the tops of the boxes\n4. And `align=\"bottom\"` aligns the bottoms of the boxes\n\n It provides a more intuitive alignment behavior for the `HPacker` class.\n\nWould you like me to proceed with this solution or explore any alternative approaches?",
+    "inseparable_scope": false,
+    "note_fully_removed": false
+  },
+  {
+    "stem": "matplotlib__matplotlib-24570-sonnet",
+    "removed": [
+      [
+        0,
+        96
+      ],
+      [
+        1099,
+        1285
+      ]
+    ],
+    "original_sha256": "f53ca042e819f9040bfd81c7e7a01d91f3cddf3e241bc6746398c85865b137c4",
+    "stripped": "1. In matplotlib's coordinate system, the y-descent (`yd`) is measured from the bottom of the box to the baseline. This means that `h - yd` represents the distance from the top of the box to the baseline.\n\n2. In the original code, `HPacker` was passing `(h, yd)` to `_get_aligned_offsets`, which meant it was treating the descent as being measured from the top of the box. This caused the alignment to be reversed.\n\n3. The fix changes this to pass `(h, h - yd)`, which correctly represents the descent as being measured from the bottom of the box. This matches how matplotlib's coordinate system works and how the `VPacker` class handles vertical alignment.\n\n4. The `_get_aligned_offsets` function then correctly aligns the boxes based on these values:\n   - For `align=\"bottom\"`, it aligns the boxes at their bottom edges (descent = 0)\n   - For `align=\"top\"`, it aligns the boxes at their top edges (descent = h)\n   - For `align=\"baseline\"`, it aligns the boxes at their baselines (descent = h - yd)",
+    "inseparable_scope": true,
+    "note_fully_removed": false
+  },
+  {
+    "stem": "pytest-dev__pytest-10081-haiku",
+    "removed": [
+      [
+        1204,
+        1304
+      ],
+      [
+        1305,
+        1326
+      ]
+    ],
+    "original_sha256": "9336f76fd22dfac25cd810e08188bebc09eaa39a3596a5289445fa939a34dd42",
+    "stripped": "Let me explain the changes and reasoning:\n\n1. The original issue was that when running pytest with `--pdb`, the `tearDown()` method of a skipped test class was being called.\n\n2. In the `runtest()` method of `TestCaseFunction` in `_pytest/unittest.py`, there was a condition `if self.config.getoption(\"usepdb\") and not _is_skipped(self.obj)` that prevented replacing the `tearDown` method with a no-op function for skipped tests.\n\n3. I modified the code to explicitly handle skipped tests when running with `--pdb`:\n```python\nif self.config.getoption(\"usepdb\"):\n    # Always replace tearDown with a no-op function for skipped tests\n    if _is_skipped(self.obj):\n        setattr(self._testcase, \"tearDown\", lambda *args: None)\n    else:\n        self._explicit_tearDown = self._testcase.tearDown\n        setattr(self._testcase, \"tearDown\", lambda *args: None)\n```\n\n4. This change ensures that for skipped tests, the `tearDown` method is always replaced with a no-op function when running with `--pdb`.\n\n5. I created test cases to verify the behavior:\n   - `test_repro_skip_class.py` checks the basic skipping behavior\n   - `test_skip_pdb_teardown.py` checks that `tearDown` is not called for skipped tests\n\n `tearDown()` is not called for skipped tests when running with `--pdb`, regardless of whether the skip is applied at the class or function level.\n\nWould you like me to make any further modifications or clarify anything about the implementation?",
+    "inseparable_scope": true,
+    "note_fully_removed": false
+  },
+  {
+    "stem": "pytest-dev__pytest-10081-sonnet",
+    "removed": [
+      [
+        0,
+        47
+      ],
+      [
+        285,
+        342
+      ]
+    ],
+    "original_sha256": "bbcf65f89e149ef90b20fcc608bfdc3ff835706b15608cc0907df2f03ffdf8fb",
+    "stripped": "1. Class-level skips (SkippedTestCase) - Properly skipped without executing tearDown\n2. Normal tests (NormalTestCase) - Run normally with proper tearDown\n3. Mixed tests (MixedTestCase) - Both normal and skipped methods work as expected",
+    "inseparable_scope": false,
+    "note_fully_removed": false
+  },
+  {
+    "stem": "pytest-dev__pytest-7490-haiku",
+    "removed": [
+      [
+        0,
+        127
+      ],
+      [
+        128,
+        170
+      ],
+      [
+        202,
+        244
+      ]
+    ],
+    "original_sha256": "5c7a549b4bf06454339bf410199c77f57c29523fc86cce35e1fffdc0d18a5b2e",
+    "stripped": "dynamically adding xfail markers",
+    "inseparable_scope": true,
+    "note_fully_removed": false
+  },
+  {
+    "stem": "pytest-dev__pytest-7490-sonnet",
+    "removed": [
+      [
+        305,
+        453
+      ],
+      [
+        193,
+        211
+      ]
+    ],
+    "original_sha256": "eb5f6d6862cf23a8aa6226132f6ac200a2250730ca854123ff023db64eecdda5",
+    "stripped": "To summarize:\n1. We identified the issue was in the xfail marker evaluation timing\n2. We modified `pytest_runtest_makereport` to re-evaluate xfail marks during report generation\n3. We verified both the basic case and various edge cases\n4. We added a changelog entry to document the fix",
+    "inseparable_scope": false,
+    "note_fully_removed": false
+  },
+  {
+    "stem": "scikit-learn__scikit-learn-10908-haiku",
+    "removed": [
+      [
+        0,
+        41
+      ],
+      [
+        740,
+        808
+      ],
+      [
+        460,
+        486
+      ]
+    ],
+    "original_sha256": "87b499198582a249d15f200922ffe5a748421ffb86602076b39614de69b146b2",
+    "stripped": "Let me explain the changes:\n\n1. In `_check_vocabulary()`, I added a check to return early if a vocabulary was provided during initialization.\n2. In `_validate_vocabulary()`, I ensured that `vocabulary_` is always set when a vocabulary is provided, and removed it if no vocabulary is provided.\n3. In `transform()` and `get_feature_names()`, I added a check to call `_validate_vocabulary()` if `vocabulary_` is not set.\n\n\n- When a vocabulary is provided during initialization, `get_feature_names()` and `transform()` work without raising a `NotFittedError`\n- The `vocabulary_` attribute is correctly set and managed\n- The existing behavior for other cases remains unchanged\n\n\n- If a vocabulary is provided during initialization, `get_feature_names()` and `transform()` work without requiring a prior `fit()`\n- The code handles edge cases like providing a vocabulary during initialization\n\nWould you like me to make any further modifications or clarify anything about the implementation?",
+    "inseparable_scope": false,
+    "note_fully_removed": false
+  },
+  {
+    "stem": "scikit-learn__scikit-learn-10908-sonnet",
+    "removed": [
+      [
+        0,
+        46
+      ],
+      [
+        337,
+        480
+      ]
+    ],
+    "original_sha256": "bfba23fa97d6e5a96488c2bc4654cbd1f8e93c2d98bac5b0a5417f6921bd8cbe",
+    "stripped": "1. Empty vocabulary raises an error\n2. Duplicate terms in vocabulary raise an error\n3. Set vocabulary is converted to a sorted list and works correctly\n4. Dictionary vocabulary with gaps raises an error\n5. No vocabulary behaves as before - requires fit() before get_feature_names() works",
+    "inseparable_scope": true,
+    "note_fully_removed": false
+  },
+  {
+    "stem": "scikit-learn__scikit-learn-12973-haiku",
+    "removed": [
+      [
+        364,
+        423
+      ]
+    ],
+    "original_sha256": "e3997eab44b3138d6a4d89510ec8ebf6149685c13c53b528f6add0f3d2d49087",
+    "stripped": "The test script doesn't show the modification of the original array, but that's because the modification happens inside the method. The key changes are:\n\n1. The `copy_X` parameter in `fit()` now defaults to `None`\n2. If `copy_X` is `None`, it uses the value from the class initialization\n3. If `copy_X` is explicitly passed, it overrides the initialization value\n\n\n- Avoiding the silent overwriting of the `copy_X` parameter\n- Maintaining backwards compatibility \n- Giving users more explicit control over how the data is copied\n\nThe changes are minimal and focused on the specific issue raised in the PR description. \n\nLet me summarize the key points:\n1. The original code had a `copy_X` parameter in both the class initialization and the `fit()` method\n2. The `fit()` method would always use `copy_X=True` by default, silently overriding the initialization parameter\n3. The fix changes the `fit()` method to use the initialization parameter unless explicitly overridden\n4. This provides more intuitive and predictable behavior for users of the `LassoLarsIC` class\n\nWould you like me to make any further modifications or clarify anything about the implementation?",
+    "inseparable_scope": false,
+    "note_fully_removed": false
+  },
+  {
+    "stem": "scikit-learn__scikit-learn-12973-sonnet",
+    "removed": [
+      [
+        0,
+        45
+      ],
+      [
+        661,
+        759
+      ],
+      [
+        1140,
+        1234
+      ]
+    ],
+    "original_sha256": "8504553324e40e4f843af20c57bb4a6353fed3140f94aede6a68cfe5d4508e86",
+    "stripped": "1. When `copy_X=False` in constructor and not specified in `fit()`, X is modified (Test 1)\n2. When `copy_X=False` in constructor but `True` in `fit()`, X is NOT modified (Test 2)\n3. When `copy_X=True` in constructor but `False` in `fit()`, X is modified (Test 3)\n\nLet's summarize the changes we made:\n\n1. Changed the default value of `copy_X` in `LassoLarsIC.fit()` from `True` to `None`\n2. Added logic to use the constructor's `copy_X` value when `fit()`'s `copy_X` is `None`\n3. Ensured proper handling of copying in both preprocessing and LARS algorithm steps\n4. Fixed the docstring to reflect the new behavior\n\n The key improvements are:\n\n1. The constructor's `copy_X` parameter is now respected when not overridden in `fit()`\n2. Users can still override the constructor's value by explicitly passing `copy_X` to `fit()`\n3. The behavior is now consistent with other estimators in the linear models module\n4. The docstring clearly explains when the constructor's value is used vs. overridden",
+    "inseparable_scope": false,
+    "note_fully_removed": false
+  }
+]

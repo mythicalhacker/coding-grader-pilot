@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P122666",
+    "probability": 24,
+    "reason": "The override reaches preprocessing, but forcing copy_X=False in lars_path lets the solver reorder the working columns used for criterion scoring when no Gram matrix is precomputed, a case the recorded tests do not establish."
+  },
+  {
+    "id": "P630053",
+    "probability": 1,
+    "reason": "The branch still checks only the test method, so a class-level skip takes the same path that saves the real tearDown for later execution under --pdb."
+  },
+  {
+    "id": "P635817",
+    "probability": 77,
+    "reason": "The new offsets correctly align the lower or upper edges, but the added test opens plots on import and requests an undeclared align fixture if collected, neither of which the recorded tests exercise."
+  },
+  {
+    "id": "P257219",
+    "probability": 88,
+    "reason": "Copying the right operand's actual matrix preserves its independent inputs, while the unrelated exact setuptools pin restricts builds in ways the recorded modeling tests do not cover."
+  }
+]

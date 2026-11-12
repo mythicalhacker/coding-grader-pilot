@@ -1,0 +1,6 @@
+Recorded test results (five existing regression tests):
+PASSED sklearn/linear_model/tests/test_least_angle.py::test_all_precomputed
+PASSED sklearn/linear_model/tests/test_least_angle.py::test_collinearity
+PASSED sklearn/linear_model/tests/test_least_angle.py::test_estimatorclasses_positive_constraint
+PASSED sklearn/linear_model/tests/test_least_angle.py::test_lars_add_features
+PASSED sklearn/linear_model/tests/test_least_angle.py::test_lars_cv

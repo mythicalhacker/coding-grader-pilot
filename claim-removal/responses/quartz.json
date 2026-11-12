@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P253050",
+    "probability": 7,
+    "reason": "The example retains its comment, but a short scientific value such as 1e-07 now bypasses conversion to the uppercase E required by FITS, a case the five header tests do not cover."
+  },
+  {
+    "id": "P360795",
+    "probability": 0,
+    "reason": "Clearing the exception for every xfail marker can report a genuine failure as a pass even when the marker condition is false, and the recorded conditional-xfail regression test fails."
+  },
+  {
+    "id": "P611478",
+    "probability": 9,
+    "reason": "Constructor validation makes the supplied list work, but it moves validation errors to construction and can exhaust a one-shot vocabulary before fitting, neither of which the five tests exercise."
+  },
+  {
+    "id": "P245689",
+    "probability": 70,
+    "reason": "The early return avoids the warning for an empty list, but it converts every empty array to shape (0,), losing dimensions for inputs such as shape (0, 2), which the recorded tests do not cover."
+  }
+]

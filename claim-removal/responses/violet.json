@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P114757",
+    "probability": 1,
+    "reason": "Replacing every descent with its complement moves the taller zero-descent child farther upward in top mode and changes center and baseline placement, none of which the recorded tests check."
+  },
+  {
+    "id": "P164378",
+    "probability": 99,
+    "reason": "Both preprocessing and the LARS solver receive the explicit fit argument or, when omitted, the constructor setting, although the added scripts only print results and the recorded tests do not check this precedence."
+  },
+  {
+    "id": "P115114",
+    "probability": 68,
+    "reason": "The class lookup covers the reported bound instance method, but a static test method has no bound instance and a class method resolves to its metaclass, leaving class-level skips incomplete in debugger mode."
+  },
+  {
+    "id": "P642129",
+    "probability": 1,
+    "reason": "The nested linear pair already yields an array, so the reported example takes the unchanged operator branch and the recorded tests do not establish that its diagonal survives."
+  }
+]

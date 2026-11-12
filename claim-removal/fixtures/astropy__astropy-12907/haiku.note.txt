@@ -1,0 +1,24 @@
+5. Let me explain the changes and reasoning:
+
+The core issue was in how nested compound models were being processed in the `_separable` function. The original implementation would recursively call `_separable` on the left and right components and then use the operator to combine their results. However, this approach didn't work correctly for nested models.
+
+The key changes are:
+1. Check if both `sepleft` and `sepright` are numpy arrays (coordinate matrices)
+2. If they are, use the original operator-based combination
+3. If not (which happens with nested models), create full coordinate matrices for the left and right components
+4. Use `np.hstack` to combine these matrices, which preserves the separability information
+
+This modification ensures that:
+- Simple compound models are processed as before
+- Nested compound models get their separability matrix correctly computed
+- The total number of outputs is preserved
+- The separability of inputs and outputs is correctly represented
+
+The solution is minimal and targeted, addressing the specific issue described in the PR without introducing unnecessary complexity.
+
+The fix handles the following cases:
+1. Simple models (Linear1D, etc.)
+2. Compound models with '&' and '|' operators
+3. Nested compound models with multiple levels of nesting
+
+Would you like me to run any additional tests or explain any part of the solution in more detail?

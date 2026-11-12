@@ -1,0 +1,11 @@
+This test script will help visualize the alignment behavior for different `align` options.
+
+To summarize the changes:
+1. I modified the `_get_aligned_offsets` function in `offsetbox.py`
+2. Swapped the conditions for `"top"` and `"bottom"` alignment
+3. This ensures that `align="top"` aligns the tops of the boxes
+4. And `align="bottom"` aligns the bottoms of the boxes
+
+The change is minimal and addresses the specific issue described in the PR description. It provides a more intuitive alignment behavior for the `HPacker` class.
+
+Would you like me to proceed with this solution or explore any alternative approaches?

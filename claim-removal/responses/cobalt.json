@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P530979",
+    "probability": 84,
+    "reason": "The swapped offsets put each lower edge at zero for bottom alignment and each upper edge at the common height for top alignment, but the added pytest function requests an undeclared align fixture and opens figures during collection."
+  },
+  {
+    "id": "P309331",
+    "probability": 43,
+    "reason": "Preprocessing honors the requested override, but forcing copy_X=False in lars_path permits column reordering in the working matrix used to score the fitted path, a risk the recorded tests and caller-mutation demonstration do not address."
+  },
+  {
+    "id": "P748590",
+    "probability": 94,
+    "reason": "Copying the right operand's actual matrix into the lower block preserves the independent linear outputs in the report, though the unrelated exact setuptools pin narrows build compatibility beyond what the modeling tests cover."
+  },
+  {
+    "id": "P993446",
+    "probability": 1,
+    "reason": "The condition still checks the test method alone, so a skip on its class leaves pytest scheduling the real teardown under --pdb, and the new teardown assertion only inspects a freshly constructed instance."
+  }
+]

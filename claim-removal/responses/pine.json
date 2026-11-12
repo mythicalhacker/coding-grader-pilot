@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P928458",
+    "probability": 0,
+    "reason": "The empty-list shortcut suppresses the warning, but calling len on a scalar raises TypeError, as confirmed by the failing single-number conversion test."
+  },
+  {
+    "id": "P636842",
+    "probability": 15,
+    "reason": "Report-time evaluation catches the new marker, but it also re-evaluates existing conditions after the test can change their inputs, and two added test cases would themselves report failures."
+  },
+  {
+    "id": "P194652",
+    "probability": 8,
+    "reason": "The reported decimal fits, but the formatter expands 1E-05 to 1.0E-05, which can truncate a previously fitting comment, and the five recorded tests do not cover that case."
+  },
+  {
+    "id": "P598607",
+    "probability": 30,
+    "reason": "Lazy validation fixes get_feature_names, but the shared vocabulary check now succeeds whenever a constructor vocabulary exists, leaving callers that rely on the check exposed to a missing vocabulary_ attribute."
+  }
+]

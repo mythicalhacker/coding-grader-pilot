@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P530979",
+    "probability": 86,
+    "reason": "The two formulas now give children a common bottom or top edge as requested, but the recorded tests do not check those edges and the added pytest function requests an undeclared align fixture."
+  },
+  {
+    "id": "P309331",
+    "probability": 66,
+    "reason": "Preprocessing honors the explicit override or constructor default, but forcing copy_X=False in lars_path lets the solver modify the working matrix that LassoLarsIC may still need to score the path, a case the recorded tests do not establish as safe."
+  },
+  {
+    "id": "P748590",
+    "probability": 88,
+    "reason": "Copying the right operand's actual matrix into its block preserves the independent inputs in the example, though the unrelated exact setuptools pin narrows build compatibility and the recorded modeling tests do not check installation."
+  },
+  {
+    "id": "P993446",
+    "probability": 1,
+    "reason": "The skip check still examines only the test method, so a class-only skip still saves the real tearDown for later execution under --pdb, and none of the recorded tests exercises that combination."
+  }
+]

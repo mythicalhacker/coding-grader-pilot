@@ -1,0 +1,6 @@
+Recorded test results (five existing regression tests):
+PASSED astropy/io/fits/tests/test_header.py::TestHeaderFunctions::test_add_blank
+PASSED astropy/io/fits/tests/test_header.py::TestHeaderFunctions::test_add_history
+PASSED astropy/io/fits/tests/test_header.py::TestHeaderFunctions::test_append_end_card
+PASSED astropy/io/fits/tests/test_header.py::TestHeaderFunctions::test_assign_boolean
+PASSED astropy/io/fits/tests/test_header.py::TestHeaderFunctions::test_assign_inf_nan

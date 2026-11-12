@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P832873",
+    "probability": 12,
+    "reason": "Eager validation makes the supplied list work, but it also consumes a one-shot vocabulary during construction, leaving it empty when fit validates it again, a case the five passing tests miss."
+  },
+  {
+    "id": "P451041",
+    "probability": 1,
+    "reason": "The early return handles empty lists, but calling len on a scalar number raises TypeError, as reflected in the failing single-number conversion test."
+  },
+  {
+    "id": "P536234",
+    "probability": 0,
+    "reason": "Clearing the exception for every xfail marker can report a genuine failure as passed even when the marker condition is false, and the existing conditional xfail test fails."
+  },
+  {
+    "id": "P788362",
+    "probability": 17,
+    "reason": "It preserves the comment for 0.009125, but it also expands 1E-08 to 1.0E-08, costing two comment characters on a full card, a case the recorded tests miss."
+  }
+]

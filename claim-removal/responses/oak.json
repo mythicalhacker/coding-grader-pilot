@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P307514",
+    "probability": 9,
+    "reason": "Report-time evaluation catches the new marker, but reevaluating an already active condition after the test can reverse its outcome, and two unrecorded tests in the patch deliberately fail when collected."
+  },
+  {
+    "id": "P858045",
+    "probability": 50,
+    "reason": "The early return prevents the warning for empty lists, but it collapses every multidimensional empty array to shape (0,), and the five recorded tests do not check empty inputs."
+  },
+  {
+    "id": "P276265",
+    "probability": 46,
+    "reason": "Lazy validation initializes the supplied vocabulary for get_feature_names, but the shared check now accepts any non-None vocabulary even if vocabulary_ is missing, a state the recorded tests do not cover."
+  },
+  {
+    "id": "P997246",
+    "probability": 3,
+    "reason": "Using str preserves the example comment, but short scientific values such as 1e-07 now bypass FITS uppercase exponent formatting, which none of the recorded tests exercises."
+  }
+]

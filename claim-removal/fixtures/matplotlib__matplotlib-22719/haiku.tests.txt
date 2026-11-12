@@ -1,0 +1,6 @@
+Recorded test results (five existing regression tests):
+PASSED lib/matplotlib/tests/test_category.py::TestStrCategoryConverter::test_axisinfo
+PASSED lib/matplotlib/tests/test_category.py::TestStrCategoryConverter::test_convert_float_array
+FAILED lib/matplotlib/tests/test_category.py::TestStrCategoryConverter::test_convert_one_number
+PASSED lib/matplotlib/tests/test_category.py::TestStrCategoryConverter::test_default_units
+PASSED lib/matplotlib/tests/test_category.py::TestStrCategoryLocator::test_StrCategoryLocator

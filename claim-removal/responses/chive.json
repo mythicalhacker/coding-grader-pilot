@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P253050",
+    "probability": 7,
+    "reason": "The reported decimal now fits with its comment, but short scientific values such as 1e-09 bypass FITS uppercase exponent formatting, a case the recorded tests miss."
+  },
+  {
+    "id": "P360795",
+    "probability": 0,
+    "reason": "Clearing the exception whenever any xfail marker exists hides failures even when its condition is false and prevents accurate XFAIL reporting, and the recorded conditional xfail test fails."
+  },
+  {
+    "id": "P611478",
+    "probability": 12,
+    "reason": "Constructor validation makes the supplied list work, but it changes when invalid vocabularies raise and leaves get_feature_names unable to initialize a vocabulary supplied later through set_params, neither of which the recorded tests cover."
+  },
+  {
+    "id": "P245689",
+    "probability": 55,
+    "reason": "The early return bypasses the warning for the reported empty list, but it converts every empty array to shape (0,), discarding dimensions such as (0, 2) in a case the recorded tests miss."
+  }
+]

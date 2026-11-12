@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P928458",
+    "probability": 0,
+    "reason": "The early return suppresses the warning for empty lists, but calling len() on a scalar breaks numeric conversion, as the recorded test_convert_one_number failure confirms."
+  },
+  {
+    "id": "P636842",
+    "probability": 8,
+    "reason": "Report-time evaluation catches the marker added by the test, but reevaluating an existing xfail condition after the test can reverse its outcome if the test changes the condition, and two added edge-case tests fail outright when collected."
+  },
+  {
+    "id": "P194652",
+    "probability": 18,
+    "reason": "Using str() preserves 0.009125, but expanding 1E+20 to 1.0E+20 can newly truncate a HIERARCH card comment, a case the recorded header tests do not exercise."
+  },
+  {
+    "id": "P598607",
+    "probability": 22,
+    "reason": "get_feature_names() now initializes the fixed vocabulary correctly, but the shared check also accepts an uninitialized vocabulary_ for other callers, which can then raise AttributeError, a path the recorded tests do not cover."
+  }
+]

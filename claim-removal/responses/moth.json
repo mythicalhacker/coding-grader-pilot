@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P104831",
+    "probability": 1,
+    "reason": "Replacing every child's descent with its ascent changes center and baseline geometry as well as edge alignment, and none of the recorded tests checks the positions of unequal-height children."
+  },
+  {
+    "id": "P721717",
+    "probability": 98,
+    "reason": "Both preprocessing and the LARS path receive the explicit fit argument when supplied and the estimator setting otherwise, although the added script only prints integer inputs and never asserts copy behavior."
+  },
+  {
+    "id": "P167422",
+    "probability": 0,
+    "reason": "The nested linear models already produce a coordinate array, so the reported example takes the unchanged operator branch and retains the incorrect dependencies."
+  },
+  {
+    "id": "P769734",
+    "probability": 91,
+    "reason": "The skip check on a bound test method now honors its instance's class marker as well as the method marker, although the recorded tests do not demonstrate the class-skipped teardown under --pdb."
+  }
+]

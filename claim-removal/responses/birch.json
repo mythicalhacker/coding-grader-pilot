@@ -1,0 +1,22 @@
+[
+  {
+    "id": "P530979",
+    "probability": 84,
+    "reason": "The new offsets put every lower edge at zero for bottom alignment and every upper edge at the common height for top alignment, but the added pytest function requests an unprovided align fixture and the recorded tests do not verify either edge."
+  },
+  {
+    "id": "P309331",
+    "probability": 38,
+    "reason": "The fit override now controls preprocessing, but always passing copy_X=False allows the solver to reorder the preprocessed matrix used to score the coefficient path, a risk the recorded tests do not address."
+  },
+  {
+    "id": "P748590",
+    "probability": 91,
+    "reason": "Copying the right operand’s dependency matrix preserves the zeros between independent outputs, although the recorded modeling tests leave the unrelated exact setuptools build pin unverified."
+  },
+  {
+    "id": "P993446",
+    "probability": 1,
+    "reason": "The debugger branch still checks only the test method, so a skip marker on the class still allows the real tearDown to be saved for later execution, and none of the recorded tests exercises that case."
+  }
+]

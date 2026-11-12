@@ -1,0 +1,6 @@
+Recorded test results (five existing regression tests):
+PASSED astropy/modeling/tests/test_separable.py::test_arith_oper
+PASSED astropy/modeling/tests/test_separable.py::test_cdot
+PASSED astropy/modeling/tests/test_separable.py::test_coord_matrix
+PASSED astropy/modeling/tests/test_separable.py::test_cstack
+PASSED astropy/modeling/tests/test_separable.py::test_custom_model_separable
