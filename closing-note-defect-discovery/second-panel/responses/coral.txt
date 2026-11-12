@@ -1,0 +1,1 @@
+Both strings are truthy, but the custom checkbox predicate selects only the first. With no ID supplied, the checked state can leak to the second child if the array shares a mutated attribute dictionary. The expected states are [True, False]. Ignoring the predicate and requiring literal True produces [False, False].

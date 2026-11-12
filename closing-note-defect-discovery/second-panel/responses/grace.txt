@@ -1,0 +1,1 @@
+The dyadic rational 2**-1100 requires only one significant binary digit, so mpmath can represent it exactly even at default precision. The scaled result must equal 1. Performing Python division before conversion underflows to zero and makes the assertion fail.

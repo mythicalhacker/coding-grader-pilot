@@ -1,0 +1,1 @@
+The sum visits (0, 0), (1, 1), and (2, 4) in a 5-by-5 identity matrix. Their entries are 1, 1, and 0, so the expected result is 2. Both coordinates depend on the summation index. Treating the coordinates as always distinct loses the two diagonal matches, while a range check on the second coordinate alone cannot count them.

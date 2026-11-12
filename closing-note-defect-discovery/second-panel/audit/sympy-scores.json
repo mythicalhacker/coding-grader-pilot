@@ -1,0 +1,34 @@
+{
+  "52a9207": {
+    "label": "miss",
+    "reason": "The expected 2 is correct for the sampled entries (0,0), (1,1), and (2,4). Both candidates fail that assertion, but the issue requires summing every entry over independent row and column indices. The test does not establish that either candidate gets the reported total wrong."
+  },
+  "f32a321": {
+    "label": "hit",
+    "reason": "The issue requires the active printer to handle nested expressions so generated Python includes the declarations needed to reconstruct the expression. Gold reconstructs this Limit. Candidate 1 raises a KeyError while printing the Limit, preventing the required code generation."
+  },
+  "d915e45": {
+    "label": "miss",
+    "reason": "The test sums three entries along (i, i**2). Its expected result is correct and both candidates fail, but neither failure establishes what the candidates return when summing every entry of an identity matrix as the issue requires."
+  },
+  "1159b7f": {
+    "label": "hit",
+    "reason": "The assertion checks both zero-argument return values specified in the issue. Gold passes, and candidate 1 returns a pair that differs from (oo, -oo)."
+  },
+  "a9d045f": {
+    "label": "hit",
+    "reason": "Gold returns the requested positive infinity for Min() and negative infinity for Max(). Candidate 1 fails the assertion on those two values."
+  },
+  "b4e431e": {
+    "label": "hit",
+    "reason": "The mpmath backend has enough precision at 100 bits to preserve 1 + 2**-60 exactly. Gold retains the increment and candidate 1 fails the arithmetic check, directly exposing loss of rational precision in lambdify."
+  },
+  "a9644a8": {
+    "label": "unscorable",
+    "reason": "The maintainer's fix emits an invalid Python assignment for the minus direction and the proposed reconstruction fails with SyntaxError on gold."
+  },
+  "6e0e348": {
+    "label": "hit",
+    "reason": "The rational 2**-1100 is an exact power of two within mpmath's exponent range. Gold preserves it under lambdify, while candidate 1 fails to recover 1 when the result is scaled back. This tests the reported requirement to evaluate rationals using mpmath."
+  }
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "slot": "flint",
+    "issue": "sympy__sympy-12419",
+    "notes": false,
+    "authors": [
+      "haiku",
+      "sonnet"
+    ],
+    "sha256": "18abc231ee1ae7fc17c184ae1ddd54e293528dda9b4e45adffaa0cb468d5ca75"
+  },
+  {
+    "slot": "lilac",
+    "issue": "sympy__sympy-12419",
+    "notes": true,
+    "authors": [
+      "haiku",
+      "sonnet"
+    ],
+    "sha256": "7417d502b76a76964cbce3e54f4ca7860a57f6b76a5c7c119d1dc947f1c94e0b"
+  },
+  {
+    "slot": "drum",
+    "issue": "sympy__sympy-14531",
+    "notes": false,
+    "authors": [
+      "sonnet",
+      "haiku"
+    ],
+    "sha256": "cc2c4f9c824f80a3d4ed38612fc9ed3a32401df9ed9e73b207cdded67285af94"
+  },
+  {
+    "slot": "pearl",
+    "issue": "sympy__sympy-14531",
+    "notes": true,
+    "authors": [
+      "sonnet",
+      "haiku"
+    ],
+    "sha256": "1b3bd5e7eed03966f70cc55136fe790dce2769c3394f61e2ec80248d971951fd"
+  },
+  {
+    "slot": "bay",
+    "issue": "sympy__sympy-14976",
+    "notes": false,
+    "authors": [
+      "sonnet",
+      "haiku"
+    ],
+    "sha256": "090b56b3080296bcee12ffbede7c5f4c0e61635878bfd0fa421cbf02cadd5dfe"
+  },
+  {
+    "slot": "grace",
+    "issue": "sympy__sympy-14976",
+    "notes": true,
+    "authors": [
+      "sonnet",
+      "haiku"
+    ],
+    "sha256": "927102f4c5e874986c4dab5ee59b6b3ba744a7986c465edae8ba3812d2636d46"
+  },
+  {
+    "slot": "mist",
+    "issue": "sympy__sympy-15809",
+    "notes": false,
+    "authors": [
+      "haiku",
+      "sonnet"
+    ],
+    "sha256": "6a6fc8c530b08df1f2f230765f54c2d88404b740a12c62b8ae50e76a5fc03961"
+  },
+  {
+    "slot": "otter",
+    "issue": "sympy__sympy-15809",
+    "notes": true,
+    "authors": [
+      "haiku",
+      "sonnet"
+    ],
+    "sha256": "bfad19eb2a874e9138033332dec02dd0c51568a3968d4b6561564d3f89123606"
+  }
+]

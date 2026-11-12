@@ -1,0 +1,6 @@
+# Preserve archived inputs and exact evidence bytes across checkouts.
+inputs/** -text
+packets/** -text
+responses/** -text
+audit/** -text
+*.json -text

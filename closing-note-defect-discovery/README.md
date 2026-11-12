@@ -4,6 +4,8 @@ On the same **six of eight** SWE-bench Verified issues, a reviewer who saw the a
 
 The reviews and test executions took place on November 13, 2026. The patch pairs, commands, outputs and notes are from the October 2024 Claude 3.5 Sonnet and Haiku archive submissions. Pranav Lakhwara requested the comparison. Codex designed and executed the pilot, including the packet assignment and test replays. Sixteen fresh Codex model-reviewer contexts each saw one packet. Separate model scorers assessed relevance after execution.
 
+A [second blind panel](second-panel/README.md) used identical packets with 16 fresh reviewers. Commands and outputs again found defects on the same six issues. Reviewers who also saw closing notes found five of those six. Their proposed test for the sixth issue also failed on the maintainer’s fix.
+
 ## What the comparison measured
 
 A reviewer saw the issue, both candidate diffs and both authors' historical commands and outputs. Only the treatment reviewer also saw the original closing notes. Both got the same instructions and one proposed behavioral test, with no tools for trying or revising that test. Candidate order was held fixed within each pair and balanced across issues within each repository. Reviewers had no benchmark verdict, maintainer fix, or access to their counterpart's work. They could see whether their own packet contained notes. The reviewers had the same test budget; the note packets contained more input text.

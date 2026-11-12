@@ -1,0 +1,34 @@
+{
+  "c40fb6c": {
+    "label": "hit",
+    "reason": "The CharField stores the target's UUID as uppercase hex. Both candidates fail to return that target through GenericForeignKey prefetch with to_attr. The maintainer's fix returns it."
+  },
+  "7c861eb": {
+    "label": "miss",
+    "reason": "Supplying a fixed ASCII Message-ID bypasses hostname-based generation. Candidate 1 fails the Subject encoding assertion, which does not exercise the reported failure with a non-ASCII hostname."
+  },
+  "3fa133e": {
+    "label": "hit",
+    "reason": "Both candidates fail the equality assertion when the prefetched relation is accessed using the target's lowercase hex UUID stored in a CharField. The maintainer's fix returns the target with zero additional queries."
+  },
+  "93d1f40": {
+    "label": "hit",
+    "reason": "The checkbox predicate selects the first value only. Candidate 1 fails the assertion on the two subwidgets' checked states, directly testing whether each split-array checkbox reflects its own value. The maintainer's fix passes."
+  },
+  "b36cf83": {
+    "label": "hit",
+    "reason": "A SplitArrayField of BooleanField uses a custom checkbox predicate that selects False. Candidate 1 fails the expected checked, unchecked, checked sequence. The maintainer's fix sets the three states as specified by that predicate."
+  },
+  "07429d1": {
+    "label": "hit",
+    "reason": "Changing a UUID field to a foreign key requires the generated orders migration to depend on the existing people migration. Candidate 1 fails that dependency assertion and the maintainer's fix passes."
+  },
+  "4f43613": {
+    "label": "miss",
+    "reason": "The fixed ASCII Message-ID bypasses generation from the hostname. The candidate 1 failure concerns the Subject header's charset, a separate behavior from generating a usable Message-ID with a non-ASCII hostname."
+  },
+  "fecdcba": {
+    "label": "hit",
+    "reason": "After the UUID-to-foreign-key change, candidate 1 emits only the sales dependency, omitting the required dependency on catalog. The maintainer's fix includes a catalog dependency."
+  }
+}

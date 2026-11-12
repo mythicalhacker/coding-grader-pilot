@@ -1,0 +1,66 @@
+{
+  "52a9207": {
+    "label": "miss",
+    "reason": "Both candidates fail a valid sum over three selected entries of Identity(5). The report requires summing every row and column with independent indices. It does not require a sum along the nonlinear path (i, i**2)."
+  },
+  "f32a321": {
+    "label": "hit",
+    "reason": "The report identifies both Limit subexpression printing and missing declarations in generated Python. This tests whether generated Python reconstructs a Limit with nested names. The maintainer fix succeeds and candidate 1 raises KeyError while printing the Limit."
+  },
+  "d915e45": {
+    "label": "miss",
+    "reason": "The expected total of 2 is correct for the selected positions (0,0), (1,1), and (2,4). Neither candidate computes that sum, but the reported requirement concerns the full two-index sum of an identity matrix. No assertion exercises that requirement."
+  },
+  "1159b7f": {
+    "label": "hit",
+    "reason": "The assertion directly checks both requested zero-argument return values. The maintainer fix passes and candidate 1 returns a different pair."
+  },
+  "a9d045f": {
+    "label": "hit",
+    "reason": "The maintainer fix returns the requested pair (oo, -oo) for Min() and Max(). Candidate 1 fails this exact assertion."
+  },
+  "b4e431e": {
+    "label": "hit",
+    "reason": "The chosen rational is exactly representable at 100-bit precision. The mpmath-generated function must preserve the increment above 1. The maintainer fix does so and candidate 1 fails the numerical assertion."
+  },
+  "a9644a8": {
+    "label": "unscorable",
+    "reason": "The Python emitted by the maintainer fix for the left-hand Limit contains an invalid assignment to a minus sign, so the round-trip test fails on the reference."
+  },
+  "6e0e348": {
+    "label": "hit",
+    "reason": "The exact reciprocal power of two is representable by mpmath even though a native float underflows. The maintainer fix preserves the rational value in generated code and candidate 1 fails the numerical check."
+  },
+  "c40fb6c": {
+    "label": "hit",
+    "reason": "The relation stores the target UUID as a valid uppercase hexadecimal string. Public prefetch must return the same target through the requested attribute. The maintainer fix resolves it and both candidates fail."
+  },
+  "7c861eb": {
+    "label": "miss",
+    "reason": "The test supplies an ASCII Message-ID and exercises Latin-1 encoding of the Subject. Candidate 1 breaks that existing behavior, but the issue concerns generating a Message-ID from a Unicode hostname."
+  },
+  "3fa133e": {
+    "label": "hit",
+    "reason": "The maintainer fix retrieves the correct UUID target through the prefetched generic relation without an additional query. Both candidates fail the target equality assertion itself."
+  },
+  "93d1f40": {
+    "label": "hit",
+    "reason": "The supported predicate gives the first checkbox a checked value and the second an unchecked value. This directly tests whether checked state leaks to the next child. The maintainer fix passes and candidate 1 fails."
+  },
+  "b36cf83": {
+    "label": "hit",
+    "reason": "For the supplied BooleanField and custom predicate, checked, unchecked, checked is the required sequence. Each child must reflect its own value. The maintainer fix passes and candidate 1 fails that assertion."
+  },
+  "07429d1": {
+    "label": "hit",
+    "reason": "With a single initial migration in the referenced app, this tests whether the generated UUID-to-foreign-key alteration includes that cross-app dependency. The maintainer fix includes it and the candidate 1 assertion fails."
+  },
+  "4f43613": {
+    "label": "miss",
+    "reason": "The test bypasses automatic Message-ID generation and checks a Latin-1 Subject. Candidate 1 changes Subject encoding, a collateral regression unrelated to the reported failure with a non-ASCII hostname."
+  },
+  "fecdcba": {
+    "label": "hit",
+    "reason": "The generated migration must depend on the target app when converting the UUID field to a foreign key. The maintainer fix supplies the edge and candidate 1 lists only the source app's migration."
+  }
+}

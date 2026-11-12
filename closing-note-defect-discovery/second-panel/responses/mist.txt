@@ -1,0 +1,1 @@
+The empty argument list is the reported case. Checking both extrema together detects swapped signs. The expected pair is (oo, -oo). Patch A's recorded output gives the reverse pair, which would fail the assertion.

@@ -1,0 +1,272 @@
+{
+  "group": "django",
+  "python": "Python 3.10.20",
+  "probe_sha256": {
+    "reed": "807c42cd090bf5625eb53ef53edc494c447da29472a8789bc20ffecde4a7f290",
+    "cumin": "1e65148a65c038a58924265ae9cd6c1ab7ac71639ccd49e3dfd178e2292b4cac",
+    "amber": "60d022833bccaa03b8fb5926679b218918040ca00d7f006e414c9008a39750c6",
+    "acorn": "83903ea88c496421424a66dd1bdfbec11fae11f3b5e3f9d95c1262a3462c3bf6",
+    "jade": "c12f1c3f402ffdcee578ba08b4361d8d9a2d8f55ec3727d156866187074c8860",
+    "basalt": "a2e99c755ada8fba122e79545c3bb4bb3fc00ab9aaf79514fb52259b1b58ad83",
+    "coral": "0547337e851d1a770da71808a60e16a3e47fdf973a22e1f01cd05db482bda2ed",
+    "jet": "4a5147d10926373bee0cefb9a5424c18965ce994a804652a056e7817e3e17042"
+  },
+  "replays": [
+    {
+      "slot": "reed",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"responses/reed.py\", line 25, in <module>\n    assert Link.objects.prefetch_related(models.Prefetch(\"target\", to_attr=\"matched\")).get().matched == target\nAssertionError\n"
+    },
+    {
+      "slot": "reed",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "reed",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"responses/reed.py\", line 25, in <module>\n    assert Link.objects.prefetch_related(models.Prefetch(\"target\", to_attr=\"matched\")).get().matched == target\nAssertionError\n"
+    },
+    {
+      "slot": "reed",
+      "variant": "sonnet",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"responses/reed.py\", line 25, in <module>\n    assert Link.objects.prefetch_related(models.Prefetch(\"target\", to_attr=\"matched\")).get().matched == target\nAssertionError\n"
+    },
+    {
+      "slot": "cumin",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"responses/cumin.py\", line 25, in <module>\n    assert bar.foo == foo\nAssertionError\n"
+    },
+    {
+      "slot": "cumin",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "cumin",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"responses/cumin.py\", line 25, in <module>\n    assert bar.foo == foo\nAssertionError\n"
+    },
+    {
+      "slot": "cumin",
+      "variant": "sonnet",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"responses/cumin.py\", line 25, in <module>\n    assert bar.foo == foo\nAssertionError\n"
+    },
+    {
+      "slot": "amber",
+      "variant": "base",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "amber",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "amber",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"responses/amber.py\", line 18, in <module>\n    assert decode_header(str(mail.message()['Subject'])) == [(b'Caf\\xe9', 'iso-8859-1')]\nAssertionError\n"
+    },
+    {
+      "slot": "amber",
+      "variant": "sonnet",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "acorn",
+      "variant": "base",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "acorn",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "acorn",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"responses/acorn.py\", line 20, in <module>\n    assert decode_header(mail.message()[\"Subject\"]) == [(b\"Caf\\xe9\", \"iso-8859-1\")]\nAssertionError\n"
+    },
+    {
+      "slot": "acorn",
+      "variant": "sonnet",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "jade",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"responses/jade.py\", line 25, in <module>\n    assert (\"people\", \"0001_initial\") in changes[\"orders\"][0].dependencies\nAssertionError\n"
+    },
+    {
+      "slot": "jade",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "jade",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"responses/jade.py\", line 25, in <module>\n    assert (\"people\", \"0001_initial\") in changes[\"orders\"][0].dependencies\nAssertionError\n"
+    },
+    {
+      "slot": "jade",
+      "variant": "sonnet",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "basalt",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"responses/basalt.py\", line 26, in <module>\n    assert any(app == \"catalog\" and name in (\"0001_initial\", \"__first__\", \"__latest__\") for app, name in dependencies), dependencies\nAssertionError: [('sales', '0001_initial')]\n"
+    },
+    {
+      "slot": "basalt",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "basalt",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"responses/basalt.py\", line 26, in <module>\n    assert any(app == \"catalog\" and name in (\"0001_initial\", \"__first__\", \"__latest__\") for app, name in dependencies), dependencies\nAssertionError: [('sales', '0001_initial')]\n"
+    },
+    {
+      "slot": "basalt",
+      "variant": "sonnet",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "coral",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"responses/coral.py\", line 13, in <module>\n    assert [bool(child['attrs'].get('checked')) for child in children] == [True, False]\nAssertionError\n"
+    },
+    {
+      "slot": "coral",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "coral",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"responses/coral.py\", line 13, in <module>\n    assert [bool(child['attrs'].get('checked')) for child in children] == [True, False]\nAssertionError\n"
+    },
+    {
+      "slot": "coral",
+      "variant": "sonnet",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "jet",
+      "variant": "base",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"responses/jet.py\", line 10, in <module>\n    assert [bool(child['attrs'].get('checked')) for child in children] == [True, False, True]\nAssertionError\n"
+    },
+    {
+      "slot": "jet",
+      "variant": "gold",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "slot": "jet",
+      "variant": "haiku",
+      "status": "fail",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"responses/jet.py\", line 10, in <module>\n    assert [bool(child['attrs'].get('checked')) for child in children] == [True, False, True]\nAssertionError\n"
+    },
+    {
+      "slot": "jet",
+      "variant": "sonnet",
+      "status": "pass",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

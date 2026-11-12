@@ -1,0 +1,3 @@
+The configured checkbox predicate checks False and clears True. A single alternating array exercises that public option and puts an unchecked item immediately after a checked one, where shared attributes caused the reported defect.
+
+Expected result: the first and third boxes are checked and the middle box is clear. Ignoring the predicate reverses all three states. Leaking the first item's checked attribute leaves the middle box checked.

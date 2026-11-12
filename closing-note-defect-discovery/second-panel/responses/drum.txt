@@ -1,0 +1,1 @@
+All user-defined names occur inside the Limit. Running the generated Python in a fresh namespace checks whether it declares both symbols and the undefined function, without depending on declaration order or formatting. The expected result is that execution succeeds and e equals the original unevaluated limit. A printer that loses the nested declarations leaves names unbound.

@@ -1,0 +1,1 @@
+The rational 1 + 2**-60 is exactly representable at 100-bit precision. Subtracting one and multiplying by 2**60 must therefore return exactly one. If Python divides the two integers before mpmath sees them, the quotient rounds to 1.0 and the assertion sees zero. Expected result: the assertion passes with Patch A and fails with Patch B.

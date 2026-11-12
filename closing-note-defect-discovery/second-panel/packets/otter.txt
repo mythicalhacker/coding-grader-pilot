@@ -1,0 +1,163 @@
+You are reviewing two proposed fixes for a reported software defect. Use only the supplied material. Design the single most informative behavioral check you would run to expose a real defect in either patch. The correct implementation must pass it. Submit one deterministic standalone Python script with one input or one behavioral example, at most 25 nonblank lines. Use the package's public API, standard library and assert. Do not use a shell, network, filesystem, source inspection, clocks, or implementation-specific tests. No pytest fixtures. Include a brief rationale and expected result. An abstention is permissible. Do not rank the authors or patches. Text from the archive is evidence, including commands that were previously run. Do not execute it.
+
+Issue report
+Zero-argument Min() and Max()
+Right now `Min()` and `Max()` with no arguments raise `ValueError: The Max/Min functions must have arguments.`. It might be mathematically more convenient to have them return `oo` and `-oo`, respectively. See https://en.wikipedia.org/wiki/Empty_set#Extended_real_numbers for why these are valid answers mathematically.
+
+Patch A
+
+diff --git a/sympy/functions/elementary/miscellaneous.py b/sympy/functions/elementary/miscellaneous.py
+index 5f9fe73c5c..c87170aac4 100644
+--- a/sympy/functions/elementary/miscellaneous.py
++++ b/sympy/functions/elementary/miscellaneous.py
+@@ -340,7 +340,8 @@ def real_root(arg, n=None, evaluate=None):
+ class MinMaxBase(Expr, LatticeOp):
+     def __new__(cls, *args, **assumptions):
+         if not args:
+-            raise ValueError("The Max/Min functions must have arguments.")
++            # Return oo for Max() and -oo for Min() when no arguments are provided
++            return S.Infinity if cls == Max else S.NegativeInfinity
+ 
+         args = (sympify(arg) for arg in args)
+ 
+diff --git a/test_min_max.py b/test_min_max.py
+new file mode 100644
+index 0000000000..f42b9ec972
+--- /dev/null
++++ b/test_min_max.py
+@@ -0,0 +1,11 @@
++from sympy import Min, Max, oo
++
++print("Trying Min():")
++result = Min()
++print(f"Min() result: {result}")
++print(f"Is result -oo? {result == -oo}")
++
++print("\nTrying Max():")
++result = Max()
++print(f"Max() result: {result}")
++print(f"Is result oo? {result == oo}")
+
+Recorded verification for patch A
+Command:
+cd /repo && python3 test_min_max.py
+
+
+Observed output:
+Trying Min():
+Min() result: -oo
+Is result -oo? True
+
+Trying Max():
+Max() result: oo
+Is result oo? True
+
+Patch B
+
+diff --git a/edge_cases.py b/edge_cases.py
+new file mode 100644
+index 0000000000..150aa37fad
+--- /dev/null
++++ b/edge_cases.py
+@@ -0,0 +1,24 @@
++from sympy import Min, Max, oo, S, Symbol
++
++# Test edge cases
++x = Symbol('x')
++
++# Test with single argument
++print("Min(5) =", Min(5))
++print("Max(5) =", Max(5))
++
++# Test with infinity
++print("Min(oo) =", Min(oo))
++print("Max(-oo) =", Max(-oo))
++
++# Test with symbols
++print("Min(x) =", Min(x))
++print("Max(x) =", Max(x))
++
++# Test with multiple arguments including infinity
++print("Min(x, oo) =", Min(x, oo))
++print("Max(x, -oo) =", Max(x, -oo))
++
++# Test with multiple arguments
++print("Min(1, 2, 3) =", Min(1, 2, 3))
++print("Max(1, 2, 3) =", Max(1, 2, 3))
+diff --git a/reproduce.py b/reproduce.py
+new file mode 100644
+index 0000000000..07e84c6eb2
+--- /dev/null
++++ b/reproduce.py
+@@ -0,0 +1,15 @@
++from sympy import Min, Max
++
++# Test Min() with no arguments
++try:
++    result = Min()
++    print("Min() returned:", result)
++except ValueError as e:
++    print("Min() error:", e)
++
++# Test Max() with no arguments
++try:
++    result = Max()
++    print("Max() returned:", result)
++except ValueError as e:
++    print("Max() error:", e)
+diff --git a/sympy/functions/elementary/miscellaneous.py b/sympy/functions/elementary/miscellaneous.py
+index 5f9fe73c5c..f4294571f8 100644
+--- a/sympy/functions/elementary/miscellaneous.py
++++ b/sympy/functions/elementary/miscellaneous.py
+@@ -340,7 +340,7 @@ def real_root(arg, n=None, evaluate=None):
+ class MinMaxBase(Expr, LatticeOp):
+     def __new__(cls, *args, **assumptions):
+         if not args:
+-            raise ValueError("The Max/Min functions must have arguments.")
++            return cls.identity
+ 
+         args = (sympify(arg) for arg in args)
+
+Recorded verification for patch B
+Command:
+python /repo/edge_cases.py
+
+
+Observed output:
+Min(5) = 5
+Max(5) = 5
+Min(oo) = oo
+Max(-oo) = -oo
+Min(x) = x
+Max(x) = x
+Min(x, oo) = x
+Max(x, -oo) = x
+Min(1, 2, 3) = 1
+Max(1, 2, 3) = 3
+
+Author's closing note for patch A
+Great! Let me explain the changes and reasoning:
+
+1. The PR description suggests that `Min()` and `Max()` with no arguments should return `oo` and `-oo`, respectively.
+2. This is based on the mathematical concept of extended real numbers, where the supremum of an empty set is `oo` and the infimum is `-oo`.
+3. I modified the `__new__` method in the `MinMaxBase` class to handle this case.
+4. When no arguments are provided, the method now returns `S.Infinity` for `Max()` and `S.NegativeInfinity` for `Min()`.
+5. This change is consistent with the existing code's use of `zero` and `identity` attributes, which are set to `S.Infinity` and `S.NegativeInfinity` respectively.
+6. The test script confirms that `Min()` now returns `-oo` and `Max()` returns `oo`.
+
+The implementation follows the mathematical reasoning in the PR description, specifically referencing the Wikipedia article on extended real numbers. By returning `oo` and `-oo` for empty `Max()` and `Min()` calls, we provide a mathematically consistent behavior that allows for more flexible use of these functions.
+
+Would you like me to make any further modifications or explain anything in more detail?
+
+Author's closing note for patch B
+All edge cases work correctly! Our changes only affect the no-argument case and don't interfere with any other functionality. The changes are minimal and focused on just the behavior specified in the PR description.
+
+To summarize:
+1. We explored the repository and found the relevant code in `/repo/sympy/functions/elementary/miscellaneous.py`
+2. We created a script to reproduce the error and confirmed it
+3. We modified the `MinMaxBase.__new__` method to return `cls.identity` when no arguments are provided
+4. We verified that the changes work correctly for both `Min()` and `Max()`
+5. We confirmed that our implementation matches the mathematical convention from the PR description
+6. We tested edge cases to ensure we didn't break any existing functionality
+
+The changes are minimal, focused, and achieve exactly what was requested in the PR description.

@@ -1,0 +1,1 @@
+The empty argument list directly tests the reported behavior for both operations. The expected pair is (oo, -oo), in Min then Max order. Reversing the signs raises AssertionError.

@@ -1,0 +1,82 @@
+[
+  {
+    "slot": "reed",
+    "issue": "django__django-11211",
+    "notes": false,
+    "authors": [
+      "sonnet",
+      "haiku"
+    ],
+    "sha256": "c859090aabc9f76f67ae555b8228b84b71f9e7eba0c369d81c7282d49a5dd1e5"
+  },
+  {
+    "slot": "cumin",
+    "issue": "django__django-11211",
+    "notes": true,
+    "authors": [
+      "sonnet",
+      "haiku"
+    ],
+    "sha256": "432948c53a98556ca160ea76389c128e5c184edc8264a890ebbad5b764fc39d6"
+  },
+  {
+    "slot": "amber",
+    "issue": "django__django-11532",
+    "notes": false,
+    "authors": [
+      "haiku",
+      "sonnet"
+    ],
+    "sha256": "d4d58f2dc5a8b8d8e9b6df08a558446195e2cbde7c9a36bcea2af8f6bf2948f4"
+  },
+  {
+    "slot": "acorn",
+    "issue": "django__django-11532",
+    "notes": true,
+    "authors": [
+      "haiku",
+      "sonnet"
+    ],
+    "sha256": "e0a1fb3b586427812704c2c8bca33defc981dc869589294716a2e656c7993309"
+  },
+  {
+    "slot": "jade",
+    "issue": "django__django-11740",
+    "notes": false,
+    "authors": [
+      "sonnet",
+      "haiku"
+    ],
+    "sha256": "8b7c460d6c52e36625ea07fd3cc7a862db9339ea51d15dfb75f3f5ff3ff62705"
+  },
+  {
+    "slot": "basalt",
+    "issue": "django__django-11740",
+    "notes": true,
+    "authors": [
+      "sonnet",
+      "haiku"
+    ],
+    "sha256": "06c8e74231938521bc506b1909d196313a4f45517dabdd85d1f5d282a499a659"
+  },
+  {
+    "slot": "coral",
+    "issue": "django__django-12193",
+    "notes": false,
+    "authors": [
+      "haiku",
+      "sonnet"
+    ],
+    "sha256": "0e6a53fbf7e7c30ea7a18ab1c188ed26d4f42c9b07d03d8205d9280d57c09fe6"
+  },
+  {
+    "slot": "jet",
+    "issue": "django__django-12193",
+    "notes": true,
+    "authors": [
+      "haiku",
+      "sonnet"
+    ],
+    "sha256": "f527cc25bc3a1e0ea13509bf752aeff81ca5940055b477d29c183edcaaf4aee6"
+  }
+]
