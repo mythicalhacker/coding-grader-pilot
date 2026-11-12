@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "task-bundle-cli"
+version = "0.1.0"
+description = "Solver-agnostic task bundle validation and grading CLI"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "typer>=0.12",
+  "pydantic>=2.5",
+  "docker>=7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-cov",
+]
+hf = [
+  "huggingface_hub",
+  "pandas",
+  "pyarrow",
+]
+
+[project.scripts]
+task = "task_bundle.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+  "docker: tests requiring a reachable Docker daemon",
+]
